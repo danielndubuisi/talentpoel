@@ -6,7 +6,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import { IconContext } from "react-icons/lib";
 import logo from "../components/asset/Vector.png";
-import { BsTelephone } from "react-icons/bs";
+import { BsTelephoneFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               <span>
-                <img src={logo} alt="vector-logo" />
+                <img src={logo} alt="vector-logo" className="vect-logo" />
               </span>
               <span
                 onClick={() => {
@@ -31,7 +31,7 @@ const Navbar = () => {
                   });
                 }}
               >
-                Talentpoel
+                Talent<span style={{ fontWeight: 200 }}>poel</span>
               </span>
             </Link>
             <div className="menu-icon" onClick={() => setClick(!click)}>
@@ -55,17 +55,12 @@ const Navbar = () => {
               <li className="nav-line">
                 <hr />
               </li>
-              <li
-                className="nav-item"
-                onClick={() => {
-                  const anchor = document.querySelector("#howItWorks");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
-              >
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <li className="nav-item">
+                <Link
+                  to="/register"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
                   For talents
                 </Link>
               </li>
@@ -75,7 +70,7 @@ const Navbar = () => {
               <li
                 className="nav-item"
                 onClick={() => {
-                  const anchor = document.querySelector("#howItWorks");
+                  const anchor = document.querySelector("#careers");
                   anchor.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
@@ -92,7 +87,7 @@ const Navbar = () => {
               <li
                 className="nav-item"
                 onClick={() => {
-                  const anchor = document.querySelector("#howItWorks");
+                  const anchor = document.querySelector("#about");
                   anchor.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
@@ -106,16 +101,7 @@ const Navbar = () => {
               <li className="nav-line">
                 <hr />
               </li>
-              <li
-                className="nav-item"
-                onClick={() => {
-                  const anchor = document.querySelector("#howItWorks");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
-              >
+              <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   Pricing
                 </Link>
@@ -124,7 +110,7 @@ const Navbar = () => {
                 <hr />
               </li>
               <li
-                className="nav-item"
+                className="nav-item contact"
                 onClick={() => {
                   const anchor = document.querySelector("#contact");
                   anchor.scrollIntoView({
@@ -135,7 +121,7 @@ const Navbar = () => {
               >
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   <span>
-                    <BsTelephone />
+                    <BsTelephoneFill className="contact-icon" />
                   </span>
                   Contact us
                 </Link>

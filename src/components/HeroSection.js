@@ -6,8 +6,8 @@ const HeroSection = ({
   topLine,
   lightText,
   lightText2,
+  heading,
   lightTextDesc,
-  headline,
   subHeadline,
   description,
   formLabel,
@@ -40,8 +40,10 @@ const HeroSection = ({
             <div className="col">
               <div className="home__hero-text-wrapper">
                 <div className={topLine ? "top-line" : "none"}>{topLine}</div>
-                <h1 className={lightText2 ? "none" : "heading dark"}>
-                  {headline}
+                <h1 className={heading ? "heading" : "none"}>
+                  Scale your business with the best
+                  <span className="greenhead"> non-technical talent </span>
+                  in Africa
                 </h1>
                 <h4 className={lightText ? "sub-heading" : "sub-heading dark"}>
                   {subHeadline}

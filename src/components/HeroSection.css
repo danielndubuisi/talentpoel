@@ -116,24 +116,20 @@ button {
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;
-  color: #042a2b;
+  color: #005457;
 }
 
 .heading {
+  margin-top: 40px;
   margin-bottom: 24px;
-  font-size: 48px;
-  line-height: 1.1;
+  font-size: 64px;
+  line-height: 72px;
   font-weight: 700;
-  color: #f7f8fa;
+  color: #f1fcff;
 }
 
-.heading.dark {
-  margin-bottom: 24px;
-  font-style: normal;
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 700;
-  color: #dc393a;
+.greenhead {
+  color: #27d6cd;
 }
 
 .list {
@@ -158,20 +154,21 @@ button {
 }
 
 .dark {
-  color: #1b1d33;
+  color: #f1fcff;
 }
 
 .darkBg {
-  background-color: #f1fcff;
+  color: #f1fcff;
+  background-color: #198a84;
 }
 
 .home__hero-subtitle {
-  max-width: 528px;
+  max-width: 450px;
   font-style: normal;
   font-weight: 400;
   margin-bottom: 20px;
-  font-size: 22px;
-  line-height: 45px;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .desc {
@@ -335,7 +332,7 @@ button {
     padding: 30px 0 10px 0;
   }
 
-  .heading.dark {
+  .heading {
     width: 270px;
     height: 156px;
     font-style: normal;

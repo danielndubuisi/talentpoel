@@ -1,9 +1,9 @@
 export const homeDataOne = {
-  lightBg: true,
+  lightBg: false,
   lightText2: false,
   lightTextDesc: false,
-  formLabel: true,
-  headline: "Scale your business with the best non-technical talent in Africa",
+  heading: true,
+  formLabel: false,
   description:
     "Our matching process is designed to be adaptable and flexible, allowing us to create a customised process for each of our clients.",
   imgStart: "",
