@@ -1,24 +1,37 @@
 import React from "react";
 import "./Footer.css";
+import logo from "../components/asset/Vector.png";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { GrLanguage } from "react-icons/gr";
 
 function Footer() {
   return (
     <div className="footer-container" id="contact">
-      <section className="footer-subscription"></section>
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>pade</h2>
-            <p>Discover locations according to your preferences.</p>
+            <span>
+              <img src={logo} alt="footer-logo" className="foot-logo" />
+            </span>
+            <h3>Talentpoel</h3>
+            <small>8, Green Dover, Kent Delaware, USA</small>
+            <GrLanguage /> English
           </div>
+
           <div className="footer-link-items">
-            <h2>Connect</h2>
-            <p>hello@padeapp.com</p>
-            <p>+234(0) 901 446 2443</p>
+            <h2>Connect with us</h2>
+            <p>hello@talentpoel.com</p>
+            <p>+1 425 777 7978</p>
             <div className="social-icons">
-              {" "}
+              <Link
+                className="social-icon-link"
+                to="/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </Link>
               <Link
                 className="social-icon-link"
                 to="/"
@@ -31,26 +44,23 @@ function Footer() {
                 className="social-icon-link"
                 to="/"
                 target="_blank"
-                aria-label="Instagram"
+                aria-label="Facebook"
               >
-                <FaInstagram />
-              </Link>
-              <Link
-                className="social-icon-link"
-                to="/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin />
+                <FaFacebook />
               </Link>
             </div>
           </div>
+
+          <div className="footer-link-items">
+            <h3>Subscribe</h3>
+            <small>Get newsletters.</small>
+          </div>
         </div>
       </div>
-      <section className="social-media">
-        <div className="social-media-wrap">
+      <section className="footer-bottom">
+        <div className="bottom-wrap">
           <small className="website-rights">
-            ©padeapp 2021. All rights reserved
+            &copy; {new Date().getFullYear()} Talentpoel. All rights reserved
           </small>
         </div>
       </section>

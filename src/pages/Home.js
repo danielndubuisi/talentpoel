@@ -6,11 +6,11 @@ import { homeDataOne } from "../Data/data";
 
 const Home = () => {
   return (
-    <>
+    <div className="home">
       <Navbar />
       <HeroSection {...homeDataOne} />
       <Footer />
-    </>
+    </div>
   );
 };
 
