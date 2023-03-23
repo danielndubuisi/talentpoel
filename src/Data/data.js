@@ -1,5 +1,5 @@
 export const homeDataOne = {
-  lightBg: false,
+  lightBg: "dark",
   lightText2: false,
   lightTextDesc: false,
   heading: true,
@@ -12,6 +12,7 @@ export const homeDataOne = {
   alt: "christina",
   imgDouble: true,
   extraText: true,
+  extraTextValue: "Quality candidates for Quality companies",
   buttonColorOne: "white",
   buttonColorTwo: "green",
   buttonTextOne: "Hire a talent",
@@ -21,59 +22,52 @@ export const homeDataOne = {
 };
 
 export const homeDataTwo = {
-  lightBg: true,
-  lightText2: true,
-  lightText: false,
-  lightTextDesc: false,
-  description:
-    "We all crave to spend quality time with our loved ones and most times we don’t seem to agree on a particular location because we all have different preferences in mind. With pade discover tailored locations based on your preference, discover the nearest location between yourself and another individual to hang out.",
+  lightBg: "",
   imgStart: "start",
-  img: "images/characters.svg",
-  alt: "character2",
-  emImg: "images/Card1.svg",
-  imgClass: "home__img-embed grey",
-  imgEmbed: false,
+  lightText: true,
+  lightText2: false,
+  lightTextDesc: true,
+  heading: false,
+  button: true,
+  subHeadline: "Talentpoel is Cost-Effective",
+  description:
+    "Talentpoel is a low-cost solution for businesses looking to hire the best non-technical talent in Africa. Our pricing model is clear, and there are no hidden fees. We provide a variety of talent to fit a variety of budgets, and we collaborate closely with our clients to provide tailored solutions that meet their needs",
+  img1: "images/imageThree.svg",
+  alt: "christina-sits",
+  imgDouble: false,
+  extraText: true,
+  extraTextValue: "Matching African talent to a Global Audience",
+  buttonColorOne: "green",
+  buttonTextOne: "Build your non-technical team →",
+  displayButtonOne: true,
+  displayButtonTwo: false,
 };
 
 export const homeDataThree = {
-  lightBg: false,
-  lightText2: true,
+  lightBg: "grey",
+  imgStart: "",
   lightText: true,
+  lightText2: false,
   lightTextDesc: true,
-  imgSwitch: true,
-  subHeadline:
-    "Create an account and select your character (art lover, party animal, foodie etc.) and search for locations by:",
-  description: "",
+  heading: false,
+  button: false,
+  subHeadline: "Our vetting process for Talentpoel",
+  description:
+    "Attracting top talent is crucial for any organization. However, simply having a pool of candidates is not enough. The key is to identify the best individuals who will fit well into our client's company culture and contribute to its success. This is where TalentPool's vetting process comes in. It helps ensure that we provide our clients with the best talent available.",
+  img1: "images/imageFour.svg",
+  alt: "sitting-girl",
+  imgDouble: false,
+  extraText: false,
   listDesc: [
     {
       id: 1,
       text: "Using Filters : E.g outdoor siting, family friendly, insta-picture worthy",
-      isVisible: true,
-      imgSrc: "images/img1.png",
     },
     {
       id: 2,
       text: "Using Keywords: Pade provides you with certain keywords (foodie, gamer) to get a suggested location",
-      isVisible: true,
-      imgSrc: "images/img3.svg",
-    },
-    {
-      id: 3,
-      text: "Using the nearest point feature : Get the nearest point  between two users.",
-      isVisible: true,
-      imgSrc: "images/img6.svg",
-    },
-    {
-      id: 4,
-      text: "Using the search bar : You can type out what exactly you want in details (i.e a nice place where I can propose to my fiancee)",
-      isVisible: true,
-      imgSrc: "images/img5.svg",
     },
   ],
-  formLabel: false,
-  imgStart: "",
-  img: "images/Footer.png",
-  alt: "phone-img",
 };
 
 export const homeDataFour = {

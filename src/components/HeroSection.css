@@ -1,6 +1,6 @@
 .home__hero-section {
   color: #1b1d33;
-  padding: 30px 0 80px 0;
+  padding: 30px 0 50px 0;
 }
 
 .home__hero-row {
@@ -16,8 +16,7 @@
 }
 
 .col {
-  margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 0 20px;
   flex: 1;
   max-width: 50%;
   flex-basis: 50%;
@@ -34,6 +33,7 @@ input [type="text"] {
 
 .button-container {
   width: 100%;
+  height: 20px;
 }
 
 button {
@@ -45,13 +45,13 @@ button {
   cursor: pointer;
   text-align: center;
   margin-right: 20px;
-  color: #f1fcff;
+  color: #fff;
 }
 
 .home__hero-text-wrapper {
   max-width: 540px;
   padding-top: 0;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 
 .none {
@@ -74,10 +74,12 @@ button {
 
 .sub-heading {
   font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 30px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 64px;
   color: #005457;
+  width: 384px;
+  margin-bottom: 30px;
 }
 
 .heading {
@@ -86,7 +88,7 @@ button {
   font-size: 64px;
   line-height: 72px;
   font-weight: 700;
-  color: #f1fcff;
+  color: #fff;
 }
 
 .greenhead {
@@ -94,18 +96,27 @@ button {
 }
 
 .dark {
-  color: #f1fcff;
+  max-width: 450px;
+  color: #fff;
+}
+
+.light {
+  color: #252525;
+}
+
+.greyBg {
+  color: #252525;
+  background-color: #eff6f6;
 }
 
 .darkBg {
-  color: #f1fcff;
+  color: #fff;
   background-color: #198a84;
 }
 
 .home__hero-subtitle {
-  max-width: 450px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 60px;
   font-size: 18px;
   line-height: 32px;
@@ -128,6 +139,8 @@ button {
   display: flex;
   flex-direction: row;
   position: relative;
+  justify-content: flex-end;
+  margin: 0 60px 0 0;
 }
 
 .home__hero-img {
@@ -157,6 +170,15 @@ button {
   width: 212.8px;
   top: 140px;
   left: 30px;
+}
+
+.solo-container {
+  position: relative;
+  width: 100%;
+}
+
+.home__hero-img.solo {
+  width: 389px;
 }
 
 .extra-text {

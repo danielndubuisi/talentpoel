@@ -4,6 +4,7 @@ import { Button } from "./Button";
 
 const HeroSection = ({
   lightBg,
+  greyBg,
   topLine,
   lightText,
   heading,
@@ -20,6 +21,7 @@ const HeroSection = ({
   floatImg,
   imgF,
   extraText,
+  extraTextValue,
   buttonColorOne,
   buttonColorTwo,
   buttonTextOne,
@@ -40,7 +42,13 @@ const HeroSection = ({
     <>
       <div
         id="top"
-        className={lightBg ? "home__hero-section" : "home__hero-section darkBg"}
+        className={
+          lightBg === "grey"
+            ? "home__hero-section greyBg"
+            : lightBg === "dark"
+            ? "home__hero-section darkBg"
+            : "home__hero-section"
+        }
       >
         <div className="container">
           <div
@@ -56,12 +64,14 @@ const HeroSection = ({
                   <span className="greenhead"> non-technical talent </span>
                   in Africa
                 </h1>
-                <h4 className={lightText ? "sub-heading" : "sub-heading dark"}>
+                <h2 className={lightText ? "sub-heading" : "sub-heading dark"}>
                   {subHeadline}
-                </h4>
+                </h2>
                 <p
                   className={
-                    lightTextDesc ? "desc" : "home__hero-subtitle dark"
+                    lightTextDesc
+                      ? "home__hero-subtitle light"
+                      : "home__hero-subtitle dark"
                   }
                 >
                   {description}
@@ -97,9 +107,7 @@ const HeroSection = ({
                         className="home__hero-img main"
                       />
                       {extraText ? (
-                        <span className="extra-text">
-                          Quality candidates for Quality companies
-                        </span>
+                        <span className="extra-text">{extraTextValue}</span>
                       ) : null}
                     </div>
                     <div className="sub_hero-img">
@@ -111,7 +119,12 @@ const HeroSection = ({
                     </div>
                   </>
                 ) : (
-                  <img src={img1} alt={alt} className="home__hero-img" />
+                  <div className="solo-container">
+                    <img src={img1} alt={alt} className="home__hero-img solo" />
+                    {extraText ? (
+                      <span className="extra-text">{extraTextValue}</span>
+                    ) : null}
+                  </div>
                 )}
                 {floatImg ? (
                   <img
