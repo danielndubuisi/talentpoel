@@ -73,7 +73,7 @@
 .nav-item:hover {
   border-radius: 50px;
   color: #198a84;
-  background-color: #cdebf5;
+  background-color: #fff;
   height: 30px;
   transition: all 0.3s ease;
 }
@@ -109,10 +109,6 @@ hr {
   color: #198a84;
 }
 
-.nav-btn::marker {
-  color: #dc393a;
-}
-
 .menu-icon {
   display: none;
 }
@@ -139,7 +135,7 @@ hr {
     font-weight: 700;
     font-size: 18px;
     line-height: 38px;
-    color: #cdebf5;
+    color: #fff;
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
@@ -173,7 +169,7 @@ hr {
   }
 
   .nav-links {
-    color: #cdebf5;
+    color: #fff;
     text-align: center;
     padding: 2rem;
     width: 100%;
@@ -219,7 +215,7 @@ hr {
   }
 
   .fa-reg-times-circle {
-    color: #cdebf5;
+    color: #fff;
     font-size: 2rem;
     width: 7.77px;
     height: 0.69px;

@@ -1,27 +1,38 @@
 import "./HeroSection.css";
+// import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 const HeroSection = ({
   lightBg,
   topLine,
   lightText,
-  lightText2,
   heading,
   lightTextDesc,
   subHeadline,
   description,
-  formLabel,
-  listDesc,
-  subPhotos,
-  img,
-  imgSwitch,
+  button,
+  img1,
+  img2,
+  imgDouble,
   alt,
   imgStart,
   imgEmbed,
   floatImg,
   imgF,
+  extraText,
+  buttonColorOne,
+  buttonColorTwo,
+  buttonTextOne,
+  buttonTextTwo,
+  displayButtonTwo,
+  displayButtonOne,
 }) => {
-  const onSubmit = (e) => {
+  const buttonOneClickHandler = (e) => {
+    e.preventDefault();
+    window.location = "mailto:hello@talentpoel.com";
+  };
+
+  const buttonTwoClickHandler = (e) => {
     e.preventDefault();
   };
 
@@ -55,42 +66,52 @@ const HeroSection = ({
                 >
                   {description}
                 </p>
-                <ul
-                  key={Math.random()}
-                  className={lightText ? "list" : "list dark"}
-                >
-                  <div>Nothing</div>
-                </ul>
-                <div className="home__sub-photo">
-                  {subPhotos &&
-                    subPhotos.map((pic) => (
-                      <img key={pic.id} src={pic.src} alt={pic.alt} />
-                    ))}
-                </div>
-                {formLabel && (
-                  <div className="form-container">
-                    <form onSubmit={onSubmit}>
-                      <input
-                        type="email"
-                        placeholder="Enter email address"
-                        required
-                      />
-                      <Button
-                        type="submit"
-                        buttonColor="green"
-                        text="Get early access"
-                      />
-                    </form>
+                {button && (
+                  <div className="button-container">
+                    <Button
+                      type="submit"
+                      buttonColor={buttonColorOne}
+                      text={buttonTextOne}
+                      onClick={buttonOneClickHandler}
+                      display={displayButtonOne}
+                    />
+                    <Button
+                      type="submit"
+                      buttonColor={buttonColorTwo}
+                      text={buttonTextTwo}
+                      onClick={buttonTwoClickHandler}
+                      display={displayButtonTwo}
+                    />
                   </div>
                 )}
               </div>
             </div>
             <div className="col">
               <div className="home__hero-img-wrapper">
-                {imgSwitch ? (
-                  <li listDesc={listDesc} />
+                {imgDouble ? (
+                  <>
+                    <div className="main_hero-img">
+                      <img
+                        src={img1}
+                        alt={alt}
+                        className="home__hero-img main"
+                      />
+                      {extraText ? (
+                        <span className="extra-text">
+                          Quality candidates for Quality companies
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="sub_hero-img">
+                      <img
+                        src={img2}
+                        alt={alt}
+                        className="home__hero-img sub"
+                      />
+                    </div>
+                  </>
                 ) : (
-                  <img src={img} alt={alt} className="home__hero-img" />
+                  <img src={img1} alt={alt} className="home__hero-img" />
                 )}
                 {floatImg ? (
                   <img

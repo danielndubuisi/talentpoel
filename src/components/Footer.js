@@ -3,9 +3,14 @@ import "./Footer.css";
 import logo from "../components/asset/Vector.png";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { BsSend } from "react-icons/bs";
 import { GrLanguage } from "react-icons/gr";
+import { Button } from "./Button";
 
 function Footer() {
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="footer-container" id="contact">
       <div className="footer-links">
@@ -54,6 +59,16 @@ function Footer() {
           <div className="footer-link-items">
             <h3>Subscribe</h3>
             <small>Get newsletters.</small>
+            <div className="form-container">
+              <form onSubmit={onSubmit}>
+                <input
+                  type="email"
+                  placeholder="Enter email address"
+                  required
+                />
+                <Button type="submit" buttonColor="green" text={<BsSend />} />
+              </form>
+            </div>
           </div>
         </div>
       </div>
