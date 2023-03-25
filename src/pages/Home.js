@@ -10,6 +10,7 @@ import {
   homeDataFive,
   homeDataSix,
 } from "../Data/data";
+import Advantage from "../components/Advantage";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Navbar />
       <HeroSection {...homeDataOne} />
       <HeroSection {...homeDataTwo} />
+      <Advantage />
       <HeroSection {...homeDataThree} />
       <HeroSection {...homeDataFour} />
       <HeroSection {...homeDataFive} />

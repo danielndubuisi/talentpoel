@@ -41,7 +41,7 @@ const Navbar = () => {
               <li
                 className="nav-item"
                 onClick={() => {
-                  const anchor = document.querySelector("#howItWorks");
+                  const anchor = document.querySelector("#advantage");
                   anchor.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
