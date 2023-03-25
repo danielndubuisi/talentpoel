@@ -16,16 +16,20 @@ function Footer() {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <span>
+            <span className="foot-logo">
               <img src={logo} alt="footer-logo" className="foot-logo" />
+              <h3>
+                Talent<small>poel</small>
+              </h3>
             </span>
-            <h3>Talentpoel</h3>
-            <small>8, Green Dover, Kent Delaware, USA</small>
-            <GrLanguage /> English
+            <p>8, Green Dover, Kent Delaware, USA</p>
+            <div className="lang">
+              <GrLanguage /> <span>English</span>
+            </div>
           </div>
 
           <div className="footer-link-items">
-            <h2>Connect with us</h2>
+            <h4>Connect with us</h4>
             <p>hello@talentpoel.com</p>
             <p>+1 425 777 7978</p>
             <div className="social-icons">
@@ -57,16 +61,17 @@ function Footer() {
           </div>
 
           <div className="footer-link-items">
-            <h3>Subscribe</h3>
+            <h4>Subscribe</h4>
             <small>Get newsletters.</small>
             <div className="form-container">
               <form onSubmit={onSubmit}>
-                <input
-                  type="email"
-                  placeholder="Enter email address"
-                  required
+                <input type="email" placeholder="Email" required />
+                <Button
+                  type="submit"
+                  buttonColor="green"
+                  display={true}
+                  text={<BsSend />}
                 />
-                <Button type="submit" buttonColor="green" text={<BsSend />} />
               </form>
             </div>
           </div>

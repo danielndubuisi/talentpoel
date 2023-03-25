@@ -61,29 +61,61 @@ export const homeDataThree = {
   listDesc: [
     {
       id: 1,
-      text: "Using Filters : E.g outdoor siting, family friendly, insta-picture worthy",
+      text: "Cultural fit interview + Non-technical test",
     },
     {
       id: 2,
-      text: "Using Keywords: Pade provides you with certain keywords (foodie, gamer) to get a suggested location",
+      text: "Personality test + Interview with a Team Member",
     },
   ],
 };
 
 export const homeDataFour = {
-  lightBg: false,
-  lightText2: true,
-  lightText: true,
-  lightTextDesc: true,
-  diff: true,
-  topLine: "Download the padeapp today and discover more",
-  description: " Available soon, stay connected to get early access",
-  subPhotos: [
-    { src: "images/googlestore.svg", alt: "google store", id: 1 },
-    { src: "images/appstore.svg", alt: "appstore", id: 2 },
-  ],
-  formLabel: false,
+  lightBg: "grey",
   imgStart: "start",
-  img: "images/Footer.png",
-  alt: "phone-img",
+  lightText: true,
+  lightText2: false,
+  lightTextDesc: true,
+  heading: false,
+  button: false,
+  topLine: "Cultural Fit Interview",
+  description:
+    "At our organisation, we place great emphasis on cultural fit. We want to ensure that the candidate aligns with our client’s values and work culture. We assess cultural fit by asking questions about the candidate's personality, work style, and interests. This helps us determine whether the candidate would be a good fit for our team and organisation.",
+  img1: "images/imageFive.svg",
+  alt: "kojo",
+  imgDouble: false,
+  extraText: false,
+};
+
+export const homeDataFive = {
+  lightBg: "grey",
+  imgStart: "",
+  lightText: true,
+  lightText2: false,
+  lightTextDesc: true,
+  heading: false,
+  button: false,
+  topLine: "Non-Technical Interview",
+  description:
+    "Once we have assessed cultural fit, we evaluate candidates' skills by having them complete a skills assessment. Our assessment process includes a real-life video interview that utilises AI technology.",
+  img1: "images/imageSix.svg",
+  alt: "herve",
+  imgDouble: false,
+  extraText: false,
+};
+export const homeDataSix = {
+  lightBg: "grey",
+  imgStart: "start",
+  lightText: true,
+  lightText2: false,
+  lightTextDesc: true,
+  heading: false,
+  button: false,
+  topLine: "Personality test + Interview with a Team Member",
+  description:
+    "The personality test is designed to help us understand your strengths and areas for improvement, and to identify how you can best contribute to our team. The interview with a team member will give you the opportunity to learn more about our company culture, values, and goals, and to ask any questions you may have about the position and the company.",
+  img1: "images/imageSeven.svg",
+  alt: "christina-glasses",
+  imgDouble: false,
+  extraText: false,
 };

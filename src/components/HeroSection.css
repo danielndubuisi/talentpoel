@@ -7,7 +7,8 @@
   display: flex;
   align-content: stretch;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .row {
@@ -49,9 +50,7 @@ button {
 }
 
 .home__hero-text-wrapper {
-  max-width: 540px;
-  padding-top: 0;
-  padding-bottom: 100px;
+  width: 100%;
 }
 
 .none {
@@ -59,16 +58,13 @@ button {
 }
 
 .top-line {
-  color: #198a84;
-  font-weight: 700;
-  margin: 50px auto 16px;
+  color: #14706c;
+  font-weight: 800;
+  margin: 50px auto 0;
   width: 100%;
-  height: 105px;
-  left: 816px;
-  top: 3178px;
-  font-style: italic;
+  font-style: normal;
   font-size: 32px;
-  line-height: 45px;
+  line-height: 40px;
   text-align: center;
 }
 
@@ -145,8 +141,6 @@ button {
 
 .home__hero-img {
   margin: 0px 0 0 40px;
-  padding-right: 0;
-  margin-top: 100px;
   border-radius: 30px;
 }
 
@@ -188,8 +182,8 @@ button {
   background-color: #5aaaa5;
   border-radius: 50px;
   position: absolute;
-  left: -5px;
-  bottom: -40px;
+  left: 2px;
+  bottom: 60px;
 }
 
 .home__hero-floated-img {
