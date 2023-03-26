@@ -1,10 +1,9 @@
 import "./HeroSection.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 const HeroSection = ({
   lightBg,
-  greyBg,
   topLine,
   lightText,
   heading,
@@ -32,10 +31,6 @@ const HeroSection = ({
   const buttonOneClickHandler = (e) => {
     e.preventDefault();
     window.location = "mailto:hello@talentpoel.com";
-  };
-
-  const buttonTwoClickHandler = (e) => {
-    e.preventDefault();
   };
 
   return (
@@ -85,13 +80,14 @@ const HeroSection = ({
                       onClick={buttonOneClickHandler}
                       display={displayButtonOne}
                     />
-                    <Button
-                      type="submit"
-                      buttonColor={buttonColorTwo}
-                      text={buttonTextTwo}
-                      onClick={buttonTwoClickHandler}
-                      display={displayButtonTwo}
-                    />
+                    <Link to="/register">
+                      <Button
+                        type="submit"
+                        buttonColor={buttonColorTwo}
+                        text={buttonTextTwo}
+                        display={displayButtonTwo}
+                      />
+                    </Link>
                   </div>
                 )}
               </div>

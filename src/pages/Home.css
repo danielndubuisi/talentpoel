@@ -2,3 +2,14 @@
   display: flex;
   flex-direction: column;
 }
+
+.home-btn-wrapper {
+  background-color: #eff6f6;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0 200px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

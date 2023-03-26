@@ -35,7 +35,7 @@ function Footer() {
             <div className="social-icons">
               <Link
                 className="social-icon-link"
-                to="/"
+                to="https://www.linkedin.com/company/talentpoel/?viewAsMember=true"
                 target="_blank"
                 aria-label="LinkedIn"
               >
@@ -43,7 +43,7 @@ function Footer() {
               </Link>
               <Link
                 className="social-icon-link"
-                to="/"
+                to="https://twitter.com/talentpoel"
                 target="_blank"
                 aria-label="Twitter"
               >
@@ -51,7 +51,7 @@ function Footer() {
               </Link>
               <Link
                 className="social-icon-link"
-                to="/"
+                to="https://web.facebook.com/talentpoel"
                 target="_blank"
                 aria-label="Facebook"
               >

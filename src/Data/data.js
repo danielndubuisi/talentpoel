@@ -119,3 +119,44 @@ export const homeDataSix = {
   imgDouble: false,
   extraText: false,
 };
+
+export const homeButtonData = {
+  type: "submit",
+  buttonColor: "green",
+  buttonSize: "btn--center",
+  text: "join the pool →",
+  display: true,
+};
+
+export const bottomSectionOne = {
+  lightBg: "",
+  headLine: "There’s a whole world out here.",
+  headLine2: "We focus on Quality over quantity",
+  lightTextDesc: true,
+  lightText: true,
+  description:
+    "When we say we have the best talent, we mean it. Our rigorous talent acceptance process allows us to select only 10 individuals out of numerous applicants every quarter. These individuals are then added to our pre-vetted community of technical talent, where they undergo further training and mentorship to enhance their skills in their respective fields",
+  imgShow: true,
+  img: "images/imageSix.svg",
+  alt: "bottom-image",
+  button: true,
+  buttonColor: "white",
+  buttonStyle: "btn--outline",
+  buttonText: "Hire a talent →",
+  displayButton: true,
+};
+
+export const bottomSectionTwo = {
+  lightBg: "darker",
+  headLine: "",
+  topLine: "Founding team",
+  lightTextDesc: false,
+  lightText: false,
+  description:
+    "Our team has a combined experience of 20 years, hiring/working with African Talents.",
+  imgShow: true,
+  img1: "images/imageSeven.svg",
+  alt: "bottom-image",
+  button: false,
+  displayButton: false,
+};

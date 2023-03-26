@@ -33,12 +33,10 @@ input [type="text"] {
 }
 
 .button-container {
-  width: 100%;
   height: 20px;
 }
 
 button {
-  flex: 1;
   border-radius: 50px;
   height: 60px;
   border: none;
@@ -108,6 +106,11 @@ button {
 .darkBg {
   color: #fff;
   background-color: #198a84;
+}
+
+.darkerBg {
+  color: #fff;
+  background-color: #0d4a47;
 }
 
 .home__hero-subtitle {

@@ -2,6 +2,7 @@ import "./Home.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
+import BottomSection from "../components/BottomSection";
 import {
   homeDataOne,
   homeDataTwo,
@@ -9,8 +10,13 @@ import {
   homeDataFour,
   homeDataFive,
   homeDataSix,
+  homeButtonData,
+  bottomSectionOne,
+  bottomSectionTwo,
 } from "../Data/data";
 import Advantage from "../components/Advantage";
+import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,6 +29,13 @@ const Home = () => {
       <HeroSection {...homeDataFour} />
       <HeroSection {...homeDataFive} />
       <HeroSection {...homeDataSix} />
+      <div className="home-btn-wrapper">
+        <Link to="/register">
+          <Button {...homeButtonData} />
+        </Link>
+      </div>
+      <BottomSection {...bottomSectionOne} />
+      <BottomSection {...bottomSectionTwo} />
       <Footer />
     </div>
   );
