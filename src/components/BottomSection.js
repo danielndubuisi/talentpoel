@@ -1,6 +1,7 @@
 import "./BottomSection.css";
 import FounderDetails from "../components/FounderDetails";
 import GridImages from "../components/GridImages";
+import GridText from "../components/GridText";
 import { Button } from "./Button";
 
 const BottomSection = ({
@@ -12,6 +13,7 @@ const BottomSection = ({
   lightTextDesc,
   lightText,
   description,
+  gridText,
   imgShow,
   button,
   buttonColor,
@@ -49,6 +51,7 @@ const BottomSection = ({
                 {subHeadline}
               </h4>
             ) : null}
+            {gridText ? <GridText /> : null}
             <p
               className={
                 lightTextDesc

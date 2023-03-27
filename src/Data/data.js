@@ -146,6 +146,25 @@ export const bottomSectionOne = {
   displayButton: true,
 };
 
+export const aboutData = {
+  lightBg: "",
+  imgStart: "",
+  lightText: true,
+  lightText2: false,
+  lightTextDesc: true,
+  heading: false,
+  button: true,
+  subHeadline: "About Us",
+  description: `Derived from the Afrikaans word "Talentpoel", which roughly translates to Talentpool.
+
+    Talentpoel matches vetted non-technical Mid-level/Senior level experts in Africa to global tech companies and startups. Our aim is to enable companies have access to a broader pool of candidates regardless of location or governmental restrictions.`,
+  img1: "images/aboutImage.svg",
+  alt: "about-image",
+  imgDouble: false,
+  extraText: true,
+  extraTextValue: "Matching African talent to a Global Audience",
+};
+
 export const bottomSectionTwo = {
   lightBg: "darker",
   headLine: "",
@@ -163,10 +182,11 @@ export const bottomSectionThree = {
   lightBg: "",
   headLine: "Talents available",
   topLine: "For individuals",
-  lightTextDesc: false,
+  lightTextDesc: true,
   lightText: false,
   description:
     "Still can't find the talent you're looking for “in the list above” click the button below  to request talent.",
+  gridText: true,
   imgShow: "",
   button: true,
   buttonColor: "white",

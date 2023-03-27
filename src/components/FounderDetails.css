@@ -1,27 +1,110 @@
 .founders {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   color: #fff;
 }
 
 .founder-jeph {
   display: flex;
-  width: 500px;
+  width: 250px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background-color: #1d948ec5;
+  border-radius: 20px;
+}
+
+.founder-jeph img {
+  width: 304px;
+  height: 274px;
 }
 
 .founder-karen {
   display: flex;
-  width: 500px;
+  width: 250px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background-color: #f7ccbc;
+  border-radius: 20px;
+  position: relative;
 }
 
-.founder-lloyd {
+.founder-karen img {
+  width: 270px;
+  height: 274px;
+}
+
+.founder-llyod {
   display: flex;
-  width: 500px;
+  width: 250px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background-color: #d7bffada;
+  border-radius: 20px;
+}
+
+.founder-llyod img {
+  width: 491px;
+  height: 274px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+.details h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 15px;
+}
+
+.details p {
+  font-style: normal;
+  margin: 2px 0 20px 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.details.jeph {
+  background-color: #1b9690;
+  margin-top: -45px;
+}
+
+.details.karen {
+  background-color: #fb8f67;
+  margin-top: -45px;
+}
+
+.details.lloyd {
+  background-color: #9067c6;
+  margin-top: -45px;
+}
+
+.detail-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.founder-icon-link svg {
+  color: #fff;
+}
+
+.founder-icon-link svg:hover {
+  color: yellowgreen;
 }
