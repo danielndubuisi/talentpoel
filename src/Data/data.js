@@ -136,7 +136,7 @@ export const bottomSectionOne = {
   lightText: true,
   description:
     "When we say we have the best talent, we mean it. Our rigorous talent acceptance process allows us to select only 10 individuals out of numerous applicants every quarter. These individuals are then added to our pre-vetted community of technical talent, where they undergo further training and mentorship to enhance their skills in their respective fields",
-  imgShow: true,
+  imgShow: "grid",
   img: "images/imageSix.svg",
   alt: "bottom-image",
   button: true,
@@ -154,9 +154,23 @@ export const bottomSectionTwo = {
   lightText: false,
   description:
     "Our team has a combined experience of 20 years, hiring/working with African Talents.",
-  imgShow: true,
-  img1: "images/imageSeven.svg",
-  alt: "bottom-image",
+  imgShow: "row",
   button: false,
   displayButton: false,
+};
+
+export const bottomSectionThree = {
+  lightBg: "",
+  headLine: "Talents available",
+  topLine: "For individuals",
+  lightTextDesc: false,
+  lightText: false,
+  description:
+    "Still can't find the talent you're looking for “in the list above” click the button below  to request talent.",
+  imgShow: "",
+  button: true,
+  buttonColor: "white",
+  buttonStyle: "btn--outline",
+  buttonText: "Hire a talent →",
+  displayButton: true,
 };

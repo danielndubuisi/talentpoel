@@ -1,4 +1,6 @@
 import "./BottomSection.css";
+import FounderDetails from "../components/FounderDetails";
+import GridImages from "../components/GridImages";
 import { Button } from "./Button";
 
 const BottomSection = ({
@@ -11,8 +13,6 @@ const BottomSection = ({
   lightText,
   description,
   imgShow,
-  img,
-  alt,
   button,
   buttonColor,
   buttonStyle,
@@ -59,12 +59,12 @@ const BottomSection = ({
               {description}
             </p>
             <div className="home__bottom-img-wrapper">
-              {imgShow ? (
+              {imgShow === "grid" ? (
                 <>
-                  <div className="bottom-img">
-                    <img src={img} alt={alt} className="home__bottom-img" />
-                  </div>
+                  <GridImages />
                 </>
+              ) : imgShow === "row" ? (
+                <FounderDetails />
               ) : null}
             </div>
             {button && (

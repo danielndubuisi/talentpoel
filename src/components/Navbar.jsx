@@ -67,18 +67,9 @@ const Navbar = () => {
               <li className="nav-line">
                 <hr />
               </li>{" "}
-              <li
-                className="nav-item"
-                onClick={() => {
-                  const anchor = document.querySelector("#careers");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
-              >
+              <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Careers
+                  Careers <small>(coming soon)</small>
                 </Link>
               </li>
               <li className="nav-line">

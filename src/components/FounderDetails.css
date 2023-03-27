@@ -1,0 +1,27 @@
+.founders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.founder-jeph {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}
+
+.founder-karen {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}
+
+.founder-lloyd {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}

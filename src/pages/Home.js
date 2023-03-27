@@ -13,6 +13,7 @@ import {
   homeButtonData,
   bottomSectionOne,
   bottomSectionTwo,
+  bottomSectionThree,
 } from "../Data/data";
 import Advantage from "../components/Advantage";
 import { Button } from "../components/Button";
@@ -36,6 +37,7 @@ const Home = () => {
       </div>
       <BottomSection {...bottomSectionOne} />
       <BottomSection {...bottomSectionTwo} />
+      <BottomSection {...bottomSectionThree} />
       <Footer />
     </div>
   );
