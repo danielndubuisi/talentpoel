@@ -147,6 +147,7 @@ export const bottomSectionOne = {
 };
 
 export const aboutData = {
+  id: "about",
   lightBg: "",
   imgStart: "",
   lightText: true,

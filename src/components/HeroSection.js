@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 const HeroSection = ({
+  id,
   lightBg,
   topLine,
   lightText,
@@ -45,7 +46,7 @@ const HeroSection = ({
             : "home__hero-section"
         }
       >
-        <div className="container">
+        <div className="container" id={id}>
           <div
             className={
               imgStart === "start" ? "row home__hero-row" : "home__hero-row"
