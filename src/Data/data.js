@@ -155,10 +155,14 @@ export const aboutData = {
   lightTextDesc: true,
   heading: false,
   button: true,
-  subHeadline: "About Us",
-  description: `Derived from the Afrikaans word "Talentpoel", which roughly translates to Talentpool.
-
-    Talentpoel matches vetted non-technical Mid-level/Senior level experts in Africa to global tech companies and startups. Our aim is to enable companies have access to a broader pool of candidates regardless of location or governmental restrictions.`,
+  smallHeadline: "About Us",
+  about: true,
+  aboutText: true,
+  about1: `Derived from the Afrikaans word "Talentpoel", which roughly translates to Talentpool.`,
+  about2:
+    "Talentpoel matches vetted non-technical Mid-level/Senior level experts in Africa to global tech companies and startups. Our aim is to enable companies have access to a broader pool of candidates regardless of location or governmental restrictions.",
+  about3:
+    "Our vision is to become the leading global platform for working with and hiring non-technical talent in Africa.",
   img1: "images/aboutImage.svg",
   alt: "about-image",
   imgDouble: false,
@@ -194,4 +198,24 @@ export const bottomSectionThree = {
   buttonStyle: "btn--outline",
   buttonText: "Hire a talent →",
   displayButton: true,
+};
+
+export const registerData = {
+  lightBg: "",
+  imgStart: "start",
+  lightText: true,
+  lightText2: false,
+  lightTextDesc: true,
+  heading: "Register",
+  button: true,
+  description: "Register here",
+  img1: "images/reg-image.svg",
+  alt: "christina-sits",
+  imgDouble: false,
+  extraText: true,
+  extraTextValue: "Matching African talent to a Global Audience",
+  buttonColorOne: "green",
+  buttonTextOne: "Build your non-technical team →",
+  displayButtonOne: true,
+  displayButtonTwo: false,
 };

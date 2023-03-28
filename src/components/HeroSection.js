@@ -1,6 +1,8 @@
 import "./HeroSection.css";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+import line from "./asset/line.svg";
+import vector from "./asset/Vector.svg";
 
 const HeroSection = ({
   id,
@@ -10,6 +12,12 @@ const HeroSection = ({
   heading,
   lightTextDesc,
   subHeadline,
+  smallHeadline,
+  about,
+  aboutText,
+  about1,
+  about2,
+  about3,
   description,
   button,
   img1,
@@ -63,6 +71,33 @@ const HeroSection = ({
                 <h2 className={lightText ? "sub-heading" : "sub-heading dark"}>
                   {subHeadline}
                 </h2>
+                {aboutText ? (
+                  <>
+                    <div className="about-section">
+                      <h4
+                        className={
+                          aboutText ? "small-heading" : "small-heading dark"
+                        }
+                      >
+                        <span>
+                          <img src={line} alt="hr-line" />
+                        </span>{" "}
+                        {smallHeadline}
+                      </h4>
+                      {about ? (
+                        <>
+                          <p className="home__hero-subtitle light">{about1}</p>
+                          <p className="home__hero-subtitle light">{about2}</p>
+                          <div className="vect-img">
+                            <img src={vector} alt="about-img" />
+                          </div>
+                          <h5>Our Vision</h5>
+                          <p className="home__hero-subtitle light">{about3}</p>
+                        </>
+                      ) : null}
+                    </div>
+                  </>
+                ) : null}
                 <p
                   className={
                     lightTextDesc

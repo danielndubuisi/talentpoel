@@ -76,6 +76,38 @@ button {
   margin-bottom: 30px;
 }
 
+.small-heading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: #14706c;
+  margin-bottom: 30px;
+}
+
+.small-heading span {
+  width: 50px;
+}
+
+h5 {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin: 40px 0 20px 0;
+}
+
+.vect-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(165, 166, 246, 0.32);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
 .heading {
   margin-top: 40px;
   margin-bottom: 24px;
