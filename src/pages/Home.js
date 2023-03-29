@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import BottomSection from "../components/BottomSection";
+import CompanySection from "../components/CompanySection";
 import {
   homeDataOne,
   homeDataTwo,
@@ -40,6 +41,7 @@ const Home = () => {
       <HeroSection {...aboutData} />
       <BottomSection {...bottomSectionTwo} />
       <BottomSection {...bottomSectionThree} />
+      <CompanySection />
       <Footer />
     </div>
   );

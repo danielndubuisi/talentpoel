@@ -124,7 +124,7 @@ export const homeButtonData = {
   type: "submit",
   buttonColor: "green",
   buttonSize: "btn--center",
-  text: "join the pool →",
+  text: "Join the pool →",
   display: true,
 };
 
