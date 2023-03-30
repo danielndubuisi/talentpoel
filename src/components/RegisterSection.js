@@ -2,6 +2,7 @@ import "./RegisterSection.css";
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
 import logo from "../components/asset/Vector.png";
+import star from "../components/asset/star.svg";
 import { useState } from "react";
 
 const RegisterSection = ({ imgSrc }) => {
@@ -37,15 +38,25 @@ const RegisterSection = ({ imgSrc }) => {
             </p>
             <div className="reg-list">
               <ul>
-                <li>
-                  HMO coverage for the duration of their contract with us.
-                </li>
-                <li>Career coaching from our learning partners.</li>
-                <li>
-                  We are one of the first companies in Africa to introduce the
-                  concept of "community equity". As a member of our company, you
-                  will have the opportunity to own a share of the company.
-                </li>
+                <span>
+                  <img src={star} alt="list-star" />
+                  <li>
+                    HMO coverage for the duration of their contract with us.
+                  </li>
+                </span>
+                <span>
+                  <img src={star} alt="list-star" />
+                  <li>Career coaching from our learning partners.</li>
+                </span>
+                <span>
+                  <img src={star} alt="list-star" />
+
+                  <li>
+                    We are one of the first companies in Africa to introduce the
+                    concept of "community equity". As a member of our company,
+                    you will have the opportunity to own a share of the company.
+                  </li>
+                </span>
               </ul>
               <small>
                 We will also be offering additional benefits in the near future
@@ -53,7 +64,7 @@ const RegisterSection = ({ imgSrc }) => {
             </div>
           </div>
           <div className="right">
-            <div className="form-container">
+            <div className="reg-form-container">
               <p className="form-desc">
                 Fill out this application, become a talent
               </p>
