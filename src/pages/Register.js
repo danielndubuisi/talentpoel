@@ -1,11 +1,11 @@
 import "./Register.css";
-import HeroSection from "../components/HeroSection";
+import RegisterSection from "../components/RegisterSection";
 import { registerData } from "../Data/data";
 
 const Register = () => {
   return (
     <div className="register">
-      <HeroSection {...registerData} />
+      <RegisterSection {...registerData} />
     </div>
   );
 };

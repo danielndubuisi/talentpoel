@@ -201,7 +201,7 @@ export const bottomSectionThree = {
 };
 
 export const registerData = {
-  lightBg: "",
+  lightBg: "grey",
   imgStart: "start",
   lightText: true,
   lightText2: false,
@@ -209,7 +209,7 @@ export const registerData = {
   heading: "Register",
   button: true,
   description: "Register here",
-  img1: "images/reg-image.svg",
+  imgSrc: "images/reg-image.svg",
   alt: "christina-sits",
   imgDouble: false,
   extraText: true,
