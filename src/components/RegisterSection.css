@@ -71,11 +71,6 @@
   border-radius: 20px;
 }
 
-.form-container form {
-  display: flex;
-  flex-direction: column;
-}
-
 .right {
   width: 588px;
   height: 738px;
@@ -84,4 +79,20 @@
     0px 4px 30px rgba(97, 134, 196, 0.05);
   border-radius: 32px;
   padding: 30px;
+}
+
+/* Form styles */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 50px auto;
 }
