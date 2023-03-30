@@ -71,6 +71,19 @@
   border-radius: 20px;
 }
 
+.reg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.reg-list small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #252525;
+}
+
 .right {
   width: 588px;
   height: 738px;
@@ -95,4 +108,21 @@
   flex-direction: column;
   gap: 50px;
   margin: 50px auto;
+}
+
+.reg-list ul {
+  list-style-type: none;
+}
+
+.reg-list li {
+  width: 431px;
+  height: 54px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #252525;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #252525;
 }

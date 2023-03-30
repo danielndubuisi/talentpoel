@@ -35,18 +35,22 @@ const RegisterSection = ({ imgSrc }) => {
               We seek to attract the best talent, and to that end we offer a
               number of benefits to those who join our talent network:
             </p>
-            <ul>
-              <li>HMO coverage for the duration of their contract with us.</li>
-              <li>Career coaching from our learning partners.</li>
-              <li>
-                We are one of the first companies in Africa to introduce the
-                concept of "community equity". As a member of our company, you
-                will have the opportunity to own a share of the company.
-              </li>
+            <div className="reg-list">
+              <ul>
+                <li>
+                  HMO coverage for the duration of their contract with us.
+                </li>
+                <li>Career coaching from our learning partners.</li>
+                <li>
+                  We are one of the first companies in Africa to introduce the
+                  concept of "community equity". As a member of our company, you
+                  will have the opportunity to own a share of the company.
+                </li>
+              </ul>
               <small>
                 We will also be offering additional benefits in the near future
               </small>
-            </ul>
+            </div>
           </div>
           <div className="right">
             <div className="form-container">
