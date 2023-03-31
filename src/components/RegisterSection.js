@@ -70,13 +70,13 @@ const RegisterSection = ({ imgSrc }) => {
               </p>
               {formDetails ? (
                 <>
-                  <form onSubmit={submitHandler}>
+                  <form className="form-one" onSubmit={submitHandler}>
                     <input type="text" placeholder="First name" required />
                     <input type="text" placeholder="Last name" required />
                     <input type="email" placeholder="Email" required />
                     <input type="text" placeholder="LinkedIn" />
-
                     <Button
+                      id="reg-buttonOne"
                       type="submit"
                       buttonColor="green"
                       text="Continue"
@@ -86,19 +86,23 @@ const RegisterSection = ({ imgSrc }) => {
                 </>
               ) : (
                 <div>
-                  <form onSubmit={submitHandler}>
-                    <label>
+                  <form className="form-two" onSubmit={submitHandler}>
+                    <label htmlFor="exp">
                       Do you have up to 3-5 years of experience as a
                       non-technical professional?
                     </label>
-                    <select name="" id="">
+                    <select name="exp" id="exp">
                       <option value="No">No</option>
                       <option value="Yes">Yes</option>
                     </select>
-                    <label>Enter your non - technical role</label>
-                    <input type="text" placeholder="Role" required />
-                    <label>Enter a short bio (one sentence)</label>
-                    <input type="email" placeholder="Bio" required />
+                    <label htmlFor="role">
+                      Enter your non - technical role
+                    </label>
+                    <input id="role" type="text" placeholder="Role" required />
+                    <label htmlFor="bio">
+                      Enter a short bio (one sentence)
+                    </label>
+                    <input id="bio" type="email" placeholder="Bio" required />
                   </form>
                   <small>Availability (part-time or full-time)</small>
 
