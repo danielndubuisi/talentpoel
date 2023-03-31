@@ -103,15 +103,14 @@ const RegisterSection = ({ imgSrc }) => {
                       Enter a short bio (one sentence)
                     </label>
                     <input id="bio" type="email" placeholder="Bio" required />
+                    <small>Availability (part-time or full-time)</small>
+                    <Button
+                      type="submit"
+                      buttonColor="green"
+                      text="Submit"
+                      display={true}
+                    />
                   </form>
-                  <small>Availability (part-time or full-time)</small>
-
-                  <Button
-                    type="submit"
-                    buttonColor="green"
-                    text="Submit"
-                    display={true}
-                  />
                 </div>
               )}
             </div>

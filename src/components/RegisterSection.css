@@ -212,3 +212,17 @@ select:focus {
   background: #ffffff;
   border: 1px solid #9dcac8;
 }
+
+.form-two small {
+  width: 472px;
+  height: 32px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+  margin: 10px auto;
+}
+
+.form-two button {
+  width: 100%;
+}

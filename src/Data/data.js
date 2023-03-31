@@ -201,21 +201,5 @@ export const bottomSectionThree = {
 };
 
 export const registerData = {
-  lightBg: "grey",
-  imgStart: "start",
-  lightText: true,
-  lightText2: false,
-  lightTextDesc: true,
-  heading: "Register",
-  button: true,
-  description: "Register here",
   imgSrc: "images/reg-image.svg",
-  alt: "christina-sits",
-  imgDouble: false,
-  extraText: true,
-  extraTextValue: "Matching African talent to a Global Audience",
-  buttonColorOne: "green",
-  buttonTextOne: "Build your non-technical team →",
-  displayButtonOne: true,
-  displayButtonTwo: false,
 };
