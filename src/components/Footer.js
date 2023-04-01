@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+import axios from "axios";
 import logo from "../components/asset/Vector.png";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
@@ -8,8 +9,33 @@ import { GrLanguage } from "react-icons/gr";
 import { Button } from "./Button";
 
 function Footer() {
-  const onSubmit = (e) => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [message, setMessage] = useState(null);
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+    console.log(email);
+  };
+
+  const submitHandler = (e) => {
     e.preventDefault();
+    console.log(email);
+    const formElement = document.querySelector("form");
+    const formData = new FormData(formElement);
+    axios.post(
+      "https://script.google.com/macros/s/AKfycbwjItjunfq9lxfR0icSEhJYyLdjLSrCSl0BrhU-d7CnJ2zZgkgnjybJ2VrgHTPG6e4c1A/exec",
+      formData
+    );
+    setEmail("");
+    setSubmitted(true);
+    setMessage("Subscription successful!!");
+
+    setTimeout(function () {
+      setMessage(null);
+    }, 3000);
+
+    console.log(email);
   };
   return (
     <div className="footer-container" id="contact">
@@ -64,8 +90,15 @@ function Footer() {
             <h4>Subscribe</h4>
             <small>Get newsletters.</small>
             <div className="form-container">
-              <form onSubmit={onSubmit}>
-                <input type="email" placeholder="Email" required />
+              <form onSubmit={submitHandler}>
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={handleChange}
+                  required
+                />
                 <Button
                   type="submit"
                   buttonColor="green"
@@ -74,6 +107,20 @@ function Footer() {
                 />
               </form>
             </div>
+            {submitted && (
+              <span
+                style={{
+                  fontWeight: "700",
+                  fontSize: "12px",
+                  color: "#1b9690",
+                  fontStyle: "italic",
+                  marginLeft: "25px",
+                  marginTop: "5px",
+                }}
+              >
+                {message}
+              </span>
+            )}
           </div>
         </div>
       </div>

@@ -8,12 +8,13 @@ import axios from "axios";
 
 const RegisterSection = ({ imgSrc }) => {
   const [formDetails, setFormDetails] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
+  const [message, setMessage] = useState(null);
 
   const submitHandlerOne = (e) => {
-    setFormDetails(false);
-
-    const formElement = document.querySelector("form");
     e.preventDefault();
+    setFormDetails(false);
+    const formElement = document.querySelector("form");
     const formData = new FormData(formElement);
     axios.post(
       "https://script.google.com/macros/s/AKfycbwjItjunfq9lxfR0icSEhJYyLdjLSrCSl0BrhU-d7CnJ2zZgkgnjybJ2VrgHTPG6e4c1A/exec",
@@ -24,6 +25,12 @@ const RegisterSection = ({ imgSrc }) => {
   const submitHandlerTwo = (e) => {
     e.preventDefault();
     setFormDetails(true);
+    setSubmitted(true);
+    setMessage("Submitted");
+
+    setTimeout(function () {
+      setMessage(null);
+    }, 3000);
   };
   return (
     <div className="register-section">
@@ -152,6 +159,20 @@ const RegisterSection = ({ imgSrc }) => {
                     />
                   </form>
                 </div>
+              )}
+              {submitted && (
+                <span
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "12px",
+                    color: "green",
+                    fontStyle: "italic",
+                    marginLeft: "25px",
+                    marginTop: "-15px",
+                  }}
+                >
+                  {message}
+                </span>
               )}
             </div>
           </div>
