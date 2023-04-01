@@ -27,7 +27,9 @@ const HeroSection = ({
   imgStart,
   imgEmbed,
   floatImg,
-  imgF,
+  imgFloat1,
+  imgFloat2,
+  imgFloat3,
   extraText,
   extraTextValue,
   buttonColorOne,
@@ -159,11 +161,23 @@ const HeroSection = ({
                   </div>
                 )}
                 {floatImg ? (
-                  <img
-                    src={imgF}
-                    alt="floated-img"
-                    className="home__hero-floated-img"
-                  />
+                  <div className="floats">
+                    <img
+                      src={imgFloat1}
+                      alt="floated-img"
+                      className="home__hero-floated-img"
+                    />
+                    <img
+                      src={imgFloat2}
+                      alt="floated-img"
+                      className="home__hero-floated-img"
+                    />
+                    <img
+                      src={imgFloat3}
+                      alt="floated-img"
+                      className="home__hero-floated-img"
+                    />
+                  </div>
                 ) : null}
                 <div className="home__img-embed-container">
                   {imgEmbed ? <div>Nothing to see</div> : null}

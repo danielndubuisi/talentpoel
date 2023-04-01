@@ -148,13 +148,6 @@ h5 {
   color: #fff;
   background-color: #198a84;
   padding-bottom: 180px;
-  /* background: repeating-linear-gradient(
-    45deg,
-    #606dbc,
-    #606dbc 10px,
-    #465298 10px,
-    #465298 20px
-  ); */
 }
 
 .darkerBg {
@@ -192,26 +185,31 @@ h5 {
 }
 
 .home__hero-img {
+  object-fit: cover;
   margin: 0px 0 0 40px;
   border-radius: 30px;
 }
 
 .main_hero-img {
+  object-fit: cover;
   width: 226.24px;
   height: 339px;
   position: relative;
 }
 
 .home__hero-img.main {
+  object-fit: cover;
   width: 226.24px;
 }
 
 .sub_hero-img {
+  object-fit: cover;
   width: 206.24px;
   position: relative;
 }
 
 .home__hero-img.sub {
+  object-fit: cover;
   position: absolute;
   width: 212.8px;
   top: 140px;
@@ -224,6 +222,7 @@ h5 {
 }
 
 .home__hero-img.solo {
+  object-fit: cover;
   width: 389px;
 }
 
@@ -238,49 +237,26 @@ h5 {
   bottom: 60px;
 }
 
+.floats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 200px;
+  bottom: -20px;
+}
+
 .home__hero-floated-img {
-  position: absolute;
-  width: 176px;
-  height: 235px;
-  left: 55%;
-  margin-top: -5%;
-  border-radius: 15px;
-}
-.home__img-embed-container {
-  margin: -5px 0 0 0;
-}
-
-.home__img-embed.red {
-  box-sizing: border-box;
-  width: 450px;
-  padding-right: 20%;
-  height: 100px;
-  background: rgba(220, 57, 58, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 10px 90px 50px -32px rgba(32, 32, 32, 0.4);
-  backdrop-filter: blur(20px);
-  border-radius: 15px;
-  transition: all 0.3s ease-in;
-}
-
-.home__img-embed.grey {
-  box-sizing: border-box;
-  position: absolute;
-  left: 12%;
-  top: -25rem;
-  width: 460px;
-  padding-right: 20%;
-  height: 120px;
-  backdrop-filter: blur(1px);
-  border-radius: 15px;
-  transition: all 0.3s ease-in;
-  box-sizing: border-box;
-  background: rgba(134, 132, 132, 0.39);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 10px 90px 50px -32px rgba(32, 32, 32, 0.4);
+  object-fit: cover;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  margin-left: -10px;
 }
 
 .img {
+  object-fit: cover;
   border: 0;
   max-width: 100%;
   vertical-align: middle;
