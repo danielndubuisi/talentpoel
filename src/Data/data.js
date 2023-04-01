@@ -7,8 +7,8 @@ export const homeDataOne = {
   description:
     "Our matching process is designed to be adaptable and flexible, allowing us to create a customised process for each of our clients.",
   imgStart: "",
-  img1: "images/ImageOne.svg",
-  img2: "images/imageTwo.svg",
+  img1: "images/test2.jpg",
+  img2: "images/test3.jpg",
   alt: "christina",
   floatImg: true,
   imgFloat1: "images/ellipse-image2.png",
