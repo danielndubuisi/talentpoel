@@ -14,16 +14,23 @@ const RegisterSection = ({ imgSrc }) => {
   const submitHandlerOne = (e) => {
     e.preventDefault();
     setFormDetails(false);
-    const formElement = document.querySelector("form");
-    const formData = new FormData(formElement);
+    const formElementOne = document.querySelector(".form-one");
+    const formData = new FormData(formElementOne);
     axios.post(
-      "https://script.google.com/macros/s/AKfycbwjItjunfq9lxfR0icSEhJYyLdjLSrCSl0BrhU-d7CnJ2zZgkgnjybJ2VrgHTPG6e4c1A/exec",
+      "https://script.google.com/macros/s/AKfycbxHhzAGKiVL2TACHnTHsVWwmc2_dzonwGnQynMSxpK_904kbGQisS323GGVNto_bJEaVQ/exec",
       formData
     );
   };
 
   const submitHandlerTwo = (e) => {
     e.preventDefault();
+    const formElementTwo = document.querySelector(".form-two");
+    const formData = new FormData(formElementTwo);
+    axios.post(
+      "https://script.google.com/macros/s/AKfycbxHhzAGKiVL2TACHnTHsVWwmc2_dzonwGnQynMSxpK_904kbGQisS323GGVNto_bJEaVQ/exec",
+      formData
+    );
+
     setFormDetails(true);
     setSubmitted(true);
     setMessage("Application submitted!");
