@@ -12,6 +12,10 @@
   margin: 20px auto;
 }
 
+#reg-icon {
+  background-color: #198a84;
+}
+
 .reg-logo span {
   color: #1b9690;
 }

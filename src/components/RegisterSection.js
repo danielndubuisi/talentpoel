@@ -44,7 +44,12 @@ const RegisterSection = ({ imgSrc }) => {
       <div className="reg-logo">
         <Link to="/" className="navbar-logo">
           <span>
-            <img src={logo} alt="vector-logo" className="vect-logo" />
+            <img
+              src={logo}
+              alt="vector-logo"
+              className="vect-logo"
+              id="reg-icon"
+            />
           </span>
           <span>
             Talent<span style={{ fontWeight: 200 }}>poel</span>

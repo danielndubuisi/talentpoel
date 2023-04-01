@@ -40,8 +40,9 @@
 }
 
 .vect-logo {
-  background-color: #198a84;
-  border-radius: 50%;
+  border-radius: 100%;
+  width: 32.78px;
+  height: 32.78px;
   margin-right: 5px;
 }
 
