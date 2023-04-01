@@ -8,11 +8,13 @@
 }
 
 .reg-logo {
+  object-fit: cover;
   width: 1050px;
   margin: 20px auto;
 }
 
 #reg-icon {
+  object-fit: cover;
   background-color: #198a84;
 }
 
