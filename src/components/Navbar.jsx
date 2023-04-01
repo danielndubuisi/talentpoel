@@ -44,7 +44,8 @@ const Navbar = () => {
                   const anchor = document.querySelector("#advantage");
                   anchor.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
+                    inline: "end",
                   });
                 }}
               >
@@ -61,7 +62,7 @@ const Navbar = () => {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  For talents
+                  For Talents
                 </Link>
               </li>
               <li className="nav-line">
@@ -84,6 +85,7 @@ const Navbar = () => {
                   anchor.scrollIntoView({
                     behavior: "smooth",
                     block: "start",
+                    inline: "end",
                   });
                 }}
               >
@@ -100,7 +102,8 @@ const Navbar = () => {
                   const anchor = document.querySelector("#pricing");
                   anchor.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
+                    inline: "end",
                   });
                 }}
               >
