@@ -5,6 +5,8 @@ import GridText from "../components/GridText";
 import { Button } from "./Button";
 
 const BottomSection = ({
+  id,
+  paraId,
   lightBg,
   headLine,
   headLine2,
@@ -38,7 +40,7 @@ const BottomSection = ({
         }
       >
         <div className="bottom-container">
-          <div className="bottom-col">
+          <div className="bottom-col" id={id}>
             {headLine ? (
               <h2 className="headline">
                 <span>{headLine}</span>
@@ -53,6 +55,7 @@ const BottomSection = ({
             ) : null}
             {gridText ? <GridText /> : null}
             <p
+              id={paraId}
               className={
                 lightTextDesc
                   ? "home__hero-subtitle light"

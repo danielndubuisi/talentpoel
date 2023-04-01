@@ -22,6 +22,7 @@ export const homeDataOne = {
 };
 
 export const homeDataTwo = {
+  id: "pricing",
   lightBg: "",
   imgStart: "start",
   lightText: true,
@@ -184,6 +185,8 @@ export const bottomSectionTwo = {
 };
 
 export const bottomSectionThree = {
+  id: "talents",
+  paraId: "para",
   lightBg: "",
   headLine: "Talents available",
   topLine: "For individuals",

@@ -61,6 +61,11 @@
   border-bottom: 2px solid transparent;
 }
 
+.nav-inline small {
+  color: #0d4a47;
+  font-size: 12px;
+}
+
 .contact {
   margin-left: 120px;
 }

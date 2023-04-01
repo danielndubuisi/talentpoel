@@ -1,6 +1,5 @@
 .home__hero-section {
   color: #1b1d33;
-  padding: 30px 0 50px 0;
 }
 
 .home__hero-row {
@@ -130,14 +129,32 @@ h5 {
   color: #252525;
 }
 
+.whiteBg {
+  margin: 100px 0;
+}
+
 .greyBg {
   color: #252525;
   background-color: #eff6f6;
+  padding-top: 150px;
+}
+
+.greyBg h2 {
+  width: 100%;
+  color: #14706c;
 }
 
 .darkBg {
   color: #fff;
   background-color: #198a84;
+  padding-bottom: 180px;
+  /* background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  ); */
 }
 
 .darkerBg {
@@ -147,7 +164,7 @@ h5 {
 
 .home__hero-subtitle {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 60px;
   font-size: 18px;
   line-height: 32px;

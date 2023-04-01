@@ -51,7 +51,7 @@ const HeroSection = ({
             ? "home__hero-section greyBg"
             : lightBg === "dark"
             ? "home__hero-section darkBg"
-            : "home__hero-section"
+            : "home__hero-section whiteBg"
         }
       >
         <div className="container" id={id}>

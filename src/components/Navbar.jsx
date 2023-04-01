@@ -49,7 +49,7 @@ const Navbar = () => {
                 }}
               >
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Our advantage
+                  Our Advantage
                 </Link>
               </li>
               <li className="nav-line">
@@ -69,7 +69,9 @@ const Navbar = () => {
               </li>{" "}
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Careers <small>(coming soon)</small>
+                  <div className="nav-inline">
+                    <span> Careers</span> <small>(coming soon)</small>
+                  </div>
                 </Link>
               </li>
               <li className="nav-line">
@@ -92,7 +94,16 @@ const Navbar = () => {
               <li className="nav-line">
                 <hr />
               </li>
-              <li className="nav-item">
+              <li
+                className="nav-item"
+                onClick={() => {
+                  const anchor = document.querySelector("#pricing");
+                  anchor.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
+              >
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   Pricing
                 </Link>

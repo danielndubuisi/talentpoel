@@ -102,7 +102,7 @@ const RegisterSection = ({ imgSrc }) => {
                     <label htmlFor="bio">
                       Enter a short bio (one sentence)
                     </label>
-                    <input id="bio" type="email" placeholder="Bio" required />
+                    <input id="bio" type="text" placeholder="Bio" required />
                     <small>Availability (part-time or full-time)</small>
                     <Button
                       type="submit"
