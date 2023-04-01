@@ -149,6 +149,7 @@ h5 {
   color: #fff;
   background-color: #198a84;
   padding-bottom: 180px;
+  background-image: url("../components/asset/background.svg");
 }
 
 .darkerBg {
