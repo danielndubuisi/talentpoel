@@ -26,7 +26,7 @@ const RegisterSection = ({ imgSrc }) => {
     e.preventDefault();
     setFormDetails(true);
     setSubmitted(true);
-    setMessage("Submitted");
+    setMessage("Application submitted!");
 
     setTimeout(function () {
       setMessage(null);
@@ -168,7 +168,7 @@ const RegisterSection = ({ imgSrc }) => {
                     color: "green",
                     fontStyle: "italic",
                     marginLeft: "25px",
-                    marginTop: "-15px",
+                    marginTop: "-30px",
                   }}
                 >
                   {message}
