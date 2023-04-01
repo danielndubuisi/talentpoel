@@ -181,7 +181,7 @@ h5 {
   flex-direction: row;
   position: relative;
   justify-content: flex-end;
-  margin: 0 60px 0 0;
+  margin: 0 60px;
 }
 
 .home__hero-img {
@@ -191,28 +191,27 @@ h5 {
 }
 
 .main_hero-img {
-  object-fit: cover;
-  width: 226.24px;
-  height: 339px;
   position: relative;
+  width: 100%;
 }
 
 .home__hero-img.main {
   object-fit: cover;
   width: 226.24px;
+  height: 226px;
 }
 
 .sub_hero-img {
-  object-fit: cover;
-  width: 206.24px;
   position: relative;
+  width: 100%;
 }
 
 .home__hero-img.sub {
   object-fit: cover;
   position: absolute;
   width: 212.8px;
-  top: 140px;
+  height: 206px;
+  top: 130px;
   left: 30px;
 }
 
@@ -229,12 +228,13 @@ h5 {
 .extra-text {
   font-size: 12px;
   font-weight: 400;
-  padding: 10px 5px;
+  padding: 10px 4px;
   background-color: #5aaaa5;
   border-radius: 50px;
+  width: 100%;
   position: absolute;
-  left: 2px;
-  bottom: 60px;
+  left: 0;
+  bottom: -30px;
 }
 
 .floats {
@@ -242,8 +242,8 @@ h5 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 200px;
-  bottom: -20px;
+  right: 180px;
+  bottom: -100px;
 }
 
 .home__hero-floated-img {
