@@ -11,7 +11,7 @@ const FounderDetails = () => {
       <div className="founder-jeph">
         <img src={founderOneImg} alt="jephthah" />
         <div className="details jeph">
-          <h4>Jephthah Abu</h4>
+          <h4>Jephtah Abu</h4>
           <p>Founder</p>
           <div className="detail-links">
             <Link

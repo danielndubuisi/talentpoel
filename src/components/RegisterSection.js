@@ -1,7 +1,7 @@
 import "./RegisterSection.css";
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
-import logo from "../components/asset/Vector.png";
+import logo from "../components/asset/logo-green.svg";
 import star from "../components/asset/star.svg";
 import { useState } from "react";
 import axios from "axios";
@@ -51,9 +51,9 @@ const RegisterSection = ({ imgSrc }) => {
               id="reg-icon"
             />
           </span>
-          <span>
+          {/* <span>
             Talent<span style={{ fontWeight: 200 }}>poel</span>
-          </span>
+          </span> */}
         </Link>
       </div>
       <div className="reg-content-wrapper">
@@ -85,8 +85,8 @@ const RegisterSection = ({ imgSrc }) => {
 
                   <li>
                     We are one of the first companies in Africa to introduce the
-                    concept of "community equity". As a member of our company,
-                    you will have the opportunity to own a share of the company.
+                    concept of "community equity". As a member of our talent
+                    community, you get your own Talentpoel equity.
                   </li>
                 </span>
               </ul>

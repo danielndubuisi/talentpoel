@@ -15,7 +15,7 @@
 
 #reg-icon {
   object-fit: cover;
-  background-color: #198a84;
+  width: 200px;
 }
 
 .reg-logo span {

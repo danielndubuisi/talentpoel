@@ -5,7 +5,7 @@ import "./Navbar.css";
 import { useState } from "react";
 import "./Navbar.css";
 import { IconContext } from "react-icons/lib";
-import logo from "../components/asset/Vector.png";
+import logo from "../components/asset/logo-white.svg";
 import { BsTelephoneFill } from "react-icons/bs";
 
 const Navbar = () => {
@@ -19,9 +19,6 @@ const Navbar = () => {
         <div className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <span>
-                <img src={logo} alt="vector-logo" className="vect-logo" />
-              </span>
               <span
                 onClick={() => {
                   window.scroll({
@@ -31,7 +28,7 @@ const Navbar = () => {
                   });
                 }}
               >
-                Talent<span style={{ fontWeight: 200 }}>poel</span>
+                <img src={logo} alt="vector-logo" className="vect-logo" />
               </span>
             </Link>
             <div className="menu-icon" onClick={() => setClick(!click)}>
