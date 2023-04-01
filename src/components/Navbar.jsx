@@ -56,7 +56,7 @@ const Navbar = () => {
               <li className="nav-line">
                 <hr />
               </li>
-              <li className="nav-item">
+              <li className="nav-item" onClick={window.scrollTo(0, 0)}>
                 <Link
                   to="/register"
                   className="nav-links"

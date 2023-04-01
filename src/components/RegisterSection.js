@@ -4,13 +4,26 @@ import { Button } from "../components/Button";
 import logo from "../components/asset/Vector.png";
 import star from "../components/asset/star.svg";
 import { useState } from "react";
+import axios from "axios";
 
 const RegisterSection = ({ imgSrc }) => {
   const [formDetails, setFormDetails] = useState(true);
 
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const submitHandlerOne = (e) => {
     setFormDetails(false);
+
+    const formElement = document.querySelector("form");
+    e.preventDefault();
+    const formData = new FormData(formElement);
+    axios.post(
+      "https://script.google.com/macros/s/AKfycbwjItjunfq9lxfR0icSEhJYyLdjLSrCSl0BrhU-d7CnJ2zZgkgnjybJ2VrgHTPG6e4c1A/exec",
+      formData
+    );
+  };
+
+  const submitHandlerTwo = (e) => {
+    e.preventDefault();
+    setFormDetails(true);
   };
   return (
     <div className="register-section">
@@ -70,11 +83,26 @@ const RegisterSection = ({ imgSrc }) => {
               </p>
               {formDetails ? (
                 <>
-                  <form className="form-one" onSubmit={submitHandler}>
-                    <input type="text" placeholder="First name" required />
-                    <input type="text" placeholder="Last name" required />
-                    <input type="email" placeholder="Email" required />
-                    <input type="text" placeholder="LinkedIn" />
+                  <form className="form-one" onSubmit={submitHandlerOne}>
+                    <input
+                      type="text"
+                      name="First"
+                      placeholder="First name"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="Last"
+                      placeholder="Last name"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="Email"
+                      placeholder="Email"
+                      required
+                    />
+                    <input type="text" name="LinkedIn" placeholder="LinkedIn" />
                     <Button
                       id="reg-buttonOne"
                       type="submit"
@@ -86,23 +114,35 @@ const RegisterSection = ({ imgSrc }) => {
                 </>
               ) : (
                 <div>
-                  <form className="form-two" onSubmit={submitHandler}>
+                  <form className="form-two" onSubmit={submitHandlerTwo}>
                     <label htmlFor="exp">
                       Do you have up to 3-5 years of experience as a
                       non-technical professional?
                     </label>
-                    <select name="exp" id="exp">
+                    <select name="Experience" id="exp">
                       <option value="No">No</option>
                       <option value="Yes">Yes</option>
                     </select>
                     <label htmlFor="role">
                       Enter your non - technical role
                     </label>
-                    <input id="role" type="text" placeholder="Role" required />
+                    <input
+                      id="role"
+                      name="Role"
+                      type="text"
+                      placeholder="Role"
+                      required
+                    />
                     <label htmlFor="bio">
                       Enter a short bio (one sentence)
                     </label>
-                    <input id="bio" type="text" placeholder="Bio" required />
+                    <input
+                      id="bio"
+                      type="text"
+                      name="Bio"
+                      placeholder="Bio"
+                      required
+                    />
                     <small>Availability (part-time or full-time)</small>
                     <Button
                       type="submit"
