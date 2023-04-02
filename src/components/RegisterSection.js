@@ -51,9 +51,6 @@ const RegisterSection = ({ imgSrc }) => {
               id="reg-icon"
             />
           </span>
-          {/* <span>
-            Talent<span style={{ fontWeight: 200 }}>poel</span>
-          </span> */}
         </Link>
       </div>
       <div className="reg-content-wrapper">
@@ -82,7 +79,6 @@ const RegisterSection = ({ imgSrc }) => {
                 </span>
                 <span>
                   <img src={star} alt="list-star" />
-
                   <li>
                     We are one of the first companies in Africa to introduce the
                     concept of "community equity". As a member of our talent
@@ -90,6 +86,8 @@ const RegisterSection = ({ imgSrc }) => {
                   </li>
                 </span>
               </ul>
+              <small id="terms">Terms and conditions apply.</small>
+
               <small>
                 We will also be offering additional benefits in the near future
               </small>

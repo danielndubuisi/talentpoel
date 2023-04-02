@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import line from "./asset/line.svg";
 import vector from "./asset/Vector.svg";
+import star from "../components/asset/star.svg";
 
 const HeroSection = ({
   id,
@@ -19,6 +20,7 @@ const HeroSection = ({
   about2,
   about3,
   description,
+  listItem,
   button,
   img1,
   img2,
@@ -109,6 +111,21 @@ const HeroSection = ({
                 >
                   {description}
                 </p>
+                {listItem ? (
+                  <div className="reg-list">
+                    <h3>The vetting process comprises two stages:</h3>
+                    <ul>
+                      <span>
+                        <img src={star} alt="list-star" />
+                        <li>Cultural fit interview + Non-technical test</li>
+                      </span>
+                      <span>
+                        <img src={star} alt="list-star" />
+                        <li>Personality test + Interview with a Team Member</li>
+                      </span>
+                    </ul>
+                  </div>
+                ) : null}
                 {button && (
                   <div className="button-container">
                     <Button
@@ -155,9 +172,17 @@ const HeroSection = ({
                 ) : (
                   <div className="solo-container">
                     <img src={img1} alt={alt} className="home__hero-img solo" />
-                    {extraText ? (
+                    {extraText === "top" ? (
                       <span className="extra-text">{extraTextValue}</span>
-                    ) : null}
+                    ) : extraText === "middle" ? (
+                      <span className="extra-text-middle">
+                        <p>{extraTextValue}</p>
+                      </span>
+                    ) : (
+                      <span className="extra-text-bottom">
+                        <p>{extraTextValue}</p>
+                      </span>
+                    )}
                   </div>
                 )}
                 {floatImg ? (

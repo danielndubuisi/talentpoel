@@ -15,7 +15,7 @@ export const homeDataOne = {
   imgFloat2: "images/ellipse-image3.png",
   imgFloat3: "images/ellipse-image1.png",
   imgDouble: true,
-  extraText: true,
+  extraText: "top",
   extraTextValue: "Quality candidates for Quality companies",
   buttonColorOne: "white",
   buttonColorTwo: "green",
@@ -40,7 +40,7 @@ export const homeDataTwo = {
   img1: "images/imageThree.svg",
   alt: "christina-sits",
   imgDouble: false,
-  extraText: true,
+  extraText: "middle",
   extraTextValue: "Matching African talent to a Global Audience",
   buttonColorOne: "green",
   buttonTextOne: "Build your non-technical team →",
@@ -63,16 +63,7 @@ export const homeDataThree = {
   alt: "sitting-girl",
   imgDouble: false,
   extraText: false,
-  listDesc: [
-    {
-      id: 1,
-      text: "Cultural fit interview + Non-technical test",
-    },
-    {
-      id: 2,
-      text: "Personality test + Interview with a Team Member",
-    },
-  ],
+  listItem: true,
 };
 
 export const homeDataFour = {
@@ -171,7 +162,7 @@ export const aboutData = {
   img1: "images/aboutImage.svg",
   alt: "about-image",
   imgDouble: false,
-  extraText: true,
+  extraText: "",
   extraTextValue: "Matching African talent to a Global Audience",
 };
 

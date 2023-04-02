@@ -110,6 +110,15 @@
   color: #252525;
 }
 
+#terms {
+  font-style: italic;
+  font-size: 12px;
+  color: rgba(14, 78, 131, 0.822);
+  font-weight: 700;
+  margin-top: -55px;
+  margin-left: 25px;
+}
+
 .reg-list small {
   font-weight: 400;
   font-size: 14px;
