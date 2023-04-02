@@ -88,6 +88,12 @@ button {
   width: 50px;
 }
 
+.reg-list h3 {
+  font-weight: 800;
+  color: #198a84;
+  margin-bottom: -30px;
+}
+
 h5 {
   font-weight: 800;
   font-size: 18px;
@@ -232,6 +238,7 @@ h5 {
   font-weight: 400;
   padding: 10px 4px;
   background-color: #5aaaa5;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
   border-radius: 50px;
   width: 100%;
   position: absolute;
@@ -255,9 +262,35 @@ h5 {
   border-radius: 8px;
 }
 
-/* .extra-text-middle p {
-  width: 200px;
-} */
+.extra-text-bottom .text-one {
+  position: absolute;
+  width: 214px;
+  height: 65px;
+  left: -30px;
+  top: -30px;
+  background: #198a84;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  color: #eff6f6;
+  padding: 10px 30px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.extra-text-bottom .text-two {
+  position: absolute;
+  width: 224px;
+  height: 65px;
+  right: -50px;
+  bottom: -30px;
+  background: #dfebea;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  color: #14706c;
+  padding: 10px 30px;
+  line-height: 22px;
+  font-size: 14px;
+}
 
 .floats {
   display: flex;

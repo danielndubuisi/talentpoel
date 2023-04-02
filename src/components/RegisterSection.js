@@ -80,9 +80,8 @@ const RegisterSection = ({ imgSrc }) => {
                 <span>
                   <img src={star} alt="list-star" />
                   <li>
-                    We are one of the first companies in Africa to introduce the
-                    concept of "community equity". As a member of our talent
-                    community, you get your own Talentpoel equity.
+                    As a member of out talent community, you are eligible for
+                    equity participation.
                   </li>
                 </span>
               </ul>

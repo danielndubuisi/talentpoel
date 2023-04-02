@@ -162,8 +162,9 @@ export const aboutData = {
   img1: "images/aboutImage.svg",
   alt: "about-image",
   imgDouble: false,
-  extraText: "",
-  extraTextValue: "Matching African talent to a Global Audience",
+  extraText: "bottom",
+  extraTextValue: "Our talent community is a vibrant ecosystem",
+  extraTextValueTwo: "Continuous learning, diversity and collaboration",
 };
 
 export const bottomSectionTwo = {

@@ -34,6 +34,7 @@ const HeroSection = ({
   imgFloat3,
   extraText,
   extraTextValue,
+  extraTextValueTwo,
   buttonColorOne,
   buttonColorTwo,
   buttonTextOne,
@@ -178,11 +179,12 @@ const HeroSection = ({
                       <span className="extra-text-middle">
                         <p>{extraTextValue}</p>
                       </span>
-                    ) : (
+                    ) : extraText === "bottom" ? (
                       <span className="extra-text-bottom">
-                        <p>{extraTextValue}</p>
+                        <p className="text-one">{extraTextValue}</p>
+                        <p className="text-two">{extraTextValueTwo}</p>
                       </span>
-                    )}
+                    ) : null}
                   </div>
                 )}
                 {floatImg ? (
