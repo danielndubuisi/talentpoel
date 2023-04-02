@@ -184,7 +184,7 @@ export const bottomSectionThree = {
   id: "talents",
   paraId: "para",
   lightBg: "",
-  headLine: "Talents available",
+  headLine: "Talents Available",
   topLine: "For individuals",
   lightTextDesc: true,
   lightText: false,
