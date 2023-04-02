@@ -1,5 +1,5 @@
 import "./RegisterSection.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
 import logo from "../components/asset/logo-green.svg";
 import star from "../components/asset/star.svg";
@@ -10,6 +10,8 @@ const RegisterSection = ({ imgSrc }) => {
   const [formDetails, setFormDetails] = useState(true);
   const [submitted, setSubmitted] = useState(false);
   const [message, setMessage] = useState(null);
+
+  const navigate = useNavigate();
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
@@ -37,6 +39,7 @@ const RegisterSection = ({ imgSrc }) => {
 
     setTimeout(function () {
       setMessage(null);
+      navigate("/");
     }, 3000);
   };
   return (
