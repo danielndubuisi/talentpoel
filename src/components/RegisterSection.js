@@ -19,7 +19,7 @@ const RegisterSection = ({ imgSrc }) => {
     const formElementOne = document.querySelector(".form-one");
     const formData = new FormData(formElementOne);
     axios.post(
-      "https://script.google.com/macros/s/AKfycbxHhzAGKiVL2TACHnTHsVWwmc2_dzonwGnQynMSxpK_904kbGQisS323GGVNto_bJEaVQ/exec",
+      "https://script.google.com/macros/s/AKfycbx7CkCHWJowERYNOqcVpMR95s2EgTOQ27gvuFt5ARSevGAWwE5Jlv1_pyGiyMkRUUxDEA/exec",
       formData
     );
   };
@@ -29,7 +29,7 @@ const RegisterSection = ({ imgSrc }) => {
     const formElementTwo = document.querySelector(".form-two");
     const formData = new FormData(formElementTwo);
     axios.post(
-      "https://script.google.com/macros/s/AKfycbxHhzAGKiVL2TACHnTHsVWwmc2_dzonwGnQynMSxpK_904kbGQisS323GGVNto_bJEaVQ/exec",
+      "https://script.google.com/macros/s/AKfycbx7CkCHWJowERYNOqcVpMR95s2EgTOQ27gvuFt5ARSevGAWwE5Jlv1_pyGiyMkRUUxDEA/exec",
       formData
     );
 
@@ -162,7 +162,19 @@ const RegisterSection = ({ imgSrc }) => {
                       placeholder="Bio"
                       required
                     />
-                    <small>Availability (part-time or full-time)</small>
+                    <div className="available">
+                      <div className="check-left">
+                        <small>Availability (part-time or full-time)</small>
+                        <p className="check-text">
+                          Check for full-time availability
+                        </p>
+                      </div>
+                      <input
+                        type="checkbox"
+                        name="Availability"
+                        id="availability"
+                      />
+                    </div>
                     <Button
                       type="submit"
                       buttonColor="green"

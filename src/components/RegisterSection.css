@@ -241,3 +241,26 @@ select:focus {
 .form-two button {
   width: 100%;
 }
+
+.available {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.available input {
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  margin-left: -200px;
+}
+
+.check-text {
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1b9690;
+}
