@@ -36,7 +36,7 @@ export const homeDataTwo = {
   button: true,
   subHeadline: "Talentpoel is Cost-Effective",
   description:
-    "Talentpoel is a low-cost solution for businesses looking to hire the best non-technical talent in Africa. Our pricing model is clear, and there are no hidden fees. We provide a variety of talent to fit a variety of budgets, and we collaborate closely with our clients to provide tailored solutions that meet their needs",
+    "Talentpoel is a low-cost solution for businesses looking to hire the best non-technical talent in Africa. Our pricing model is clear, and there are no hidden fees. We provide a variety of talent to fit a variety of budgets, and we collaborate closely with our clients to provide tailored solutions that meet their needs.",
   img1: "images/imageThree.svg",
   alt: "christina-sits",
   imgDouble: false,

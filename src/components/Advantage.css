@@ -72,3 +72,58 @@
   background-color: #ebe7f1;
   color: rgba(172, 13, 172, 0.658);
 }
+
+@media screen and (min-width: 200px) and (max-width: 960px) {
+  .advantage {
+    width: 100%;
+    margin: 80px auto;
+  }
+
+  .title {
+    margin: 60px auto;
+  }
+
+  .title h3 {
+    width: 215px;
+    height: 24px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .title img {
+    width: 107px;
+    height: 12px;
+  }
+
+  .body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .ad-item {
+    margin-bottom: 10px;
+  }
+
+  .ad-item h3 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .ad-item p {
+    width: 294px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+  }
+
+  .icon {
+    isolation: isolate;
+    width: 38px;
+    height: 38px;
+  }
+}

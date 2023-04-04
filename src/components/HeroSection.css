@@ -310,14 +310,6 @@ h5 {
   margin-left: -10px;
 }
 
-/* .img {
-  object-fit: cover;
-  border: 0;
-  max-width: 100%;
-  vertical-align: middle;
-  display: inline-block;
-} */
-
 @media screen and (max-width: 991px) {
   .container {
     padding: 0 20px;
@@ -365,6 +357,12 @@ h5 {
   .home__hero-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 30px;
   }
 
   .row {
@@ -426,6 +424,18 @@ h5 {
 
   .darkBg {
     padding-bottom: 100px;
+  }
+
+  .greyBg {
+    padding-top: 80px;
+  }
+
+  .greyBg h2 {
+    width: 380px;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 100px;
   }
 
   .home__hero-img {
