@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaRegTimesCircle } from "react-icons/fa";
-import { MdOutlineSegment } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 import { useState } from "react";
 import "./Navbar.css";
@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#cdebf5" }}>
+      <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
@@ -32,7 +32,7 @@ const Navbar = () => {
               </span>
             </Link>
             <div className="menu-icon" onClick={() => setClick(!click)}>
-              {click ? <FaRegTimesCircle /> : <MdOutlineSegment />}
+              {click ? <FaRegTimesCircle /> : <GiHamburgerMenu />}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li

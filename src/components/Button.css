@@ -132,4 +132,12 @@
     font-size: 12px;
     width: 40%;
   }
+
+  .white {
+    width: 100%;
+  }
+
+  .green {
+    width: 100%;
+  }
 }
