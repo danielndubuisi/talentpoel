@@ -264,3 +264,66 @@ select:focus {
   font-weight: 600;
   color: #1b9690;
 }
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .register-section {
+    padding-top: 30px;
+  }
+  #reg-icon {
+    margin-left: -20px;
+  }
+  .reg-content-wrapper {
+    padding: 30px;
+  }
+  .reg-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 200px;
+  }
+
+  .reg-content h3 {
+    margin-bottom: 30px;
+  }
+
+  #reg-para {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 32px;
+    width: 380px;
+  }
+
+  .reg-list li {
+    margin-bottom: 20px;
+  }
+
+  #terms {
+    margin-top: -110px;
+  }
+
+  .right {
+    padding: 50px 20px 0 20px;
+    height: 774px;
+  }
+
+  .form-desc {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 30px 40px;
+    width: 214px;
+  }
+
+  .form-one button {
+    margin-top: 30px;
+  }
+
+  .available {
+    display: flex;
+    align-items: center;
+  }
+
+  .available input {
+    margin-left: 50px;
+  }
+}

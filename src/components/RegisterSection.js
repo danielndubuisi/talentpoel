@@ -164,9 +164,9 @@ const RegisterSection = ({ imgSrc }) => {
                     />
                     <div className="available">
                       <div className="check-left">
-                        <small>Availability (part-time or full-time)</small>
+                        <small>Availability (contract)</small>
                         <p className="check-text">
-                          Check for full-time availability
+                          Check for contract availability
                         </p>
                       </div>
                       <input
