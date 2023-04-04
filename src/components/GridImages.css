@@ -33,3 +33,58 @@
   display: flex;
   gap: 20px;
 }
+
+@media screen and (min-width: 200px) and (max-width: 960px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 100px auto;
+    width: 100%;
+  }
+
+  .grid img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 268.5px;
+    height: 452px;
+  }
+
+  .grid-one {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 200px;
+  }
+
+  .grid-one img {
+    width: 50%;
+    height: 200px;
+  }
+
+  .grid-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    gap: 5px;
+  }
+
+  .grid-two .img-six {
+    width: 100%;
+    height: 210px;
+  }
+
+  .grid-three {
+    display: flex;
+    gap: 20px;
+  }
+
+  .grid-three img {
+    width: 50%;
+    height: 214px;
+  }
+}

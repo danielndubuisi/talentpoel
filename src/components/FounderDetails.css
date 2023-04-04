@@ -115,3 +115,122 @@
 .founder-icon-link svg:hover {
   color: yellowgreen;
 }
+
+@media screen and (min-width: 200px) and (max-width: 960px) {
+  .founders {
+    flex-direction: column;
+    margin-top: -50px;
+  }
+
+  .founder-jeph {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d948ec5;
+    border-radius: 20px;
+    background-image: url("./asset/green-frame.png");
+  }
+
+  .founder-jeph img {
+    object-fit: cover;
+    width: 270px;
+    height: 374px;
+  }
+
+  .founder-karen {
+    display: flex;
+    width: 270px;
+    height: 374px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7ccbc;
+    border-radius: 20px;
+    position: relative;
+    background-image: url("./asset/orange-frame.png");
+  }
+
+  .founder-karen img {
+    object-fit: cover;
+    width: 270px;
+    height: 274px;
+    margin-top: 40px;
+    outline: none;
+  }
+
+  .founder-llyod {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d7bffada;
+    border-radius: 20px;
+    background-image: url("./asset/purple-frame.png");
+  }
+
+  .founder-llyod img {
+    object-fit: cover;
+    width: 270px;
+    height: 274px;
+    margin-top: 35px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+
+  .details h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 15px;
+  }
+
+  .details p {
+    font-style: normal;
+    margin: 2px 0 20px 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .details.jeph {
+    background-color: #1b9690;
+    margin-top: -120px;
+    height: 120px;
+  }
+
+  .details.karen {
+    background-color: #fb8f67;
+    margin-top: -10px;
+    height: 120px;
+  }
+
+  .details.lloyd {
+    background-color: #9067c6;
+    margin-top: -45px;
+    height: 120px;
+  }
+
+  .detail-links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .founder-icon-link svg {
+    color: #fff;
+  }
+
+  .founder-icon-link svg:hover {
+    color: yellowgreen;
+  }
+}

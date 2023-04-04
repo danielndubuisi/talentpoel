@@ -10,6 +10,7 @@ export const homeDataOne = {
   img1: "images/test2.jpg",
   img2: "images/test3.jpg",
   alt: "christina",
+  noDisplay: true,
   floatImg: true,
   imgFloat1: "images/ellipse-image2.png",
   imgFloat2: "images/ellipse-image3.png",
@@ -61,6 +62,7 @@ export const homeDataThree = {
     "Attracting top talent is crucial for any organization. However, simply having a pool of candidates is not enough. The key is to identify the best individuals who will fit well into our client's company culture and contribute to its success. This is where TalentPool's vetting process comes in. It helps ensure that we provide our clients with the best talent available.",
   img1: "images/imageFour.svg",
   alt: "sitting-girl",
+  noDisplay: true,
   imgDouble: false,
   extraText: false,
   listItem: true,
@@ -79,6 +81,7 @@ export const homeDataFour = {
     "At our organisation, we place great emphasis on cultural fit. We want to ensure that the candidate aligns with our client’s values and work culture. We assess cultural fit by asking questions about the candidate's personality, work style, and interests. This helps us determine whether the candidate would be a good fit for our team and organisation.",
   img1: "images/imageFive.svg",
   alt: "kojo",
+  noDisplay: true,
   imgDouble: false,
   extraText: false,
 };
@@ -96,6 +99,7 @@ export const homeDataFive = {
     "Once we have assessed cultural fit, we evaluate candidates' skills by having them complete a skills assessment. Our assessment process includes a real-life video interview that utilises AI technology.",
   img1: "images/imageSix.svg",
   alt: "herve",
+  noDisplay: true,
   imgDouble: false,
   extraText: false,
 };
@@ -112,6 +116,7 @@ export const homeDataSix = {
     "The personality test is designed to help us understand your strengths and areas for improvement, and to identify how you can best contribute to our team. The interview with a team member will give you the opportunity to learn more about our company culture, values, and goals, and to ask any questions you may have about the position and the company.",
   img1: "images/imageSeven.svg",
   alt: "christina-glasses",
+  noDisplay: true,
   imgDouble: false,
   extraText: false,
 };
@@ -161,6 +166,7 @@ export const aboutData = {
     "Our vision is to become the leading global platform for working with and hiring non-technical talent in Africa.",
   img1: "images/aboutImage.svg",
   alt: "about-image",
+  noDisplay: true,
   imgDouble: false,
   extraText: "bottom",
   extraTextValue: "Our talent community is a vibrant ecosystem",

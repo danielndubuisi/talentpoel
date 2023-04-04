@@ -70,3 +70,87 @@
   width: 470px;
   height: 64px;
 }
+
+@media screen and (min-width: 200px) and (max-width: 960px) {
+  .bottom-container {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 30px;
+  }
+
+  .bottom-col {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-col h2 {
+    color: #14706c;
+    width: 500px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .bottom-col p {
+    width: 380px;
+    height: 261px;
+    margin-top: 30px;
+  }
+
+  .headline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .home__bottom-section {
+    color: #1b1d33;
+    padding: 50px 0;
+  }
+
+  .home__bottom-section.darkerBg {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px auto;
+  }
+
+  .home__bottom-section.darkerBg p {
+    width: 320px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  #talents {
+    padding: 48px;
+    width: 906px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 30px rgba(20, 112, 108, 0.05);
+    border-radius: 24px;
+  }
+
+  .topline {
+    width: 158px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    color: #1b9690;
+    margin-top: 30px;
+  }
+
+  #para {
+    margin-top: -30px;
+    width: 470px;
+    height: 64px;
+  }
+}

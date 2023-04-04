@@ -323,6 +323,10 @@ h5 {
     padding-bottom: 65px;
   }
 
+  .home__hero-section {
+    width: 100%;
+  }
+
   .row {
     margin: 0 -15px -15px -15px;
   }
@@ -359,6 +363,10 @@ h5 {
     align-items: flex-start;
   }
 
+  .home__hero-section {
+    width: 100%;
+  }
+
   .container {
     margin: 0 auto;
     width: 100%;
@@ -367,10 +375,6 @@ h5 {
 
   .row {
     flex-direction: column-reverse;
-  }
-
-  .col {
-    padding: 0px 5px;
   }
 
   #pricing {
@@ -405,7 +409,11 @@ h5 {
     font-weight: 700;
     font-size: 42px;
     line-height: 52px;
-    margin: 10px 0 -15px 0;
+    margin: 10px 0 150px 0;
+  }
+
+  h3 {
+    margin-top: 30px;
   }
 
   .button-container {
@@ -430,6 +438,15 @@ h5 {
     padding-top: 80px;
   }
 
+  .greyBg .top-line {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .greyBg .home__hero-img-wrapper {
+    margin-top: -2px;
+  }
+
   .greyBg h2 {
     width: 380px;
     font-weight: 800;
@@ -441,6 +458,10 @@ h5 {
   .home__hero-img {
     margin: 15px;
     height: auto;
+  }
+
+  .home-btn-wrapper {
+    padding-bottom: 80px;
   }
 
   .home__hero-subtitle {
@@ -598,6 +619,7 @@ h5 {
   .col {
     max-width: 100%;
     flex-basis: 100%;
+    padding: 0px 5px;
   }
 }
 

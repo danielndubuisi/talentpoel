@@ -26,6 +26,7 @@ const HeroSection = ({
   img2,
   imgDouble,
   alt,
+  noDisplay,
   imgStart,
   imgEmbed,
   floatImg,
@@ -73,9 +74,13 @@ const HeroSection = ({
                   <span className="greenhead"> non-technical talent </span>
                   in Africa
                 </h1>
-                <h2 className={lightText ? "sub-heading" : "sub-heading dark"}>
-                  {subHeadline}
-                </h2>
+                {noDisplay ? null : (
+                  <h2
+                    className={lightText ? "sub-heading" : "sub-heading dark"}
+                  >
+                    {subHeadline}
+                  </h2>
+                )}
                 {aboutText ? (
                   <>
                     <div className="about-section">
