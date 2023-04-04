@@ -132,8 +132,9 @@
 
   #talents {
     padding: 48px;
-    width: 906px;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 30px;
     background: #ffffff;
     box-shadow: 0px 4px 30px rgba(20, 112, 108, 0.05);
     border-radius: 24px;
@@ -145,12 +146,16 @@
     font-size: 24px;
     line-height: 32px;
     color: #1b9690;
-    margin-top: 30px;
+    margin-top: 5px;
   }
 
   #para {
-    margin-top: -30px;
-    width: 470px;
-    height: 64px;
+    width: 310px;
+    height: 96px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 70px;
   }
 }

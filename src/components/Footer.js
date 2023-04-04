@@ -24,7 +24,7 @@ function Footer() {
     const formElement = document.querySelector("form");
     const formData = new FormData(formElement);
     axios.post(
-      "https://script.google.com/macros/s/AKfycbxHhzAGKiVL2TACHnTHsVWwmc2_dzonwGnQynMSxpK_904kbGQisS323GGVNto_bJEaVQ/exec",
+      "https://script.google.com/macros/s/AKfycbx7CkCHWJowERYNOqcVpMR95s2EgTOQ27gvuFt5ARSevGAWwE5Jlv1_pyGiyMkRUUxDEA/exec",
       formData
     );
     setEmail("");

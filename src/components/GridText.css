@@ -23,3 +23,30 @@
   text-align: center;
   color: #14706c;
 }
+
+@media screen and (min-width: 200px) and (max-width: 960px) {
+  .grid-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 50px auto 100px auto;
+    width: 100%;
+  }
+
+  .bottom {
+    margin-top: -90px;
+  }
+
+  .grid-text h3 {
+    margin-top: -1px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #14706c;
+    width: 300px;
+  }
+}
