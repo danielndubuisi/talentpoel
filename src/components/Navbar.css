@@ -38,6 +38,7 @@
 }
 
 .vect-logo {
+  object-fit: cover;
   width: 200px;
   height: auto;
 }
@@ -153,8 +154,8 @@ hr {
   }
 
   .vect-logo {
-    width: 100%;
-    height: 30px;
+    width: 200px;
+    height: auto;
   }
 
   .navbar-item {
