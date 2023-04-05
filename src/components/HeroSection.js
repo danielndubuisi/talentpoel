@@ -1,6 +1,7 @@
 import "./HeroSection.css";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import line from "./asset/line.svg";
 import vector from "./asset/Vector.svg";
 import star from "../components/asset/star.svg";
@@ -158,7 +159,7 @@ const HeroSection = ({
                 {imgDouble ? (
                   <>
                     <div className="main_hero-img">
-                      <img
+                      <LazyLoadImage
                         src={img1}
                         alt={alt}
                         className="home__hero-img main"
@@ -168,7 +169,7 @@ const HeroSection = ({
                       ) : null}
                     </div>
                     <div className="sub_hero-img">
-                      <img
+                      <LazyLoadImage
                         src={img2}
                         alt={alt}
                         className="home__hero-img sub"
@@ -177,7 +178,11 @@ const HeroSection = ({
                   </>
                 ) : (
                   <div className="solo-container">
-                    <img src={img1} alt={alt} className="home__hero-img solo" />
+                    <LazyLoadImage
+                      src={img1}
+                      alt={alt}
+                      className="home__hero-img solo"
+                    />
                     {extraText === "top" ? (
                       <span className="extra-text">{extraTextValue}</span>
                     ) : extraText === "middle" ? (
@@ -194,17 +199,17 @@ const HeroSection = ({
                 )}
                 {floatImg ? (
                   <div className="floats">
-                    <img
+                    <LazyLoadImage
                       src={imgFloat1}
                       alt="floated-img"
                       className="home__hero-floated-img"
                     />
-                    <img
+                    <LazyLoadImage
                       src={imgFloat2}
                       alt="floated-img"
                       className="home__hero-floated-img"
                     />
-                    <img
+                    <LazyLoadImage
                       src={imgFloat3}
                       alt="floated-img"
                       className="home__hero-floated-img"
