@@ -172,7 +172,7 @@ hr {
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    padding-top: 80px;
+    padding-top: 50px;
   }
 
   .nav-menu.active {
@@ -186,14 +186,16 @@ hr {
   .nav-links {
     color: #fff;
     text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
+    height: 20px;
+    width: 200px;
+    margin: 0 auto;
     font-size: 0.8em;
   }
 
   .nav-links:hover {
-    transform: scale(1.1);
+    color: #fff;
+    color: red;
+    /* transform: scale(1.02); */
     transition: all 0.3s ease;
   }
 
@@ -207,7 +209,17 @@ hr {
   }
 
   .nav-item {
-    width: 100%;
+    width: fit-content;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .nav-item:hover {
+    z-index: 100;
+    background: none;
+    color: red;
+    background-color: transparent;
+    transition: all 0.3s ease;
   }
 
   .menu-icon {
