@@ -59,7 +59,7 @@ export const homeDataThree = {
   button: false,
   subHeadline: "Our vetting process for Talentpoel",
   description:
-    "Attracting top talent is crucial for any organization. However, simply having a pool of candidates is not enough. The key is to identify the best individuals who will fit well into our client's company culture and contribute to its success. This is where TalentPool's vetting process comes in. It helps ensure that we provide our clients with the best talent available.",
+    "Attracting and retaining top talent is paramount for the success of any organization. However, merely having a large pool of candidates is not sufficient. The true value lies in identifying the most exceptional individuals who align with our client's unique company culture and have the potential to make meaningful contributions to its success. This is where TalentPoel’s rigorous vetting process comes into play. By employing meticulous screening and assessment methods, we ensure that we deliver the crème de la crème of talent to our clients, providing them with the best possible candidates to meet their needs and drive their organization forward.",
   img1: "images/imageFour.svg",
   alt: "sitting-girl",
   noDisplay: true,
@@ -76,9 +76,9 @@ export const homeDataFour = {
   lightTextDesc: true,
   heading: false,
   button: false,
-  topLine: "Cultural Fit Interview",
+  topLine: "Cultural Add Interview",
   description:
-    "At our organisation, we place great emphasis on cultural fit. We want to ensure that the candidate aligns with our client’s values and work culture. We assess cultural fit by asking questions about the candidate's personality, work style, and interests. This helps us determine whether the candidate would be a good fit for our team and organisation.",
+    "At our organization, we believe that cultural add is a key aspect of successful talent acquisition. It's not just about finding candidates who fit in, but also those who bring unique perspectives, diverse experiences, and complementary qualities that can enhance our client's work culture. To thoroughly assess cultural fit, we delve into the candidate's personality, work style, and interests through thoughtful questioning during our assessment process. This enables us to gauge whether the candidate's values, attitudes, and behaviors align with our client's organization and team dynamics. By prioritizing cultural add, we aim to create a cohesive and inclusive work environment that fosters collaboration, innovation, and mutual growth for both the candidate and our client's organization.",
   img1: "images/imageFive.svg",
   alt: "kojo",
   noDisplay: true,

@@ -57,7 +57,8 @@ button {
 .top-line {
   color: #14706c;
   font-weight: 800;
-  margin: 50px auto 0;
+  margin: 30px auto;
+  margin-bottom: 30px;
   width: 100%;
   font-style: normal;
   font-size: 32px;

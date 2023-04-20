@@ -16,7 +16,7 @@ const FounderDetails = () => {
           <div className="detail-links">
             <Link
               className="founder-icon-link"
-              to="https://www.linkedin.com/in/jephtah-abu-03b899150/"
+              to="https://www.linkedin.com/in/jephtahabu/"
               target="_blank"
               aria-label="LinkedIn"
             >

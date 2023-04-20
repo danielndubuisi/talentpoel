@@ -38,6 +38,7 @@ const Navbar = () => {
               <li
                 className="nav-item"
                 onClick={() => {
+                  setClick(false);
                   const anchor = document.querySelector("#advantage");
                   anchor.scrollIntoView({
                     behavior: "smooth",
@@ -46,7 +47,11 @@ const Navbar = () => {
                   });
                 }}
               >
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                <Link
+                  to="/"
+                  className="nav-links"
+                  // onClick={closeMobileMenu}
+                >
                   Our Advantage
                 </Link>
               </li>

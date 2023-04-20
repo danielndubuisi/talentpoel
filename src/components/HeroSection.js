@@ -124,7 +124,7 @@ const HeroSection = ({
                     <ul>
                       <span>
                         <img src={star} alt="list-star" />
-                        <li>Cultural fit interview + Non-technical test</li>
+                        <li>Cultural add interview + Non-technical test</li>
                       </span>
                       <span>
                         <img src={star} alt="list-star" />
