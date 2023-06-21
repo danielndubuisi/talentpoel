@@ -5,6 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import line from "./asset/line.svg";
 import vector from "./asset/Vector.svg";
 import star from "../components/asset/star.svg";
+import { generalRoute } from "../Data/generalRoutes";
 
 const HeroSection = ({
   id,
@@ -44,10 +45,10 @@ const HeroSection = ({
   displayButtonTwo,
   displayButtonOne,
 }) => {
-  const buttonOneClickHandler = (e) => {
-    e.preventDefault();
-    window.location = "mailto:hello@talentpoel.com";
-  };
+  // const buttonOneClickHandler = (e) => {
+  //   e.preventDefault();
+  //   window.location = "mailto:hello@talentpoel.com";
+  // };
 
   return (
     <>
@@ -135,19 +136,20 @@ const HeroSection = ({
                 ) : null}
                 {button && (
                   <div className="button-container">
-                    <Button
-                      type="submit"
-                      buttonColor={buttonColorOne}
-                      text={buttonTextOne}
-                      onClick={buttonOneClickHandler}
-                      display={displayButtonOne}
-                    />
-                    <Link to="/register">
+                    <Link to={generalRoute.hireATalent} className="space-btn">
                       <Button
-                        type="submit"
+                        buttonColor={buttonColorOne}
+                        text={buttonTextOne}
+                        display={displayButtonOne}
+                        loading={false}
+                      />
+                    </Link>
+                    <Link to={generalRoute.becomeATalent}>
+                      <Button
                         buttonColor={buttonColorTwo}
                         text={buttonTextTwo}
                         display={displayButtonTwo}
+                        loading={false}
                       />
                     </Link>
                   </div>

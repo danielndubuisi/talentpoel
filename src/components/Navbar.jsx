@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
@@ -7,17 +7,24 @@ import "./Navbar.css";
 import { IconContext } from "react-icons/lib";
 import logo from "../components/asset/logo-white.svg";
 import { BsTelephoneFill } from "react-icons/bs";
+import { generalRoute } from "../Data/generalRoutes";
+import { Button } from "./Button";
+
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const router = useLocation();
 
   const closeMobileMenu = () => setClick(false);
+
+  console.log(router);
 
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className="navbar">
-          <div className="navbar-container container">
+          <div className="navbar-container layout">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               <span
                 onClick={() => {
@@ -36,40 +43,62 @@ const Navbar = () => {
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li
-                className="nav-item"
-                onClick={() => {
-                  setClick(false);
-                  const anchor = document.querySelector("#advantage");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                    inline: "end",
-                  });
-                }}
+                className={
+                  router.hash === "#about" ? "nav-item active-link" : "nav-item"
+                }
               >
-                <Link
-                  to="/"
-                  className="nav-links"
-                  // onClick={closeMobileMenu}
-                >
-                  Our Advantage
-                </Link>
-              </li>
-              <li className="nav-line">
-                <hr />
-              </li>
-              <li className="nav-item" onClick={window.scrollTo(0, 0)}>
-                <Link
-                  to="/register"
-                  className="nav-links"
+                <HashLink
+                  smooth
+                  to="/#about"
+                  className={
+                    router.hash === "#about"
+                      ? "nav-links active-link-text"
+                      : "nav-links"
+                  }
                   onClick={closeMobileMenu}
                 >
-                  For Talents
+                  About
+                </HashLink>
+              </li>
+              <li
+                className={
+                  router.hash === "#advantage"
+                    ? "nav-item active-link"
+                    : "nav-item"
+                }
+              >
+                <HashLink
+                  smooth
+                  to="/#advantage"
+                  className={
+                    router.hash === "#advantage"
+                      ? "nav-links active-link-text"
+                      : "nav-links"
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Our Advantage
+                </HashLink>
+              </li>
+              <li
+                className={
+                  router.pathname === "/discover-talents"
+                    ? "nav-item active-link"
+                    : "nav-item"
+                }
+              >
+                <Link
+                  to={generalRoute.discoverTalents}
+                  className={
+                    router.pathname === "/discover-talents"
+                      ? "nav-links active-link-text"
+                      : "nav-links"
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  Discover talents
                 </Link>
               </li>
-              <li className="nav-line">
-                <hr />
-              </li>{" "}
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   <div className="nav-inline">
@@ -77,61 +106,74 @@ const Navbar = () => {
                   </div>
                 </Link>
               </li>
-              <li className="nav-line">
-                <hr />
-              </li>{" "}
-              <li
-                className="nav-item"
-                onClick={() => {
-                  const anchor = document.querySelector("#about");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                    inline: "end",
-                  });
-                }}
-              >
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  About us
+
+              <li className="display nav-item-btn">
+                <Link to={generalRoute.becomeATalent}>
+                  <Button
+                    buttonColor="green"
+                    text="Become a talent"
+                    display={true}
+                    loading={false}
+                  />
                 </Link>
               </li>
-              <li className="nav-line">
-                <hr />
-              </li>
               <li
-                className="nav-item"
-                onClick={() => {
-                  const anchor = document.querySelector("#pricing");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                    inline: "end",
-                  });
-                }}
+                className={
+                  router.hash === "#contact"
+                    ? "nav-item display active-link"
+                    : "nav-item display"
+                }
               >
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  Pricing
-                </Link>
-              </li>
-              <li className="nav-line">
-                <hr />
-              </li>
-              <li
-                className="nav-item contact"
-                onClick={() => {
-                  const anchor = document.querySelector("#contact");
-                  anchor.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }}
-              >
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  className={
+                    router.hash === "#contact"
+                      ? "nav-links active-link-text"
+                      : "nav-links"
+                  }
+                  onClick={closeMobileMenu}
+                >
                   <span>
                     <BsTelephoneFill className="contact-icon" />
                   </span>
                   Contact us
+                </HashLink>
+              </li>
+            </ul>
+            <ul className={click ? "nav-menu2 active" : "nav-menu"}>
+              <li>
+                <Link to={generalRoute.becomeATalent}>
+                  <Button
+                    buttonColor="green"
+                    text="Become a talent"
+                    display={true}
+                    loading={false}
+                  />
                 </Link>
+              </li>
+              <li
+                className={
+                  router.hash === "#contact"
+                    ? "nav-item active-link"
+                    : "nav-item"
+                }
+              >
+                <HashLink
+                  smooth
+                  to="/#contact"
+                  className={
+                    router.hash === "#contact"
+                      ? "nav-links active-link-text"
+                      : "nav-links"
+                  }
+                  onClick={closeMobileMenu}
+                >
+                  <span>
+                    <BsTelephoneFill className="contact-icon" />
+                  </span>
+                  Contact us
+                </HashLink>
               </li>
             </ul>
           </div>

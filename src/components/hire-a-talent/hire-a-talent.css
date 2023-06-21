@@ -1,0 +1,45 @@
+.form-select-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  position: relative;
+}
+
+select {
+  width: 100%;
+  border-radius: 50px;
+  padding: 16px 32px;
+  background: #ffffff;
+  border: 1px solid #9dcac8;
+}
+
+select.form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select:after {
+  content: url("../asset/icons/select-arrow.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 32px;
+  pointer-events: none;
+}
+
+select {
+  font-size: 20px;
+  color: #49484c !important;
+  font-weight: normal;
+}
+
+.action-select {
+  margin-left: 17px;
+  cursor: pointer;
+}

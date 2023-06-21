@@ -20,6 +20,7 @@ import {
 import Advantage from "../components/Advantage";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
+import { generalRoute } from "../Data/generalRoutes";
 
 const Home = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => {
       <HeroSection {...homeDataFive} />
       <HeroSection {...homeDataSix} />
       <div className="home-btn-wrapper">
-        <Link to="/register">
+        <Link to={generalRoute.becomeATalent}>
           <Button {...homeButtonData} />
         </Link>
       </div>

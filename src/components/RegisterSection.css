@@ -1,25 +1,12 @@
-.register-section {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
 .reg-logo {
-  object-fit: cover;
-  width: 1050px;
-  margin: 20px auto;
-}
-
-#reg-icon {
-  object-fit: cover;
-  width: 200px;
-}
-
-.reg-logo span {
-  color: #1b9690;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
 }
 
 .reg-content-wrapper {
@@ -29,24 +16,32 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../components/asset/forms-bg-lines.png");
   margin: 0 auto;
-  padding: 100px 0;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .reg-content {
   display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 100px;
+}
+
+.reg-content > div {
+  width: 48%;
 }
 
 .reg-content h3 {
   color: #0d4a47;
-  width: 462px;
-  height: 64px;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
   line-height: 32px;
+  padding: 20px 0;
 }
 
 .reg-content span {
@@ -54,16 +49,11 @@
 }
 
 .left {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 400px;
-  height: 738px;
+  padding-right: 5%;
 }
 
 #reg-para {
   width: 466px;
-  height: 96px;
   font-weight: 800;
   font-size: 18px;
   line-height: 32px;
@@ -80,16 +70,16 @@
 .reg-list {
   display: flex;
   flex-direction: column;
-  gap: 80px;
 }
 
 .reg-list ul {
+  padding: 20px 0;
   list-style-type: none;
 }
 
 .reg-list ul span {
   display: flex;
-  gap: 5px;
+  padding-bottom: 20px;
 }
 
 .reg-list ul span img {
@@ -98,8 +88,6 @@
 }
 
 .reg-list li {
-  width: 431px;
-  height: 54px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -115,7 +103,6 @@
   font-size: 12px;
   color: #1b9690;
   font-weight: 700;
-  margin-top: -85px;
   margin-left: 25px;
 }
 
@@ -127,37 +114,30 @@
 }
 
 .right {
-  width: 588px;
-  height: 738px;
   background: #eff6f6;
   box-shadow: 0px -4px 20px rgba(154, 196, 150, 0.05),
     0px 4px 30px rgba(97, 134, 196, 0.05);
   border-radius: 32px;
-  padding: 80px;
+  padding: 50px;
 }
 
 /* Form styles */
 .reg-form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   background-color: transparent;
 }
 
 .form-desc {
-  width: 413px;
-  height: 32px;
+  text-align: center;
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
   color: #605d62;
+  padding-bottom: 50px;
 }
 
 .reg-form-container form {
   display: flex;
   flex-direction: column;
-  margin: 50px 0;
 }
 
 .form-one {
@@ -170,15 +150,14 @@
   flex-direction: row;
   align-items: center;
   padding: 16px 32px;
-  gap: 8px;
-  width: 472px;
-  height: 64px;
+  gap: 16px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid #9dcac8;
 }
 
 .form-one button {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .form-two {
@@ -186,7 +165,7 @@
 }
 
 .form-two label {
-  width: 472px;
+  width: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
@@ -198,9 +177,7 @@
   flex-direction: row;
   align-items: center;
   padding: 16px 32px;
-  gap: 357px;
-  width: 472px;
-  height: 64px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid #9dcac8;
   border-radius: 100px;
@@ -221,15 +198,36 @@ select:focus {
   flex-direction: row;
   align-items: center;
   padding: 16px 32px;
-  gap: 8px;
-  width: 472px;
-  height: 64px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid #9dcac8;
 }
 
+input::placeholder, textarea::placeholder {
+  font-weight: 500;
+  font-size: 20px;
+  color: #afafaf;
+}
+
+input, textarea {
+  font-size: 20px;
+  color: #49484C;
+  font-weight: normal;
+}
+
+textarea {
+  padding: 16px 32px;
+  width: 100%;
+  height: 120px;
+  background: #ffffff;
+  border: 1px solid #9dcac8;
+  border-radius: 16px;
+  resize: none;
+  outline: none;
+}
+
 .form-two small {
-  width: 472px;
+  width: 100%;
   height: 32px;
   font-weight: 400;
   font-size: 18px;
@@ -247,7 +245,6 @@ select:focus {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -255,7 +252,10 @@ select:focus {
   width: 15px;
   height: 15px;
   padding: 2px;
-  margin-left: -200px;
+}
+
+.check-left{
+  width: 90%;
 }
 
 .check-text {
@@ -265,44 +265,79 @@ select:focus {
   color: #1b9690;
 }
 
-@media screen and (min-width: 200px) and (max-width: 600px) {
-  .register-section {
-    padding-top: 30px;
+@media (min-width: 768px) and (max-width: 992px) {
+  .reg-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
   }
-  #reg-icon {
-    margin-left: -20px;
+
+  .reg-content > div {
+    width: 100%;
   }
+
+  .form-desc {
+    width: 100%;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-size: 18px;
+  }
+
+  input, textarea {
+    font-size: 18px;
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  .left img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #reg-para {
+    width: 100%;
+  }
+}
+
+@media (min-width: 0) and (max-width: 768px) {
   .reg-content-wrapper {
-    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .reg-content {
     flex-direction: column;
     align-items: center;
-    gap: 200px;
+    gap: 50px;
+  }
+
+  .reg-content > div {
+    width: 100%;
   }
 
   .reg-content h3 {
-    margin-bottom: 30px;
+    padding: 10px 0;
   }
 
   #reg-para {
-    margin-bottom: 30px;
     font-size: 18px;
     line-height: 32px;
-    width: 380px;
-  }
-
-  .reg-list li {
-    margin-bottom: 20px;
-  }
-
-  #terms {
-    margin-top: -90px;
+    width: 100%;
   }
 
   .right {
-    padding: 50px 20px 0 20px;
-    height: 774px;
+    padding: 50px 20px;
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  .left img {
+    width: 100%;
   }
 
   .form-desc {
@@ -310,8 +345,16 @@ select:focus {
     font-weight: 500;
     font-size: 20px;
     line-height: 32px;
-    margin: 30px 40px;
-    width: 214px;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-size: 16px;
+  }
+
+  input, textarea {
+    font-size: 16px;
   }
 
   .form-one button {
@@ -321,9 +364,5 @@ select:focus {
   .available {
     display: flex;
     align-items: center;
-  }
-
-  .available input {
-    margin-left: 50px;
   }
 }

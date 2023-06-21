@@ -3,7 +3,7 @@
 }
 
 .btn {
-  padding: 8px 290px;
+  padding: 8px 16px;
   border-radius: 50px;
   font-size: 16px;
   font-weight: 600;
@@ -76,6 +76,18 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+.spin-btn-container {
+  background-color: rgba(27, 150, 144, 0.2);
+  cursor: not-allowed;
+  border: 2px solid #fff;
+}
+
+.ant-spin .ant-spin-dot-item{
+  background-color: #198a84;
+  width: 12px;
+  height: 12px;
 }
 
 .green {

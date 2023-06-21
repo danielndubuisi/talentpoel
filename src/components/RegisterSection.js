@@ -42,21 +42,15 @@ const RegisterSection = ({ imgSrc }) => {
       navigate("/");
     }, 3000);
   };
+
   return (
     <div className="register-section">
-      <div className="reg-logo">
-        <Link to="/" className="navbar-logo">
-          <span>
-            <img
-              src={logo}
-              alt="vector-logo"
-              className="vect-logo"
-              id="reg-icon"
-            />
-          </span>
+      <div className="reg-logo layout">
+        <Link to="/" className="">
+          <img src={logo} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
-      <div className="reg-content-wrapper">
+      <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <img src={imgSrc} alt="register" />
@@ -92,7 +86,7 @@ const RegisterSection = ({ imgSrc }) => {
                   </li>
                 </span>
               </ul>
-              <small id="terms">Terms and conditions apply.</small>
+              {/* <small id="terms">Terms and conditions apply.</small> */}
 
               <small>
                 We will also be offering additional benefits in the near future
