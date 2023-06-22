@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
 import { generalRoute } from "../../Data/generalRoutes";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import "./cost.css";
 
