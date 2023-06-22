@@ -1,5 +1,5 @@
 .cost {
-  border: 1px solid red;
+  margin: 100px 0 70px 0;
 }
 
 .cost .hero-des-img {
@@ -8,6 +8,18 @@
 
 .cost .flex {
   margin-top: 0 !important;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .cost {
+    margin: 80px 0 50px 0;
+  }
+}
+
+@media (min-width: 0) and (max-width: 768px) {
+  .cost {
+    margin: 50px 0 20px 0;
+  }
 }
 
 @media (min-width: 0) and (max-width: 992px) {
@@ -20,7 +32,7 @@
     width: 100%;
   }
 
-  .cost .sub-heading{
+  .cost .sub-heading {
     width: 100% !important;
     height: 100% !important;
     margin-bottom: 10px;

@@ -45,15 +45,10 @@ const HeroSection = ({
   displayButtonTwo,
   displayButtonOne,
 }) => {
-  // const buttonOneClickHandler = (e) => {
-  //   e.preventDefault();
-  //   window.location = "mailto:hello@talentpoel.com";
-  // };
-
   return (
     <>
       <div
-        id="top"
+        id={id}
         className={
           lightBg === "grey"
             ? "home__hero-section greyBg"
@@ -63,12 +58,8 @@ const HeroSection = ({
         }
       >
         <div className="layout" id={id}>
-          <div
-            className={
-              imgStart === "start" ? "row home__hero-row" : "home__hero-row"
-            }
-          >
-            <div className="col">
+          <div className={imgStart === "start" ? "row flex" : "flex"}>
+            <div className="">
               <div className="home__hero-text-wrapper">
                 <div className={topLine ? "top-line" : "none"}>{topLine}</div>
                 <h1 className={heading ? "heading" : "none"}>
@@ -98,13 +89,21 @@ const HeroSection = ({
                       </h4>
                       {about ? (
                         <>
-                          <p className="home__hero-subtitle light">{about1}</p>
-                          <p className="home__hero-subtitle light">{about2}</p>
+                          <div>
+                            <p className="home__hero-subtitle light">
+                              {about1}
+                            </p>
+                            <p className="home__hero-subtitle light space-bottom">
+                              {about2}
+                            </p>
+                          </div>
                           <div className="vect-img">
                             <img src={vector} alt="about-img" />
                           </div>
                           <h5>Our Vision</h5>
-                          <p className="home__hero-subtitle light">{about3}</p>
+                          <p className="home__hero-subtitle light about-bottom">
+                            {about3}
+                          </p>
                         </>
                       ) : null}
                     </div>
@@ -156,8 +155,8 @@ const HeroSection = ({
                 )}
               </div>
             </div>
-            <div className="col">
-              <div className="home__hero-img-wrapper">
+            <div className="">
+              <div className="">
                 {imgDouble ? (
                   <>
                     <div className="main_hero-img">
@@ -179,24 +178,17 @@ const HeroSection = ({
                     </div>
                   </>
                 ) : (
-                  <div className="solo-container">
-                    <LazyLoadImage
-                      src={img1}
-                      alt={alt}
-                      className="home__hero-img solo"
+                  <div>
+                    <img
+                      className="hero-des-img"
+                      src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687446394/Group_2_yjqpmg.png"
+                      alt=""
                     />
-                    {extraText === "top" ? (
-                      <span className="extra-text">{extraTextValue}</span>
-                    ) : extraText === "middle" ? (
-                      <span className="extra-text-middle">
-                        <p>{extraTextValue}</p>
-                      </span>
-                    ) : extraText === "bottom" ? (
-                      <span className="extra-text-bottom">
-                        <p className="text-one">{extraTextValue}</p>
-                        <p className="text-two">{extraTextValueTwo}</p>
-                      </span>
-                    ) : null}
+                    <img
+                      className="hero-mobile-img"
+                      src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687446486/Group_2_1_bq8pk0.png"
+                      alt=""
+                    />
                   </div>
                 )}
                 {floatImg ? (

@@ -1,15 +1,16 @@
 .founders {
-  display: flex;
-  align-items: center;
-  gap: 20px;
   width: 100%;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
   color: #fff;
+  margin-top: 40px;
 }
 
 .founder-jeph {
   display: flex;
-  width: 300px;
+  width: 100%;
+  height: 330px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -19,15 +20,15 @@
 }
 
 .founder-jeph img {
-  object-fit: cover;
-  width: 404px;
-  height: 384px;
+  object-fit: fill;
+  width: 100%;
+  height: 274px;
 }
 
 .founder-karen {
   display: flex;
-  width: 300px;
-  height: 390px;
+  width: 100%;
+  height: 330px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -37,9 +38,21 @@
   background-image: url("./asset/orange-frame.png");
 }
 
+.founder-udoye {
+  display: flex;
+  width: 100%;
+  height: 330px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: relative;
+  background-image: url("./asset/orange-frame.png");
+}
+
 .founder-karen img {
-  object-fit: cover;
-  width: 270px;
+  object-fit: fill;
+  width: 100%;
   height: 274px;
   margin-top: 40px;
   outline: none;
@@ -47,7 +60,8 @@
 
 .founder-llyod {
   display: flex;
-  width: 300px;
+  width: 100%;
+  height: 330px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -57,10 +71,22 @@
 }
 
 .founder-llyod img {
-  object-fit: cover;
-  width: 491px;
+  object-fit: fill;
+  width: 100%;
   height: 274px;
-  margin-top: 35px;
+}
+
+.founder-udoye {
+  display: flex;
+  width: 100%;
+  height: 330px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #f7ccbc;
+  position: relative;
+  background-image: url("./asset/orange-frame.png");
 }
 
 .details {
@@ -69,6 +95,7 @@
   align-items: center;
   border: 1px solid transparent;
   border-radius: 20px;
+  width: 100%;
 }
 
 .details h4 {
@@ -89,7 +116,7 @@
 
 .details.jeph {
   background-color: #1b9690;
-  margin-top: -120px;
+  margin-top: -75px;
 }
 
 .details.karen {
@@ -97,9 +124,14 @@
   margin-top: -10px;
 }
 
+.details.udoye {
+  background-color: #fb8f67;
+  margin-top: -75px;
+}
+
 .details.lloyd {
   background-color: #9067c6;
-  margin-top: -45px;
+  margin-top: -70px;
 }
 
 .detail-links {
@@ -116,68 +148,21 @@
   color: yellowgreen;
 }
 
-@media screen and (min-width: 200px) and (max-width: 960px) {
+@media (min-width: 600px) and (max-width: 992px) {
   .founders {
-    flex-direction: column;
-    margin-top: -50px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px
   }
+}
 
-  .founder-jeph {
-    display: flex;
-    width: 270px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #1d948ec5;
-    border-radius: 20px;
-    background-image: url("./asset/green-frame.png");
+@media (min-width: 0) and (max-width: 600px) {
+  .founders {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 40px
   }
+}
 
-  .founder-jeph img {
-    object-fit: cover;
-    width: 270px;
-    height: 374px;
-  }
-
-  .founder-karen {
-    display: flex;
-    width: 270px;
-    height: 374px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f7ccbc;
-    border-radius: 20px;
-    position: relative;
-    background-image: url("./asset/orange-frame.png");
-  }
-
-  .founder-karen img {
-    object-fit: cover;
-    width: 270px;
-    height: 274px;
-    margin-top: 40px;
-    outline: none;
-  }
-
-  .founder-llyod {
-    display: flex;
-    width: 270px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #d7bffada;
-    border-radius: 20px;
-    background-image: url("./asset/purple-frame.png");
-  }
-
-  .founder-llyod img {
-    object-fit: cover;
-    width: 270px;
-    height: 274px;
-    margin-top: 35px;
-  }
-
+@media (min-width: 0) and (max-width: 960px) {
   .details {
     display: flex;
     flex-direction: column;
@@ -202,22 +187,16 @@
     line-height: 22px;
   }
 
-  .details.jeph {
-    background-color: #1b9690;
-    margin-top: -120px;
-    height: 120px;
-  }
-
   .details.karen {
-    background-color: #fb8f67;
-    margin-top: -10px;
-    height: 120px;
+    margin-top: -70px;
   }
 
   .details.lloyd {
-    background-color: #9067c6;
-    margin-top: -45px;
-    height: 120px;
+    margin-top: -80px;
+  }
+
+  .details.udoye {
+    margin-top: -100px;
   }
 
   .detail-links {

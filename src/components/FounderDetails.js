@@ -2,8 +2,9 @@ import "./FounderDetails.css";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import founderOneImg from "../components/asset/founderOne.svg";
-import founderTwoImg from "../components/asset/Karen.svg";
+import founderTwoImg from "../components/asset/founderTwo.svg";
 import founderThreeImg from "../components/asset/founderThree.svg";
+import founderFourImg from "../components/asset/founderFour.svg";
 
 const FounderDetails = () => {
   return (
@@ -75,6 +76,31 @@ const FounderDetails = () => {
             <Link
               className="founder-icon-link"
               to="https://twitter.com/glucosezaddy90"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="founder-udoye">
+        <img src={founderFourImg} alt="udoye" />
+        <div className="details udoye">
+          <h4>Udoye Chinemerem</h4>
+          <p>Executive Assistant</p>
+          <div className="detail-links">
+            <Link
+              className="founder-icon-link"
+              to="https://www.linkedin.com/in/karen-chukwu/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              className="founder-icon-link"
+              to="https://twitter.com/Karen_Amarii"
               target="_blank"
               aria-label="Twitter"
             >

@@ -6,7 +6,7 @@ import { BiSearch } from "react-icons/bi";
 
 const Advantage = () => {
   return (
-    <div className="advantage" id="advantage">
+    <div className="advantage layout" id="advantage">
       <div className="title">
         <h3>Our competitive advantage</h3>
         <img src={line} alt="line" />

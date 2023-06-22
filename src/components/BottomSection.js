@@ -1,6 +1,5 @@
 import "./BottomSection.css";
 import FounderDetails from "../components/FounderDetails";
-import GridImages from "../components/GridImages";
 import GridText from "../components/GridText";
 import { Button } from "./Button";
 
@@ -36,10 +35,12 @@ const BottomSection = ({
             ? "home__bottom-section darkerBg"
             : lightBg === "dark"
             ? "home__bottom-section darkBg"
+            : lightBg === "top"
+            ? "home__bottom-section-quality"
             : "home__bottom-section"
         }
       >
-        <div className="bottom-container">
+        <div className="bottom-container layout">
           <div className="bottom-col" id={id}>
             {headLine ? (
               <h2 className="headline">
@@ -66,9 +67,18 @@ const BottomSection = ({
             </p>
             <div className="home__bottom-img-wrapper">
               {imgShow === "grid" ? (
-                <>
-                  <GridImages />
-                </>
+                <div className="bottom-img-con">
+                  <img
+                    className="hero-des-img"
+                    src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687443772/Frame_255_gikhoo.png"
+                    alt=""
+                  />
+                  <img
+                    className="hero-mobile-img"
+                    src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687444442/Frame_306_q3vlds.png"
+                    alt=""
+                  />
+                </div>
               ) : imgShow === "row" ? (
                 <FounderDetails />
               ) : null}

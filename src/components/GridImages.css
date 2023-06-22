@@ -15,12 +15,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 597px;
+  /* height: 597px; */
 }
 
 .grid-two {
   gap: 20px;
-  height: 597px;
+  /* height: 597px; */
 }
 
 .grid-two .img-six {

@@ -7,7 +7,7 @@ import "./cost.css";
 
 const Cost = () => {
   return (
-    <div id="top" className="home__hero-section whiteBg cost">
+    <div id="top" className="home__hero-section cost">
       <div className="layout">
         <div className="flex">
           {/* <div className="">
