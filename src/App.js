@@ -3,14 +3,19 @@ import "./App.css";
 import ScrollToTop from "./components/ScrollTop";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import DiscoverTalents from "./pages/DiscoverTalents";
+import HireATalent from "./components/hire-a-talent/HireATalent";
+import { generalRoute } from "./Data/generalRoutes";
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
+        <Route path={generalRoute.home} element={<Home />} />
+        <Route path={generalRoute.becomeATalent} element={<Register />} />
+        <Route path={generalRoute.discoverTalents} element={<DiscoverTalents />} />
+        <Route path={generalRoute.hireATalent} element={<HireATalent />} />
       </Routes>
     </Router>
   );

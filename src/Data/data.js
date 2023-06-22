@@ -103,6 +103,7 @@ export const homeDataFive = {
   imgDouble: false,
   extraText: false,
 };
+
 export const homeDataSix = {
   lightBg: "grey",
   imgStart: "start",

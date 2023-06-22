@@ -5,3 +5,23 @@
   font-family: "Sofia Sans", sans-serif;
   max-width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.layout {
+  padding: 0 120px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .layout {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 0) and (max-width: 768px) {
+  .layout {
+    padding: 0 5%;
+  }
+}

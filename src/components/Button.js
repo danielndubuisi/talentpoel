@@ -1,4 +1,7 @@
+import { Spin } from "antd";
 import "./Button.css";
+
+import arrow from "./asset/icons/btn-arrow.svg";
 
 const STYLES = ["btn--primary", "btn--outline"];
 
@@ -14,6 +17,8 @@ export const Button = ({
   buttonColor,
   text,
   display,
+  icon,
+  loading,
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -26,13 +31,24 @@ export const Button = ({
   return (
     <>
       {display ? (
-        <button
-          className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
-          onClick={onClick}
-          type={type}
-        >
-          {text}
-        </button>
+        loading ? (
+          <button
+            className={`btn ${checkButtonStyle} spin-btn-container`}
+            style={{ width: "100%" }}
+            type={type}
+          >
+            <Spin size="large" />
+          </button>
+        ) : (
+          <button
+            className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
+            onClick={onClick}
+            type={type}
+          >
+            {text}
+            {icon && <img src={arrow} alt="" style={{ marginLeft: "10px" }} />}
+          </button>
+        )
       ) : null}
     </>
   );

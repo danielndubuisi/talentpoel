@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Footer.css";
 import axios from "axios";
-import logo from "../components/asset/Vector.png";
+import logo from "../components/asset/logo-white.svg";
 import { Link } from "react-router-dom";
-import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { BsSend } from "react-icons/bs";
-import { GrLanguage } from "react-icons/gr";
+import { BiGlobe } from "react-icons/bi";
+import { TiSocialLinkedinCircular, TiSocialTwitterCircular, TiSocialFacebookCircular } from "react-icons/ti";
 import { Button } from "./Button";
 
 function Footer() {
@@ -39,18 +39,15 @@ function Footer() {
   };
   return (
     <div className="footer-container" id="contact">
-      <div className="footer-links">
+      <div className="footer-links layout">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <span className="foot-logo">
-              <img src={logo} alt="footer-logo" className="foot-logo" />
-              <h3>
-                Talent<small>poel</small>
-              </h3>
+              <img src={logo} alt="footer-logo" className="vect-logo" />
             </span>
             <p>8, Green Dover, Kent Delaware, USA</p>
             <div className="lang">
-              <GrLanguage /> <span>English</span>
+              <BiGlobe style={{ color: "#1B9690", fontSize: "24px" }} /> <span>English</span>
             </div>
           </div>
 
@@ -65,7 +62,7 @@ function Footer() {
                 target="_blank"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin />
+                <TiSocialLinkedinCircular style={{ color: "#1B9690", fontSize: "40px" }} />
               </Link>
               <Link
                 className="social-icon-link"
@@ -73,7 +70,7 @@ function Footer() {
                 target="_blank"
                 aria-label="Twitter"
               >
-                <FaTwitter />
+                <TiSocialTwitterCircular style={{ color: "#1B9690", fontSize: "40px" }} />
               </Link>
               <Link
                 className="social-icon-link"
@@ -81,14 +78,14 @@ function Footer() {
                 target="_blank"
                 aria-label="Facebook"
               >
-                <FaFacebook />
+                <TiSocialFacebookCircular style={{ color: "#1B9690", fontSize: "40px" }} />
               </Link>
             </div>
           </div>
 
           <div className="footer-link-items">
             <h4>Subscribe</h4>
-            <small>Get newsletters.</small>
+            <p>Get newsletters.</p>
             <div className="form-container">
               <form onSubmit={submitHandler}>
                 <input
@@ -102,8 +99,11 @@ function Footer() {
                 <Button
                   type="submit"
                   buttonColor="green"
+                  text={
+                    <BsSend style={{ color: "#27D6CD", fontSize: "20px" }} />
+                  }
                   display={true}
-                  text={<BsSend />}
+                  loading={false}
                 />
               </form>
             </div>
@@ -124,12 +124,10 @@ function Footer() {
           </div>
         </div>
       </div>
-      <section className="footer-bottom">
-        <div className="bottom-wrap">
-          <small className="website-rights">
-            &copy; {new Date().getFullYear()} Talentpoel. All rights reserved
-          </small>
-        </div>
+      <section className="footer-bottom layout">
+        <p className="website-rights">
+          &copy; {new Date().getFullYear()} Talentpoel. All rights reserved
+        </p>
       </section>
     </div>
   );
