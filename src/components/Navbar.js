@@ -18,8 +18,6 @@ const Navbar = () => {
 
   const closeMobileMenu = () => setClick(false);
 
-  console.log(router);
-
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
@@ -41,7 +39,7 @@ const Navbar = () => {
             <div className="menu-icon" onClick={() => setClick(!click)}>
               {click ? <FaRegTimesCircle /> : <GiHamburgerMenu />}
             </div>
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <ul className={click ? "nav-menu active " : "nav-menu"}>
               <li
                 className={
                   router.hash === "#about" ? "nav-item active-link" : "nav-item"

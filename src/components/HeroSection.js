@@ -62,7 +62,7 @@ const HeroSection = ({
             : "home__hero-section whiteBg"
         }
       >
-        <div className="container" id={id}>
+        <div className="layout" id={id}>
           <div
             className={
               imgStart === "start" ? "row home__hero-row" : "home__hero-row"
