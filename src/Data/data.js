@@ -131,7 +131,7 @@ export const homeButtonData = {
 };
 
 export const bottomSectionOne = {
-  lightBg: "",
+  lightBg: "top",
   headLine: "There’s a whole world out here.",
   headLine2: "We focus on Quality over quantity",
   lightTextDesc: true,
@@ -177,7 +177,7 @@ export const aboutData = {
 export const bottomSectionTwo = {
   lightBg: "darker",
   headLine: "",
-  topLine: "Founding team",
+  topLine: "Meet the team ",
   lightTextDesc: false,
   lightText: false,
   description:

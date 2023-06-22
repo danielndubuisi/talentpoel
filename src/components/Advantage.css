@@ -4,7 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 150px auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .title {
@@ -12,6 +13,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  margin: 0;
 }
 
 .title h3 {
@@ -19,14 +21,15 @@
   font-weight: 800;
   line-height: 24px;
   color: #1b9690;
+  margin: 0;
 }
 
-.body {
+.advantage .body {
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 30px;
+  padding-top: 50px;
 }
 
 .ad-item {
@@ -73,14 +76,11 @@
   color: rgba(172, 13, 172, 0.658);
 }
 
-@media screen and (min-width: 200px) and (max-width: 960px) {
+@media screen and (min-width: 0) and (max-width: 992px) {
   .advantage {
     width: 100%;
-    margin: 80px auto;
-  }
-
-  .title {
-    margin: 60px auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .title h3 {
@@ -96,29 +96,33 @@
     height: 12px;
   }
 
-  .body {
+  .advantage .body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
+    padding-top: 30px;
   }
+
 
   .ad-item {
     margin-bottom: 10px;
+    width: 100%;
+    padding: 0;
   }
 
   .ad-item h3 {
     font-weight: 800;
     font-size: 20px;
     line-height: 32px;
+    margin-top: 0;
   }
 
   .ad-item p {
-    width: 294px;
+    width: 100%;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    /* or 162% */
   }
 
   .icon {

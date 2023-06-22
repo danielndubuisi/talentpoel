@@ -1,13 +1,5 @@
 .company-section {
-  display: flex;
-  width: 1149px;
-  height: 432px;
-  background-color: #f6ebe7;
-  border-radius: 24px;
-  padding: 50px;
-  margin: 100px auto;
-  align-items: center;
-  justify-content: center;
+  margin: 100px 0;
 }
 
 .company-headline {
@@ -17,84 +9,203 @@
   font-weight: 800;
   font-size: 32px;
   line-height: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .img-wrapper {
-  position: relative;
-  width: 609px;
-  height: 406px;
-}
-
-.img-wrapper img {
-  position: absolute;
-  border-radius: 24px;
-  left: 30px;
-  top: -100px;
-}
-
-.text-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.icon-wrapper {
-  border: 1px solid #14706c;
-  border-radius: 15px;
-  background-color: #eff6f6;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
-  gap: 8px;
-  width: 64px;
-  height: 64px;
-  margin-bottom: 40px;
 }
 
-@media screen and (min-width: 200px) and (max-width: 960px) {
-  .company-section {
-    width: 100%;
-    height: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
+.img-wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.img-wrapper h3 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 40px;
+  color: #14706c;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.img-wrapper p {
+  font-size: 18px;
+  line-height: 32px;
+  color: #252525;
+}
+
+.img-wrapper-img-main {
+  position: relative;
+}
+
+.img-wrapper-text {
+  width: 66%;
+}
+
+.img-wrapper-img-main > div > img {
+  position: absolute;
+  top: -60px;
+  left: -20px;
+}
+
+.img-wrapper-img-main > img {
+  width: 100%;
+}
+
+.img-wrapper-img-main {
+  width: 30%;
+}
+
+.company-text-wrapper {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px;
+}
+
+.text-wrapper {
+  padding: 72px 48px;
+}
+
+.com {
+  border-radius: 24px;
+  border: 1px solid #9dcac8;
+  background: #f6ebe7;
+}
+
+.fou {
+  border-radius: 24px;
+  border: 1px solid #9DCAC8;
+  background: #EBE7F1;
+}
+
+.icon-wrapper img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 30px;
+}
+
+.founders-sub{
+  margin: 0 !important;
+  padding: 20px 0;
+}
+
+.company-text-wrapper button{
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .img-wrapper > div {
+    width: 90%;
   }
 
-  .img-wrapper img {
-    object-fit: cover;
-    width: 303px;
-    height: 298px;
-    left: 10px;
-    top: -80px;
+  .company-text-wrapper {
+    margin-top: 50px;
+    gap: 30px;
+  }
+
+  .company-section {
+    margin: 80px 0;
+  }
+
+  .img-wrapper-img-main > div > img {
+    position: absolute;
+    top: -30px;
+    width: 50px;
+  }
+
+  .founders-sub{
+    padding: 20px 0;
+  }
+  
+  .company-text-wrapper button{
+    margin-top: 30px;
+  }
+
+  .text-wrapper {
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 600px) {
+  .img-wrapper > div {
+    width: 100%;
+    display: block;
+  }
+
+  .img-wrapper {
+    display: block;
+  }
+
+  .img-wrapper-img-main {
+    width: 100%;
+  }
+
+  .img-wrapper-text {
+    width: 100%;
+  }
+
+  .img-wrapper h3 {
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .company-section {
+    margin: 50px 0;
+  }
+
+  .img-wrapper-img-main > div > img {
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    width: 50px;
+  }
+
+  .company-text-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .text-wrapper {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 992px) {
+  .company-text-wrapper button{
+    margin-top: 0;
+  }
+
+  .company-text-wrapper {
+    margin-top: 50px;
   }
 
   .company-headline {
-    width: 205px;
     font-style: normal;
     font-weight: 800;
     font-size: 28px;
     line-height: 40px;
-    margin: -30px 0 20px 0;
   }
 
-  .icon-wrapper {
+  .icon-wrapper img {
     width: 44px;
     height: 44px;
-    padding: 10px;
+    margin-bottom: 20px;
   }
 
   .text-wrapper p {
-    width: 326px;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
-    margin-bottom: 30px;
-  }
-
-  .text-wrapper button {
-    width: 60%;
   }
 }
