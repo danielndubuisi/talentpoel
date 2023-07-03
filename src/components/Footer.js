@@ -18,12 +18,14 @@ function Footer() {
     setEmail(e.target.value);
   };
 
+  
+  const formElement = document.querySelector("form");
+
   const submitHandler = (e) => {
     e.preventDefault();
-    const formElement = document.querySelector("form");
     const formData = new FormData(formElement);
     axios.post(
-      `${config.SHEET}`,
+      `${config.SUBSCRIBE_SHEET}`,
       formData
     );
     setEmail("");

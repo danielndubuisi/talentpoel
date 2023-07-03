@@ -362,8 +362,8 @@ textarea {
     padding-bottom: 30px;
   }
 
-  input::placeholder, textarea::placeholder {
-    font-size: 16px;
+  input::placeholder, textarea::placeholder, .css-1jqq78o-placeholder {
+    font-size: 16px !important;
   }
 
   input, textarea {
