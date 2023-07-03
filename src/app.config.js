@@ -6,4 +6,5 @@ export const config = {
     BECOME_TEMPLATE_ID: process.env.REACT_APP_BECOME_TEMPLATE_ID,
     USER_ID: process.env.REACT_APP_USER_ID,
     SHEET: process.env.REACT_APP_SHEET,
+    SUBSCRIBE_SHEET: process.env.REACT_APP_SUBSCRIBE_SHEET,
   };

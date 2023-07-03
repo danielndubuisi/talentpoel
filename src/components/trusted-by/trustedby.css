@@ -25,11 +25,11 @@
 }
 
 .marquee-container {
-  width: 1300px;
+  width: 1300px !important;
 }
 
 .marquee {
-  min-width: 1300px;
+  min-width: 1300px !important;
 }
 
 @media (min-width: 0) and (max-width: 768px) {
@@ -38,10 +38,10 @@
   }
 
   .marquee-container {
-    width: 1300px;
+    width: 1300px !important;
   }
 
   .marquee {
-    min-width: 1300px;
+    min-width: 1300px !important;
   }
 }
