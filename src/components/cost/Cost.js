@@ -4,35 +4,22 @@ import { Link } from "react-router-dom";
 import { generalRoute } from "../../Data/generalRoutes";
 
 import "./cost.css";
+import { config } from "../../app.config";
 
 const Cost = () => {
   return (
     <div id="top" className="home__hero-section cost">
       <div className="layout">
         <div className="flex">
-          {/* <div className="">
-            <div className="home__hero-img-wrapper">
-              <div className="solo-container">
-                <LazyLoadImage
-                  src="images/imageThree.svg"
-                  alt="christina-sits"
-                  className="home__hero-img solo"
-                />
-                <span className="extra-text-middle">
-                  <p>Matching African talent to a Global Audience</p>
-                </span>
-              </div>
-            </div>
-          </div> */}
           <div className="hero-img-con">
             <img
               className="hero-des-img"
-              src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687416323/Group_10_lv2lsm.png"
+              src={`${config.IMAGE_BASE_URL}/v1687416323/Group_10_lv2lsm.png`}
               alt=""
             />
             <img
               className="hero-mobile-img"
-              src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687416473/Group_10_1_x2rygg.png"
+              src={`${config.IMAGE_BASE_URL}/v1687416473/Group_10_1_x2rygg.png`}
               alt=""
             />
           </div>

@@ -1,7 +1,7 @@
 import { Spin } from "antd";
 import "./Button.css";
 
-import arrow from "./asset/icons/btn-arrow.svg";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const STYLES = ["btn--primary", "btn--outline"];
 
@@ -19,6 +19,7 @@ export const Button = ({
   display,
   icon,
   loading,
+  buttonIconStyle
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -33,7 +34,7 @@ export const Button = ({
       {display ? (
         loading ? (
           <button
-            className={`btn ${checkButtonStyle} spin-btn-container`}
+            className={`btn btns ${checkButtonStyle} spin-btn-container`}
             style={{ width: "100%" }}
             type={type}
           >
@@ -41,12 +42,12 @@ export const Button = ({
           </button>
         ) : (
           <button
-            className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
+            className={`btn btns ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
             onClick={onClick}
             type={type}
           >
             {text}
-            {icon && <img src={arrow} alt="" style={{ marginLeft: "10px" }} />}
+            {icon && <BsArrowRightShort className={`button-icon ${buttonIconStyle}`} />}
           </button>
         )
       ) : null}

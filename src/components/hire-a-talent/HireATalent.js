@@ -1,46 +1,78 @@
+import { useRef, useState } from "react";
+import Select from "react-select";
 import { Link } from "react-router-dom";
-import logo from "../asset/logo-green.svg";
-import star from "../asset/star.svg";
-import { useState } from "react";
-import axios from "axios";
-import { Button } from "../Button";
+import emailjs from "@emailjs/browser";
+
 import { errorMessage, successMessage } from "../../utils/message.utils";
+import { Button } from "../Button";
+import { allTalent } from "../../Data/talents";
+
 import "./hire-a-talent.css";
 
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
+import { config } from "../../app.config";
 
 const InitialFormData = {
   fullName: "",
   companyEmail: "",
   additionalRequest: "",
+  talent: "",
 };
 
 const HireATalent = () => {
+  const form = useRef();
+
   const [loading, setLoading] = useState(false);
   const [dropDown, setDropDown] = useState([]);
 
   const [formData, setFormData] = useState(InitialFormData);
-  const formElementOne = document.querySelector(".form-one");
+
+  const talentArray = (n) => {
+    const arr = [];
+    for (let i = 1; i < n + 2; i++) {
+      arr.push(`${form.current[`Talents${i}`].value}`);
+    }
+
+    return arr;
+  };
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
     setLoading(true);
-    const formData = new FormData(formElementOne);
+    const templateParams = {
+      full_name: formData.fullName,
+      email: formData.companyEmail,
+      additional_request: formData.additionalRequest,
+      talents: talentArray(dropDown.length),
+    };
 
-    try {
-      axios.post(
-        "https://script.google.com/macros/s/AKfycbx1XM9X1c0ztgiS_ktMI83luz53TdWRxdvsVP9vZqosh9kLrNpZ7R8vPtoqLUkNLpGy/exec",
-        formData
+    emailjs
+      .send(
+        `${config.HIRE_SERVICE_ID}`,
+        `${config.HIRE_TEMPLATE_ID}`,
+        templateParams,
+        `${config.USER_ID}`
+      )
+      .then(
+        function (response) {
+          if (response.status === 200) {
+            setLoading(false);
+            successMessage("Successfully Submitted");
+            setFormData({
+              fullName: "",
+              companyEmail: "",
+              additionalRequest: "",
+              talent: "",
+            });
+            setDropDown([]);
+          }
+        },
+        function (error) {
+          setLoading(false);
+          errorMessage("Could not submit form");
+        }
       );
-      setLoading(false);
-      successMessage("Successfully Submitted");
-      setFormData({ fullName: "", companyEmail: "", additionalRequest: "" });
-      setDropDown([])
-    } catch (e) {
-      errorMessage("Could not submit form");
-      setLoading(false);
-    }
   };
 
   const addDropdown = () => {
@@ -57,60 +89,36 @@ const HireATalent = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className=" ">
-          <img src={logo} alt="vector-logo" id="reg-icon" />
+          <img src={`${config.IMAGE_BASE_URL}/v1688403601/logo-green_jmqctv.svg`} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
-            <img
-              src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687267567/Frame_280_wv2tqw.svg"
-              alt="register"
-            />
-            <h3>
-              Are you one of the best non-technical talents in Africa?{" "}
-              <span>If so, we want you!</span>{" "}
-            </h3>
-            <p className="home__hero-subtitle light" id="reg-para">
-              We seek to attract the best talent, and to that end we offer a
-              number of benefits to those who join our talent network:
-            </p>
-            <div className="reg-list">
-              <ul>
-                <span>
-                  <img src={star} alt="list-star" />
-                  <li>
-                    HMO coverage for the duration of their contract with us.
-                  </li>
-                </span>
-                <span>
-                  <img src={star} alt="list-star" />
-                  <li>Career coaching from our learning partners.</li>
-                </span>
-                <span>
-                  <img src={star} alt="list-star" />
-                  <li>
-                    We are one of the first companies in Africa to introduce the
-                    concept of "community equity". As a member of our company,
-                    you will have the opportunity to own a share of the company.
-                  </li>
-                </span>
-              </ul>
-              <small>
-                We will also be offering additional benefits in the near future
-              </small>
+            <div className="reg-img-con">
+              <img src={`${config.IMAGE_BASE_URL}/v1688403413/hire_qzjfqp.jpg`} alt="register" />
             </div>
+            <h3>
+              We understand the challenges associated with finding exceptional
+              talent in Africa.
+            </h3>
+            <p className="hire-para">
+              That's why we are here to take the burden off your shoulders. Our
+              proven vetting process ensures that you have access to the most
+              qualified professionals who can help your company thrive. Fill out
+              the form to request any talent you need.
+            </p>
           </div>
           <div className="right">
             <div className="reg-form-container">
               <p className="form-desc">
-                Fill out this application, become a talent
+                Fill out this application, looking for a talent
               </p>
-              <form className="form-one" onSubmit={submitHandlerOne}>
+              <form className="form-one" onSubmit={submitHandlerOne} ref={form}>
                 <input
                   type="text"
-                  name="Full Name"
-                  placeholder="Full name"
+                  name="full_name"
+                  placeholder="Full Name"
                   value={formData.fullName}
                   required
                   onChange={(event) =>
@@ -122,7 +130,7 @@ const HireATalent = () => {
                 />
                 <input
                   type="email"
-                  name="Company Email"
+                  name="email"
                   placeholder="Company Email"
                   value={formData.companyEmail}
                   required
@@ -135,18 +143,24 @@ const HireATalent = () => {
                 />
                 <label>Select talent you’re hiring for </label>
                 <div className="form-select-con">
-                  <div class="select">
-                    <select
+                  <div className="select">
+                    <Select
+                      value={formData.talent}
+                      onChange={(selectedOption) => {
+                        setFormData({
+                          ...formData,
+                          talent: selectedOption,
+                        });
+                      }}
+                      options={allTalent}
                       name="Talents1"
-                      defaultValue="Community manager"
                       className="form-select"
-                    >
-                      <option value="Community manager" className="my-opt">
-                        Community manager
-                      </option>
-                      <option value="Yiminghe">Yiminghe</option>
-                    </select>
+                      id="Talents1"
+                      defaultValue=""
+                      isSearchable
+                    />
                   </div>
+
                   <div onClick={addDropdown} className="action-select">
                     <img src={addIcon} alt="" />
                   </div>
@@ -154,17 +168,15 @@ const HireATalent = () => {
 
                 {dropDown.map((input, index) => (
                   <div key={index} className="form-select-con">
-                    <div class="select">
-                      <select
+                    <div className="select">
+                      <Select
+                        options={allTalent}
                         name={`Talents${index + 2}`}
-                        defaultValue="Digital Marketer"
                         className="form-select"
-                      >
-                        <option value="Digital Marketer">
-                          Digital Marketer
-                        </option>
-                        <option value="Yiminghe">Yiminghe</option>
-                      </select>
+                        id={`Talents${index + 2}`}
+                        defaultValue=""
+                        isSearchable
+                      />
                     </div>
                     <div onClick={removeDropdown} className="action-select">
                       <img src={deleteIcon} alt="" />
@@ -172,14 +184,14 @@ const HireATalent = () => {
                   </div>
                 ))}
 
-                <label htmlFor="Additional Request">
-                  Not seeing what you are looking for ? Make;
+                <label htmlFor="additional_request">
+                  Not seeing what you are looking for ? Make a request.
                 </label>
                 <textarea
-                  id="Additional Request"
+                  id="additional_request"
                   type="text"
-                  name="Additional Request"
-                  placeholder="Additional request"
+                  name="additional_request"
+                  placeholder="Request a Talent"
                   value={formData.additionalRequest}
                   onChange={(event) =>
                     setFormData({

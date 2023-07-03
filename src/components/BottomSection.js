@@ -1,7 +1,10 @@
+import { config } from "../app.config";
 import "./BottomSection.css";
 import FounderDetails from "../components/FounderDetails";
 import GridText from "../components/GridText";
 import { Button } from "./Button";
+import { generalRoute } from "../Data/generalRoutes";
+import { Link } from "react-router-dom";
 
 const BottomSection = ({
   id,
@@ -22,11 +25,6 @@ const BottomSection = ({
   buttonText,
   displayButton,
 }) => {
-  const buttonClickHandler = (e) => {
-    e.preventDefault();
-    window.location = "mailto:hello@talentpoel.com";
-  };
-
   return (
     <>
       <div
@@ -70,12 +68,12 @@ const BottomSection = ({
                 <div className="bottom-img-con">
                   <img
                     className="hero-des-img"
-                    src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687443772/Frame_255_gikhoo.png"
+                    src={`${config.IMAGE_BASE_URL}/v1687443772/Frame_255_gikhoo.png`}
                     alt=""
                   />
                   <img
                     className="hero-mobile-img"
-                    src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687444442/Frame_306_q3vlds.png"
+                    src={`${config.IMAGE_BASE_URL}/v1687444442/Frame_306_q3vlds.png`}
                     alt=""
                   />
                 </div>
@@ -85,14 +83,13 @@ const BottomSection = ({
             </div>
             {button && (
               <div className="bottom_button-container">
-                <Button
-                  type="submit"
+                <Link to={generalRoute.hireATalent}><Button
                   buttonColor={buttonColor}
                   buttonStyle={buttonStyle}
                   text={buttonText}
-                  onClick={buttonClickHandler}
                   display={displayButton}
-                />
+                  icon
+                /></Link>
               </div>
             )}
           </div>

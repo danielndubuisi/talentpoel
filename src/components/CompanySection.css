@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.find{
+  font-weight: 700;
+  margin-top: 10px;
+}
+
 .img-wrapper > div {
   display: flex;
   justify-content: space-between;

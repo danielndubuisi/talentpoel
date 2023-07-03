@@ -1,59 +1,97 @@
-import "./RegisterSection.css";
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../components/Button";
-import logo from "../components/asset/logo-green.svg";
-import star from "../components/asset/star.svg";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
+import Select from "react-select";
 
-const RegisterSection = ({ imgSrc }) => {
+import { Button } from "../components/Button";
+import { errorMessage, successMessage } from "../utils/message.utils";
+import { experience } from "../Data/talents"
+
+import star from "../components/asset/star.svg";
+
+import "./RegisterSection.css";
+import { config } from "../app.config";
+
+const InitialFormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  role: "",
+  bio: "",
+  linkedin: "",
+  availability: false,
+  experience: { value: "no", label: "No" },
+};
+
+const RegisterSection = () => {
   const [formDetails, setFormDetails] = useState(true);
-  const [submitted, setSubmitted] = useState(false);
-  const [message, setMessage] = useState(null);
-
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState(InitialFormData);
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
     setFormDetails(false);
-    const formElementOne = document.querySelector(".form-one");
-    const formData = new FormData(formElementOne);
-    axios.post(
-      "https://script.google.com/macros/s/AKfycbx7CkCHWJowERYNOqcVpMR95s2EgTOQ27gvuFt5ARSevGAWwE5Jlv1_pyGiyMkRUUxDEA/exec",
-      formData
-    );
   };
 
   const submitHandlerTwo = (e) => {
     e.preventDefault();
-    const formElementTwo = document.querySelector(".form-two");
-    const formData = new FormData(formElementTwo);
-    axios.post(
-      "https://script.google.com/macros/s/AKfycbx7CkCHWJowERYNOqcVpMR95s2EgTOQ27gvuFt5ARSevGAWwE5Jlv1_pyGiyMkRUUxDEA/exec",
-      formData
-    );
+    setLoading(true);
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      role: formData.role,
+      bio: formData.bio,
+      linkedin: formData.linkedin,
+      availability: formData.availability,
+      experience: formData.experience.value,
+    };
 
-    setFormDetails(true);
-    setSubmitted(true);
-    setMessage("Application submitted!");
-
-    setTimeout(function () {
-      setMessage(null);
-      navigate("/");
-    }, 3000);
+    emailjs
+      .send(
+        `${config.BECOME_SERVICE_ID}`,
+        `${config.BECOME_TEMPLATE_ID}`,
+        templateParams,
+        `${config.USER_ID}`
+      )
+      .then(
+        function (response) {
+          if (response.status === 200) {
+            setLoading(false);
+            successMessage("Successfully Submitted");
+            setFormData({
+              firstName: "",
+              lastName: "",
+              email: "",
+              role: "",
+              bio: "",
+              linkedin: "",
+              availability: false,
+              experience: { value: "no", label: "No" },
+            });
+            setFormDetails(true);
+          }
+        },
+        function (error) {
+          setLoading(false);
+          errorMessage("Could not submit form");
+        }
+      );
   };
 
   return (
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className="">
-          <img src={logo} alt="vector-logo" id="reg-icon" />
+          <img src={`${config.IMAGE_BASE_URL}/v1688403601/logo-green_jmqctv.svg`} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
-            <img src={imgSrc} alt="register" />
+            <div className="reg-img-con">
+              <img src={`${config.IMAGE_BASE_URL}/v1688403530/become_pazhm1.jpg`} alt="register" />
+            </div>
             <h3>
               Are you one of the best non-technical talents in Africa?{" "}
               <span>If so, we want you!</span>{" "}
@@ -86,8 +124,6 @@ const RegisterSection = ({ imgSrc }) => {
                   </li>
                 </span>
               </ul>
-              {/* <small id="terms">Terms and conditions apply.</small> */}
-
               <small>
                 We will also be offering additional benefits in the near future
               </small>
@@ -106,20 +142,52 @@ const RegisterSection = ({ imgSrc }) => {
                       name="First"
                       placeholder="First name"
                       required
+                      value={formData.firstName}
+                      onChange={(event) =>
+                        setFormData({
+                          ...formData,
+                          firstName: event.currentTarget.value,
+                        })
+                      }
                     />
                     <input
                       type="text"
                       name="Last"
                       placeholder="Last name"
                       required
+                      value={formData.lastName}
+                      onChange={(event) =>
+                        setFormData({
+                          ...formData,
+                          lastName: event.currentTarget.value,
+                        })
+                      }
                     />
                     <input
                       type="email"
                       name="Email"
                       placeholder="Email"
                       required
+                      value={formData.email}
+                      onChange={(event) =>
+                        setFormData({
+                          ...formData,
+                          email: event.currentTarget.value,
+                        })
+                      }
                     />
-                    <input type="text" name="LinkedIn" placeholder="LinkedIn" />
+                    <input
+                      type="text"
+                      name="LinkedIn"
+                      placeholder="LinkedIn"
+                      value={formData.linkedin}
+                      onChange={(event) =>
+                        setFormData({
+                          ...formData,
+                          linkedin: event.currentTarget.value,
+                        })
+                      }
+                    />
                     <Button
                       id="reg-buttonOne"
                       type="submit"
@@ -136,10 +204,23 @@ const RegisterSection = ({ imgSrc }) => {
                       Do you have up to 3-5 years of experience as a
                       non-technical professional?
                     </label>
-                    <select name="Experience" id="exp">
-                      <option value="No">No</option>
-                      <option value="Yes">Yes</option>
-                    </select>
+                    <div className="form-select-con">
+                      <div className="select">
+                        <Select
+                          options={experience}
+                          name="experience"
+                          className="form-select"
+                          id="experience"
+                          value={formData.experience}
+                          onChange={(selectedOption) => {
+                            setFormData({
+                              ...formData,
+                              experience: selectedOption,
+                            });
+                          }}
+                        />
+                      </div>
+                    </div>
                     <label htmlFor="role">
                       Enter your non - technical role
                     </label>
@@ -149,6 +230,13 @@ const RegisterSection = ({ imgSrc }) => {
                       type="text"
                       placeholder="Role"
                       required
+                      value={formData.role}
+                      onChange={(event) =>
+                        setFormData({
+                          ...formData,
+                          role: event.currentTarget.value,
+                        })
+                      }
                     />
                     <label htmlFor="bio">
                       Enter a short bio (one sentence)
@@ -159,6 +247,13 @@ const RegisterSection = ({ imgSrc }) => {
                       name="Bio"
                       placeholder="Bio"
                       required
+                      value={formData.bio}
+                      onChange={(event) =>
+                        setFormData({
+                          ...formData,
+                          bio: event.currentTarget.value,
+                        })
+                      }
                     />
                     <div className="available">
                       <div className="check-left">
@@ -171,6 +266,13 @@ const RegisterSection = ({ imgSrc }) => {
                         type="checkbox"
                         name="Availability"
                         id="availability"
+                        checked={formData.availability}
+                        onChange={() =>
+                          setFormData({
+                            ...formData,
+                            availability: !formData.availability,
+                          })
+                        }
                       />
                     </div>
                     <Button
@@ -178,23 +280,10 @@ const RegisterSection = ({ imgSrc }) => {
                       buttonColor="green"
                       text="Submit"
                       display={true}
+                      loading={loading}
                     />
                   </form>
                 </div>
-              )}
-              {submitted && (
-                <span
-                  style={{
-                    fontWeight: "700",
-                    fontSize: "12px",
-                    color: "green",
-                    fontStyle: "italic",
-                    marginLeft: "25px",
-                    marginTop: "-30px",
-                  }}
-                >
-                  {message}
-                </span>
               )}
             </div>
           </div>

@@ -15,6 +15,10 @@
   width: 48%;
 }
 
+.button-container{
+  display: flex;
+}
+
 .hero-img-wrapper {
   max-width: 555px;
   display: flex;
@@ -53,5 +57,9 @@
 
     .hero-mobile-img{
         display: block;
+    }
+
+    .button-container{
+      display: block;
     }
 }

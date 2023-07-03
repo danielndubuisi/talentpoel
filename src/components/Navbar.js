@@ -46,7 +46,6 @@ const Navbar = () => {
                 }
               >
                 <HashLink
-                  smooth
                   to="/#about"
                   className={
                     router.hash === "#about"
@@ -66,7 +65,6 @@ const Navbar = () => {
                 }
               >
                 <HashLink
-                  smooth
                   to="/#advantage"
                   className={
                     router.hash === "#advantage"
@@ -97,12 +95,10 @@ const Navbar = () => {
                   Discover talents
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                  <div className="nav-inline">
-                    <span> Careers</span> <small>(coming soon)</small>
-                  </div>
-                </Link>
+              <li className="nav-item2">
+                <div className="nav-inline nav-links">
+                  <span> Careers</span> <small>(coming soon)</small>
+                </div>
               </li>
 
               <li className="display nav-item-btn">
@@ -123,7 +119,6 @@ const Navbar = () => {
                 }
               >
                 <HashLink
-                  smooth
                   to="/#contact"
                   className={
                     router.hash === "#contact"
@@ -153,12 +148,11 @@ const Navbar = () => {
               <li
                 className={
                   router.hash === "#contact"
-                    ? "nav-item active-link"
+                    ? "nav-item active-link contact"
                     : "nav-item"
                 }
               >
                 <HashLink
-                  smooth
                   to="/#contact"
                   className={
                     router.hash === "#contact"

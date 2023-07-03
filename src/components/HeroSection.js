@@ -6,6 +6,7 @@ import line from "./asset/line.svg";
 import vector from "./asset/Vector.svg";
 import star from "../components/asset/star.svg";
 import { generalRoute } from "../Data/generalRoutes";
+import { config } from "../app.config";
 
 const HeroSection = ({
   id,
@@ -181,12 +182,12 @@ const HeroSection = ({
                   <div>
                     <img
                       className="hero-des-img"
-                      src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687446394/Group_2_yjqpmg.png"
+                      src={`${config.IMAGE_BASE_URL}/v1687446394/Group_2_yjqpmg.png`}
                       alt=""
                     />
                     <img
                       className="hero-mobile-img"
-                      src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687446486/Group_2_1_bq8pk0.png"
+                      src={`${config.IMAGE_BASE_URL}/v1687446486/Group_2_1_bq8pk0.png`}
                       alt=""
                     />
                   </div>

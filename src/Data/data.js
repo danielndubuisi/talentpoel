@@ -137,14 +137,14 @@ export const bottomSectionOne = {
   lightTextDesc: true,
   lightText: true,
   description:
-    "When we say we have the best talent, we mean it. Our rigorous talent acceptance process allows us to select only 10 individuals out of numerous applicants every quarter. These individuals are then added to our pre-vetted community of technical talent, where they undergo further training and mentorship to enhance their skills in their respective fields",
+    "When we say we have the best talent, we mean it. Our rigorous talent acceptance process allows us to select the top 2% out of numerous applicants every quarter. These individuals are then added to our pre-vetted community of technical talent, where they undergo further training and mentorship to enhance their skills in their respective fields",
   imgShow: "grid",
   img: "images/imageSix.svg",
   alt: "bottom-image",
   button: true,
   buttonColor: "white",
   buttonStyle: "btn--outline",
-  buttonText: "Hire a talent →",
+  buttonText: "Hire a talent",
   displayButton: true,
 };
 
@@ -206,6 +206,3 @@ export const bottomSectionThree = {
   displayButton: true,
 };
 
-export const registerData = {
-  imgSrc: "images/reg-image.svg",
-};

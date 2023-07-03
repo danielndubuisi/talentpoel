@@ -5,6 +5,7 @@ import "./talents-types.css";
 import { Button } from "../../Button";
 import { Link } from "react-router-dom";
 import { generalRoute } from "../../../Data/generalRoutes";
+import { Design, Finance, HumanManagement, Marketing, Support } from "../../../Data/talents";
 
 const Talents = () => {
   return (
@@ -18,11 +19,11 @@ const Talents = () => {
       </div>
 
       <div className="dropdown-grid">
-        <DropDown title="Marketing" />
-        <DropDown title="Support" />
-        <DropDown title="Finance" />
-        <DropDown title="Design" />
-        <DropDown title="Human Managt." />
+        <DropDown title="Marketing" items={Marketing} className="market" />
+        <DropDown title="Support" items={Support} />
+        <DropDown title="Finance" items={Finance} />
+        <DropDown title="Design" items={Design} />
+        <DropDown title="Human Management" items={HumanManagement} />
       </div>
 
       <div className="talents-btn-con">

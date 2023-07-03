@@ -1,3 +1,4 @@
+import { config } from "../../../app.config";
 import "./ThreeModels.css";
 import icon1 from "../../asset/discover/icons/icon1.svg";
 import icon2 from "../../asset/discover/icons/icon2.svg";
@@ -37,7 +38,7 @@ const ThreeModels = () => {
         <div>
           <div className="right-tmf">
             <img
-              src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687250145/Frame_371_j2pk3t.png"
+              src={`${config.IMAGE_BASE_URL}/v1687877768/Frame_371_x75wom.jpg`}
               alt=""
             />
           </div>
