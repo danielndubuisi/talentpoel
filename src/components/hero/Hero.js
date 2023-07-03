@@ -1,4 +1,6 @@
+import { config } from "../../app.config";
 import React from "react";
+
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
@@ -23,10 +25,10 @@ const Hero = () => {
                 clients.
               </p>
               <div className="button-container">
-                <Link to={generalRoute.hireATalent} className="space-btn">
+                <Link to={generalRoute.discoverTalents} className="space-btn">
                   <Button
                     buttonColor="white"
-                    text="Hire a talent"
+                    text="Discover talent"
                     display={true}
                     loading={false}
                   />
@@ -45,12 +47,12 @@ const Hero = () => {
           <div className="hero-img-con">
             <img
               className="hero-des-img"
-              src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687396036/Group_8_2_wpynyj.png"
+              src={`${config.IMAGE_BASE_URL}/v1687396036/Group_8_2_wpynyj.png`}
               alt=""
             />
             <img
               className="hero-mobile-img"
-              src="https://res.cloudinary.com/dcp6fbxa9/image/upload/v1687395931/Group_8_1_dplljy.png"
+              src={`${config.IMAGE_BASE_URL}/v1687395931/Group_8_1_dplljy.png`}
               alt=""
             />
           </div>

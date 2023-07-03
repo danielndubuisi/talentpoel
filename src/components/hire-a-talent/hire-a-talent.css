@@ -4,33 +4,71 @@
   align-items: center;
 }
 
+.hire-para {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #252525;
+  margin-top: 10px;
+}
+
 .select {
   width: 100%;
   position: relative;
 }
 
-select {
+.css-13cymwt-control {
   width: 100%;
-  border-radius: 50px;
-  padding: 16px 32px;
+  border-radius: 50px !important;
   background: #ffffff;
   border: 1px solid #9dcac8;
 }
 
-select.form-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.css-1fdsijx-ValueContainer{
+  padding: 16px 0 16px 32px !important;
 }
 
-.select:after {
-  content: url("../asset/icons/select-arrow.svg");
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20px 32px;
-  pointer-events: none;
+.css-1u9des2-indicatorSeparator{
+  display: none;
+}
+
+.css-tj5bde-Svg {
+  color: #000;
+}
+
+.css-13cymwt-control{
+  border-color: #9dcac8 !important;
+  padding-right: 20px;
+}
+
+.css-13cymwt-control:hover{
+  border-color: #9dcac8 !important;
+}
+
+.css-t3ipsp-control{
+  border-color: #9dcac8 !important;
+  border-radius: 50px !important;
+  box-shadow: none !important;
+}
+
+.css-t3ipsp-control:hover{
+  border-color: #9dcac8 !important;
+}
+
+.css-1jqq78o-placeholder{
+  font-weight: 500;
+  font-size: 20px;
+  color: #afafaf !important;
+}
+
+.css-1dimb5e-singleValue, .css-166bipr-Input {
+  font-size: 20px;
+  color: #49484C !important;
+  font-weight: normal;
+}
+
+.css-1nmdiq5-menu{
+  display: block !important;
 }
 
 select {

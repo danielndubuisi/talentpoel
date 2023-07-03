@@ -11,7 +11,4 @@ export const TrustedImg = [
   {
     img: "images/trusted-by/logo4.svg",
   },
-  {
-    img: "images/trusted-by/logo5.svg",
-  },
 ];

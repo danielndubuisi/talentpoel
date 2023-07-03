@@ -7,6 +7,7 @@ import { BsSend } from "react-icons/bs";
 import { BiGlobe } from "react-icons/bi";
 import { TiSocialLinkedinCircular, TiSocialTwitterCircular, TiSocialFacebookCircular } from "react-icons/ti";
 import { Button } from "./Button";
+import { config } from "../app.config";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -15,16 +16,14 @@ function Footer() {
 
   const handleChange = (e) => {
     setEmail(e.target.value);
-    console.log(email);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(email);
     const formElement = document.querySelector("form");
     const formData = new FormData(formElement);
     axios.post(
-      "https://script.google.com/macros/s/AKfycbx7CkCHWJowERYNOqcVpMR95s2EgTOQ27gvuFt5ARSevGAWwE5Jlv1_pyGiyMkRUUxDEA/exec",
+      `${config.SHEET}`,
       formData
     );
     setEmail("");
@@ -34,8 +33,6 @@ function Footer() {
     setTimeout(function () {
       setMessage(null);
     }, 3000);
-
-    console.log(email);
   };
   return (
     <div className="footer-container" id="contact">

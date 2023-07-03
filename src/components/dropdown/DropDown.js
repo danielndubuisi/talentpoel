@@ -3,26 +3,11 @@ import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
 import "./dropdown.css";
 
-const items = [
-  {
-    label: "1st menu item",
-    key: "0",
-  },
-  {
-    label: "2nd menu item",
-    key: "1",
-  },
-  {
-    label: "3rd menu item",
-    key: "3",
-  },
-];
-
-const DropDown = ({ title }) => {
+const DropDown = ({ title, items, className }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="dropdown-main-con">
+    <div className={`dropdown-main-con ${className}`}>
       <div className="dropdown-con">
         <div
           onClick={() => setOpen(!open)}

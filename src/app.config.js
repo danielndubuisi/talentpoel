@@ -1,0 +1,9 @@
+export const config = {
+    IMAGE_BASE_URL: process.env.REACT_APP_IMAGE_BASE_URL,
+    HIRE_SERVICE_ID: process.env.REACT_APP_HIRE_SERVICE_ID,
+    BECOME_SERVICE_ID: process.env.REACT_APP_BECOME_SERVICE_ID,
+    HIRE_TEMPLATE_ID: process.env.REACT_APP_HIRE_TEMPLATE_ID,
+    BECOME_TEMPLATE_ID: process.env.REACT_APP_BECOME_TEMPLATE_ID,
+    USER_ID: process.env.REACT_APP_USER_ID,
+    SHEET: process.env.REACT_APP_SHEET,
+  };

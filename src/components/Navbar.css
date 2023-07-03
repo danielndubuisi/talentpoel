@@ -47,7 +47,7 @@
 
 .contact-icon {
   margin-right: 5px;
-  color: #198a84;
+  color: #fff !important;
 }
 
 .nav-item:hover {
@@ -56,12 +56,21 @@
   background-color: #fff;
   padding: 8px 16px;
   transition: all 0.3s ease;
+  margin: 0 10px;
 }
 
 .nav-item.active-link {
   border-radius: 100px;
   background-color: #fff;
   padding: 8px 16px;
+}
+
+.contact {
+  margin: 0 10px !important;
+}
+
+.nav-item.active-link .contact-icon {
+  color: #198a84 !important;
 }
 
 .nav-links.active-link-text {
@@ -88,8 +97,22 @@
   font-weight: 600;
 }
 
-.contact-icon:hover {
+.nav-item:hover .nav-links {
   color: #198a84;
+  font-weight: 600;
+}
+
+.nav-item2 {
+  cursor: default;
+}
+
+.nav-item2 .nav-links:hover {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.nav-item:hover .contact-icon {
+  color: #198a84 !important;
 }
 
 hr {
@@ -193,14 +216,20 @@ hr {
     margin: 20px auto;
   }
 
+  .nav-item2 {
+    width: fit-content;
+    height: auto;
+    margin: 20px auto;
+  }
+
   .nav-item-btn {
     margin: 20px auto;
   }
 
-  .nav-item:hover {
+  .nav-item:hover .nav-links {
     z-index: 100;
     background: none;
-    color: red;
+    color: #198a84;
     background-color: transparent;
     transition: all 0.3s ease;
   }
