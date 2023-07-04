@@ -13,11 +13,11 @@ const TrustedBy = () => {
       <h5>Trusted by</h5>
       <Marquee>
         <div className="trusted-img-con">
-          <img src={logo1} alt="" className="trusted-img" />
+          <img src={logo1} alt="" className="trusted-img1" />
           <img src={logo2} alt="" className="trusted-img" />
           <img src={logo3} alt="" className="trusted-img" />
-          <img src={logo4} alt="" className="trusted-img" />
-          <img src={logo5} alt="" className="trusted-img" />
+          <img src={logo4} alt="" className="trusted-img2" />
+          <img src={logo5} alt="" className="trusted-img3" />
         </div>
       </Marquee>
     </section>

@@ -4,8 +4,8 @@ import ScrollToTop from "./components/ScrollTop";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import DiscoverTalents from "./pages/DiscoverTalents";
-import HireATalent from "./components/hire-a-talent/HireATalent";
 import { generalRoute } from "./Data/generalRoutes";
+import HireaTalent from "./pages/HireaTalent";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path={generalRoute.home} element={<Home />} />
         <Route path={generalRoute.becomeATalent} element={<Register />} />
         <Route path={generalRoute.discoverTalents} element={<DiscoverTalents />} />
-        <Route path={generalRoute.hireATalent} element={<HireATalent />} />
+        <Route path={generalRoute.hireATalent} element={<HireaTalent />} />
       </Routes>
     </Router>
   );

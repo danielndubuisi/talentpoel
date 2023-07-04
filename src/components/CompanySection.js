@@ -6,6 +6,7 @@ import founders from "./asset/icons/founders.svg";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import { generalRoute } from "../Data/generalRoutes";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CompanySection = () => {
   return (
@@ -13,12 +14,12 @@ const CompanySection = () => {
       <div className="img-wrapper">
         <div>
           <div className="img-wrapper-img-main">
-            <img
+            <LazyLoadImage
               src={`${config.IMAGE_BASE_URL}/v1687453392/Frame_35_otemdd.png`}
               alt="company-img"
             />
             <div>
-              <img src={vector} alt="" />
+              <LazyLoadImage src={vector} alt="" />
             </div>
           </div>
           <div className="img-wrapper-text">
@@ -55,7 +56,7 @@ const CompanySection = () => {
         </div>
         <div className="text-wrapper fou">
           <div className="icon-wrapper">
-            <img src={founders} alt="company-icon" />
+            <LazyLoadImage src={founders} alt="company-icon" />
           </div>
           <h2 className="company-headline">For founders</h2>
           <p className="home__hero-subtitle light founders-sub">
