@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import { generalRoute } from "../../Data/generalRoutes";
 
 import "./cost.css";
-import { config } from "../../app.config";
+
+import cost from "../asset/cost.jpg"
+import costMobile from "../asset/cost-mobile.jpg"
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Cost = () => {
   return (
@@ -12,15 +16,17 @@ const Cost = () => {
       <div className="layout">
         <div className="flex">
           <div className="hero-img-con">
-            <img
+            <LazyLoadImage
               className="hero-des-img"
-              src={`${config.IMAGE_BASE_URL}/v1687416323/Group_10_lv2lsm.png`}
+              src={cost}
               alt=""
+              effect="blur"
             />
-            <img
+            <LazyLoadImage
               className="hero-mobile-img"
-              src={`${config.IMAGE_BASE_URL}/v1687416473/Group_10_1_x2rygg.png`}
+              src={costMobile}
               alt=""
+              effect="blur"
             />
           </div>
           <div className="">

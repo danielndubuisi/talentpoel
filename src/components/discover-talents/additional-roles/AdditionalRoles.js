@@ -1,6 +1,8 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { config } from "../../../app.config";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import "./additional-roles.css";
+
+import image from "../../asset/discover/add.jpg"
 
 const AdditionalRoles = () => {
   return (
@@ -18,8 +20,9 @@ const AdditionalRoles = () => {
       </div>
       <div className="additional-roles-right">
         <LazyLoadImage
-          src={`${config.IMAGE_BASE_URL}/v1687250299/Frame_371_1_rqmgek.png`}
+          src={image}
           alt=""
+          effect="blur"
         />
         <div>
           <p>let’s find other talents</p>

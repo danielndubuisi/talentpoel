@@ -1,10 +1,13 @@
-import { config } from "../../app.config";
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
+
+import hero from "../asset/hero.png"
+import heroMobile from "../asset/hero-mobile.png"
 
 import "./hero.css";
 
@@ -48,13 +51,15 @@ const Hero = () => {
           <div className="hero-img-con">
             <LazyLoadImage
               className="hero-des-img"
-              src={`${config.IMAGE_BASE_URL}/v1687396036/Group_8_2_wpynyj.png`}
+              src={hero}
               alt="Image Alt"
+              effect="blur"
             />
             <LazyLoadImage
               className="hero-mobile-img"
-              src={`${config.IMAGE_BASE_URL}/v1687395931/Group_8_1_dplljy.png`}
+              src={heroMobile}
               alt=""
+              effect="blur"
             />
           </div>
         </div>

@@ -15,6 +15,7 @@ import logo from "../asset/logo-green.svg"
 import formimg from "../asset/form-images/hire.jpg"
 import { config } from "../../app.config";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const InitialFormData = {
   fullName: "",
@@ -92,14 +93,14 @@ const HireATalent = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className=" ">
-          <LazyLoadImage src={logo} alt="vector-logo" id="reg-icon" />
+          <LazyLoadImage src={logo} alt="vector-logo" id="reg-icon" effect="blur" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <LazyLoadImage src={formimg} alt="register" />
+              <LazyLoadImage src={formimg} alt="register" effect="blur" />
             </div>
             <h3>
               We understand the challenges associated with finding exceptional
@@ -115,7 +116,7 @@ const HireATalent = () => {
           <div className="right">
             <div className="reg-form-container">
               <p className="form-desc">
-                Fill out this application, looking for a talent
+                Looking for a talent, fill this out
               </p>
               <form className="form-one" onSubmit={submitHandlerOne} ref={form}>
                 <input
