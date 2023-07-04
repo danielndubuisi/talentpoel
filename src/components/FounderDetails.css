@@ -11,6 +11,7 @@
   border-radius: 23px;
   overflow: hidden;
   height: 377px;
+  width: 270px;
   position: relative;
 }
 
@@ -82,7 +83,7 @@
 @media (min-width: 600px) and (max-width: 992px) {
   .founders {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 50px
+    gap: 30px
   }
 }
 

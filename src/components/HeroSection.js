@@ -84,7 +84,7 @@ const HeroSection = ({
                         }
                       >
                         <span>
-                          <img src={line} alt="hr-line" />
+                          <LazyLoadImage src={line} alt="hr-line" />
                         </span>{" "}
                         {smallHeadline}
                       </h4>

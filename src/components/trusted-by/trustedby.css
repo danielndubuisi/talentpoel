@@ -5,6 +5,25 @@
 .trusted-img {
   height: 100px;
   width: 150px;
+  object-fit: contain;
+}
+
+.trusted-img2 {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.trusted-img3 {
+  height: 100px;
+  width: 130px;
+  object-fit: contain;
+}
+
+.trusted-img1 {
+  height: 100px;
+  width: 200px;
+  object-fit: contain;
 }
 
 .trusted h5 {
@@ -21,7 +40,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  padding-right: 100px;
+  padding-right: 120px;
 }
 
 .marquee-container {

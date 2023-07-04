@@ -8,7 +8,7 @@ const VettingProcess = () => {
   return (
     <section className="vetting-process-main-con layout">
       <div className="vetting-header">
-        <h5>Our vetting process for Talentpoel</h5>
+        <h5>Our vetting process</h5>
         <p>
           Attracting top talent is crucial for any organisation. However, simply
           having a pool of candidates is not enough.

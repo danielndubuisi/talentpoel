@@ -1,5 +1,6 @@
 import { config } from "../../app.config";
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
@@ -28,7 +29,7 @@ const Hero = () => {
                 <Link to={generalRoute.discoverTalents} className="space-btn">
                   <Button
                     buttonColor="white"
-                    text="Discover talent"
+                    text="Discover talents"
                     display={true}
                     loading={false}
                   />
@@ -45,12 +46,12 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-img-con">
-            <img
+            <LazyLoadImage
               className="hero-des-img"
               src={`${config.IMAGE_BASE_URL}/v1687396036/Group_8_2_wpynyj.png`}
-              alt=""
+              alt="Image Alt"
             />
-            <img
+            <LazyLoadImage
               className="hero-mobile-img"
               src={`${config.IMAGE_BASE_URL}/v1687395931/Group_8_1_dplljy.png`}
               alt=""

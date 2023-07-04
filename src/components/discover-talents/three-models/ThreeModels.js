@@ -3,6 +3,7 @@ import "./ThreeModels.css";
 import icon1 from "../../asset/discover/icons/icon1.svg";
 import icon2 from "../../asset/discover/icons/icon2.svg";
 import icon3 from "../../asset/discover/icons/icon3.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ThreeModels = () => {
   return (
@@ -37,7 +38,7 @@ const ThreeModels = () => {
         </div>
         <div>
           <div className="right-tmf">
-            <img
+            <LazyLoadImage
               src={`${config.IMAGE_BASE_URL}/v1687877768/Frame_371_x75wom.jpg`}
               alt=""
             />

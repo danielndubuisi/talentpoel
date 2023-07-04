@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { config } from "../../../app.config";
 import "./additional-roles.css";
 
@@ -16,7 +17,7 @@ const AdditionalRoles = () => {
         </p>
       </div>
       <div className="additional-roles-right">
-        <img
+        <LazyLoadImage
           src={`${config.IMAGE_BASE_URL}/v1687250299/Frame_371_1_rqmgek.png`}
           alt=""
         />

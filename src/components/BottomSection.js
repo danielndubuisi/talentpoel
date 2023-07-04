@@ -5,6 +5,7 @@ import GridText from "../components/GridText";
 import { Button } from "./Button";
 import { generalRoute } from "../Data/generalRoutes";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const BottomSection = ({
   id,
@@ -66,12 +67,12 @@ const BottomSection = ({
             <div className="home__bottom-img-wrapper">
               {imgShow === "grid" ? (
                 <div className="bottom-img-con">
-                  <img
+                  <LazyLoadImage
                     className="hero-des-img"
                     src={`${config.IMAGE_BASE_URL}/v1687443772/Frame_255_gikhoo.png`}
                     alt=""
                   />
-                  <img
+                  <LazyLoadImage
                     className="hero-mobile-img"
                     src={`${config.IMAGE_BASE_URL}/v1687444442/Frame_306_q3vlds.png`}
                     alt=""
