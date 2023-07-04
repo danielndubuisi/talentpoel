@@ -12,13 +12,11 @@ import "./hire-a-talent.css";
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
 import logo from "../asset/logo-green.svg"
-import formimg from "../asset/form-images/hire.jpg"
+import formimg from "../asset/form-images/hire.webp"
 import { config } from "../../app.config";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const InitialFormData = {
-  fullName: "",
+  companyName: "",
   companyEmail: "",
   additionalRequest: "",
   talent: "",
@@ -45,7 +43,7 @@ const HireATalent = () => {
     e.preventDefault();
     setLoading(true);
     const templateParams = {
-      full_name: formData.fullName,
+      company_name: formData.companyName,
       email: formData.companyEmail,
       additional_request: formData.additionalRequest,
       talents: talentArray(dropDown.length),
@@ -64,7 +62,7 @@ const HireATalent = () => {
             setLoading(false);
             successMessage("Successfully Submitted");
             setFormData({
-              fullName: "",
+              companyName: "",
               companyEmail: "",
               additionalRequest: "",
               talent: "",
@@ -93,14 +91,14 @@ const HireATalent = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className=" ">
-          <LazyLoadImage src={logo} alt="vector-logo" id="reg-icon" effect="blur" />
+          <img src={logo} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <LazyLoadImage src={formimg} alt="register" effect="blur" />
+              <img src={formimg} alt="register" />
             </div>
             <h3>
               We understand the challenges associated with finding exceptional
@@ -121,14 +119,14 @@ const HireATalent = () => {
               <form className="form-one" onSubmit={submitHandlerOne} ref={form}>
                 <input
                   type="text"
-                  name="full_name"
-                  placeholder="Full Name"
-                  value={formData.fullName}
+                  name="company_name"
+                  placeholder="Company Name"
+                  value={formData.companyName}
                   required
                   onChange={(event) =>
                     setFormData({
                       ...formData,
-                      fullName: event.currentTarget.value,
+                      companyName: event.currentTarget.value,
                     })
                   }
                 />

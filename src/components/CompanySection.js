@@ -5,10 +5,8 @@ import founders from "./asset/icons/founders.svg";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import { generalRoute } from "../Data/generalRoutes";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import image from "./asset/discover/company.jpg"
+import image from "./asset/discover/company.webp"
 
 const CompanySection = () => {
   return (
@@ -16,13 +14,12 @@ const CompanySection = () => {
       <div className="img-wrapper">
         <div>
           <div className="img-wrapper-img-main">
-            <LazyLoadImage
+            <img
               src={image}
               alt="company-img"
-              effect="blur"
             />
             <div>
-              <LazyLoadImage src={vector} alt="" />
+              <img src={vector} alt="" />
             </div>
           </div>
           <div className="img-wrapper-text">
@@ -59,7 +56,7 @@ const CompanySection = () => {
         </div>
         <div className="text-wrapper fou">
           <div className="icon-wrapper">
-            <LazyLoadImage src={founders} alt="company-icon" />
+            <img src={founders} alt="company-icon" />
           </div>
           <h2 className="company-headline">For founders</h2>
           <p className="home__hero-subtitle light founders-sub">

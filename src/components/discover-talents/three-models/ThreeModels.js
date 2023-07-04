@@ -2,10 +2,8 @@ import "./ThreeModels.css";
 import icon1 from "../../asset/discover/icons/icon1.svg";
 import icon2 from "../../asset/discover/icons/icon2.svg";
 import icon3 from "../../asset/discover/icons/icon3.svg";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import discoverimg from "../../asset/discover/discover.jpg";
+import { config } from "../../../app.config";
 
 const ThreeModels = () => {
   return (
@@ -40,10 +38,9 @@ const ThreeModels = () => {
         </div>
         <div>
           <div className="right-tmf">
-            <LazyLoadImage
-              src={discoverimg}
+            <img
+              src={`${config.IMAGE_BASE_URL}/v1688484011/discover_j0d6zw.webp`}
               alt=""
-              effect="blur"
             />
           </div>
         </div>
