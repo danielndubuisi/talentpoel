@@ -6,12 +6,13 @@ import founderTwo from "../components/asset/founder2.jpg";
 import founderThree from "../components/asset/founder3.jpg";
 import founderFour from "../components/asset/founder4.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const FounderDetails = () => {
   return (
     <div className="founders">
       <div className="founder">
-        <LazyLoadImage src={founderOne} alt="jephthah" />
+        <LazyLoadImage src={founderOne} alt="jephthah" effect="blur" />
         <div className="details jeph">
           <h4>Jephtah Abu</h4>
           <p>Founder</p>
@@ -36,7 +37,7 @@ const FounderDetails = () => {
         </div>
       </div>
       <div className="founder">
-        <LazyLoadImage src={founderTwo} alt="karen" />
+        <LazyLoadImage src={founderTwo} alt="karen" effect="blur" />
         <div className="details karen">
           <h4>Karen Chukwu</h4>
           <p>Chief Legal Office</p>
@@ -61,7 +62,7 @@ const FounderDetails = () => {
         </div>
       </div>
       <div className="founder">
-        <LazyLoadImage src={founderThree} alt="llyod" />
+        <LazyLoadImage src={founderThree} alt="llyod" effect="blur" />
         <div className="details lloyd">
           <h4>Otukpa Lloyd</h4>
           <p>Sales Marketing Manager</p>
@@ -86,7 +87,7 @@ const FounderDetails = () => {
         </div>
       </div>
       <div className="founder">
-        <LazyLoadImage src={founderFour} alt="udoye" />
+        <LazyLoadImage src={founderFour} alt="udoye" effect="blur" />
         <div className="details udoye">
           <h4>Udoye Chinemerem</h4>
           <p>Executive Assistant</p>

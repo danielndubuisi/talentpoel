@@ -14,6 +14,7 @@ import formimg from "./asset/form-images/become.jpg"
 import "./RegisterSection.css";
 import { config } from "../app.config";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const InitialFormData = {
   firstName: "",
@@ -86,14 +87,14 @@ const RegisterSection = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className="">
-          <LazyLoadImage src={logo} alt="vector-logo" id="reg-icon" />
+          <LazyLoadImage src={logo} alt="vector-logo" id="reg-icon" effect="blur" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <LazyLoadImage src={formimg} alt="register" />
+              <LazyLoadImage src={formimg} alt="register" effect="blur" />
             </div>
             <h3>
               Are you one of the best non-technical talents in Africa?{" "}

@@ -1,4 +1,3 @@
-import { config } from "../app.config";
 import "./CompanySection.css";
 import vector from "./asset/icons/vector.svg";
 import company from "./asset/icons/company.svg";
@@ -7,6 +6,9 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import { generalRoute } from "../Data/generalRoutes";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import image from "./asset/discover/company.jpg"
 
 const CompanySection = () => {
   return (
@@ -15,8 +17,9 @@ const CompanySection = () => {
         <div>
           <div className="img-wrapper-img-main">
             <LazyLoadImage
-              src={`${config.IMAGE_BASE_URL}/v1687453392/Frame_35_otemdd.png`}
+              src={image}
               alt="company-img"
+              effect="blur"
             />
             <div>
               <LazyLoadImage src={vector} alt="" />
