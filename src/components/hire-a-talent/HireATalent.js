@@ -16,7 +16,7 @@ import formimg from "../asset/form-images/hire.webp"
 import { config } from "../../app.config";
 
 const InitialFormData = {
-  fullName: "",
+  companyName: "",
   companyEmail: "",
   additionalRequest: "",
   talent: "",
@@ -43,7 +43,7 @@ const HireATalent = () => {
     e.preventDefault();
     setLoading(true);
     const templateParams = {
-      full_name: formData.fullName,
+      company_name: formData.companyName,
       email: formData.companyEmail,
       additional_request: formData.additionalRequest,
       talents: talentArray(dropDown.length),
@@ -62,7 +62,7 @@ const HireATalent = () => {
             setLoading(false);
             successMessage("Successfully Submitted");
             setFormData({
-              fullName: "",
+              companyName: "",
               companyEmail: "",
               additionalRequest: "",
               talent: "",
@@ -119,14 +119,14 @@ const HireATalent = () => {
               <form className="form-one" onSubmit={submitHandlerOne} ref={form}>
                 <input
                   type="text"
-                  name="full_name"
-                  placeholder="Full Name"
-                  value={formData.fullName}
+                  name="company_name"
+                  placeholder="Company Name"
+                  value={formData.companyName}
                   required
                   onChange={(event) =>
                     setFormData({
                       ...formData,
-                      fullName: event.currentTarget.value,
+                      companyName: event.currentTarget.value,
                     })
                   }
                 />
