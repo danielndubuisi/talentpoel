@@ -1,7 +1,6 @@
 import "./HeroSection.css";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import line from "./asset/line.svg";
 import vector from "./asset/Vector.svg";
 import star from "../components/asset/star.svg";
@@ -84,7 +83,7 @@ const HeroSection = ({
                         }
                       >
                         <span>
-                          <LazyLoadImage src={line} alt="hr-line" />
+                          <img src={line} alt="hr-line" />
                         </span>{" "}
                         {smallHeadline}
                       </h4>
@@ -161,7 +160,7 @@ const HeroSection = ({
                 {imgDouble ? (
                   <>
                     <div className="main_hero-img">
-                      <LazyLoadImage
+                      <img
                         src={img1}
                         alt={alt}
                         className="home__hero-img main"
@@ -171,7 +170,7 @@ const HeroSection = ({
                       ) : null}
                     </div>
                     <div className="sub_hero-img">
-                      <LazyLoadImage
+                      <img
                         src={img2}
                         alt={alt}
                         className="home__hero-img sub"
@@ -182,29 +181,29 @@ const HeroSection = ({
                   <div>
                     <img
                       className="hero-des-img"
-                      src={`${config.IMAGE_BASE_URL}/v1687446394/Group_2_yjqpmg.png`}
+                      src={`${config.IMAGE_BASE_URL}/v1688482993/about_zikvbs.webp`}
                       alt=""
                     />
                     <img
                       className="hero-mobile-img"
-                      src={`${config.IMAGE_BASE_URL}/v1687446486/Group_2_1_bq8pk0.png`}
+                      src={`${config.IMAGE_BASE_URL}/v1688483017/about-mobile_sftwrq.webp`}
                       alt=""
                     />
                   </div>
                 )}
                 {floatImg ? (
                   <div className="floats">
-                    <LazyLoadImage
+                    <img
                       src={imgFloat1}
                       alt="floated-img"
                       className="home__hero-floated-img"
                     />
-                    <LazyLoadImage
+                    <img
                       src={imgFloat2}
                       alt="floated-img"
                       className="home__hero-floated-img"
                     />
-                    <LazyLoadImage
+                    <img
                       src={imgFloat3}
                       alt="floated-img"
                       className="home__hero-floated-img"

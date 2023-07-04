@@ -12,10 +12,8 @@ import "./hire-a-talent.css";
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
 import logo from "../asset/logo-green.svg"
-import formimg from "../asset/form-images/hire.jpg"
+import formimg from "../asset/form-images/hire.webp"
 import { config } from "../../app.config";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const InitialFormData = {
   fullName: "",
@@ -93,14 +91,14 @@ const HireATalent = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className=" ">
-          <LazyLoadImage src={logo} alt="vector-logo" id="reg-icon" effect="blur" />
+          <img src={logo} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <LazyLoadImage src={formimg} alt="register" effect="blur" />
+              <img src={formimg} alt="register" />
             </div>
             <h3>
               We understand the challenges associated with finding exceptional

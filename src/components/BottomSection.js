@@ -4,11 +4,7 @@ import GridText from "../components/GridText";
 import { Button } from "./Button";
 import { generalRoute } from "../Data/generalRoutes";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
-
-import grid from "./asset/grid.jpg"
-import gridMobile from "./asset/grid-mobile.jpg"
+import { config } from "../app.config";
 
 const BottomSection = ({
   id,
@@ -70,17 +66,15 @@ const BottomSection = ({
             <div className="home__bottom-img-wrapper">
               {imgShow === "grid" ? (
                 <div className="bottom-img-con">
-                  <LazyLoadImage
+                  <img
                     className="hero-des-img"
-                    src={grid}
+                    src={`${config.IMAGE_BASE_URL}/v1688477745/grid_yfxprb.webp`}
                     alt=""
-                    effect="blur"
                   />
-                  <LazyLoadImage
+                  <img
                     className="hero-mobile-img"
-                    src={gridMobile}
+                    src={`${config.IMAGE_BASE_URL}/v1688477729/grid-mobile_wcsfrp.webp`}
                     alt=""
-                    effect="blur"
                   />
                 </div>
               ) : imgShow === "row" ? (
