@@ -38,7 +38,7 @@ const FounderDetails = () => {
         <img src={founderTwo} alt="karen" />
         <div className="details karen">
           <h4>Karen Chukwu</h4>
-          <p>Chief Legal Office</p>
+          <p>Chief Legal Officer</p>
           <div className="detail-links">
             <Link
               className="founder-icon-link"

@@ -137,7 +137,7 @@ export const bottomSectionOne = {
   lightTextDesc: true,
   lightText: true,
   description:
-    "When we say we have the best talent, we mean it. Our rigorous talent acceptance process allows us to select the top 2% out of numerous applicants every quarter. These individuals are then added to our pre-vetted community of technical talent, where they undergo further training and mentorship to enhance their skills in their respective fields",
+    "When we say we have the best talent, we mean it. Our rigorous talent acceptance process allows us to select the top 2% out of numerous applicants every quarter. These individuals are then added to our pre-vetted community of technical talent, where they undergo further training and mentorship to enhance their skills in their respective fields.",
   imgShow: "grid",
   img: "images/imageSix.svg",
   alt: "bottom-image",
@@ -162,7 +162,7 @@ export const aboutData = {
   aboutText: true,
   about1: `Derived from the Afrikaans word "Talentpoel", which roughly translates to Talentpool.`,
   about2:
-    "Talentpoel matches vetted non-technical Mid-level/Senior level experts in Africa to global tech companies and startups. Our aim is to enable companies have access to a broader pool of candidates regardless of location or governmental restrictions.",
+    "Talentpoel matches vetted non-technical Mid-level/Senior level experts in Africa to global tech companies and startups. Our aim is to enable companies to have access to a broader pool of candidates regardless of location or governmental restrictions.",
   about3:
     "Our vision is to become the leading global platform for working with and hiring non-technical talent in Africa.",
   img1: "images/aboutImage.svg",
@@ -181,7 +181,7 @@ export const bottomSectionTwo = {
   lightTextDesc: false,
   lightText: false,
   description:
-    "Our team has a combined experience of 20 years, hiring/working with African Talents.",
+    "Our team has a combined experience of 20 years, hiring/working with African talents.",
   imgShow: "row",
   button: false,
   displayButton: false,
