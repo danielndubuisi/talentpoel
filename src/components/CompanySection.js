@@ -40,7 +40,7 @@ const CompanySection = () => {
           </div>
           <h2 className="company-headline">For companies</h2>
           <p className="home__hero-subtitle light founders-sub">
-            Start building your team and and hire the best non-technical talent
+            Start building your team and hire the best non-technical talents
             in Africa.
           </p>
           <Link to={generalRoute.hireATalent}>
@@ -60,7 +60,7 @@ const CompanySection = () => {
           </div>
           <h2 className="company-headline">For founders</h2>
           <p className="home__hero-subtitle light founders-sub">
-            Start building your team and and hire the best non-technical talent
+            Start building your team and hire the best non-technical talents
             in Africa.
           </p>
           <Link to={generalRoute.hireATalent}>

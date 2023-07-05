@@ -17,7 +17,7 @@ const Advantage = () => {
           <h3>Support</h3>
           <p>
             We are able to assist organisations in hiring talent in Africa
-            without restrictions. By handling payroll, Talent legal
+            without restrictions. By handling payroll, talent legal
             documentation, and providing guidance on selecting the best talent
             for their teams, we eliminate the arduous process that organisations
             typically experience when hiring talent in Africa.
@@ -28,7 +28,7 @@ const Advantage = () => {
           <h3>Our team</h3>
           <p>
             Our team comprises of skilled individuals with a deep understanding
-            of the African Market, not just from a Talent matching perspective,
+            of the African market, not just from a talent matching perspective,
             but also from a legal perspective when it comes to hiring these
             individuals.
           </p>
