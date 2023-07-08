@@ -8,8 +8,6 @@ import { errorMessage, successMessage } from "../utils/message.utils";
 import { experience } from "../Data/talents"
 
 import star from "./asset/star.svg";
-import logo from "./asset/logo-green.svg"
-import formimg from "./asset/form-images/become.webp"
 
 import "./RegisterSection.css";
 import { config } from "../app.config";
@@ -85,14 +83,14 @@ const RegisterSection = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className="">
-          <img src={logo} alt="vector-logo" id="reg-icon" />
+          <img src={`${config.IMAGE_BASE_URL}/v1688803649/logo-green_erdxca.svg`} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <img src={formimg} alt="register" />
+              <img src={`${config.IMAGE_BASE_URL}/v1688803418/become_gwajwr.webp`} alt="register" />
             </div>
             <h3>
               Are you one of the best non-technical talents in Africa?{" "}

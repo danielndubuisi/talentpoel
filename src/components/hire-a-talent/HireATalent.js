@@ -11,8 +11,6 @@ import "./hire-a-talent.css";
 
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
-import logo from "../asset/logo-green.svg"
-import formimg from "../asset/form-images/hire.webp"
 import { config } from "../../app.config";
 
 const InitialFormData = {
@@ -91,14 +89,14 @@ const HireATalent = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className=" ">
-          <img src={logo} alt="vector-logo" id="reg-icon" />
+          <img src={`${config.IMAGE_BASE_URL}/v1688803649/logo-green_erdxca.svg`} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <img src={formimg} alt="register" />
+              <img src={`${config.IMAGE_BASE_URL}/v1688803450/hire_n4nzt8.webp`} alt="register" />
             </div>
             <h3>
               We understand the challenges associated with finding exceptional
