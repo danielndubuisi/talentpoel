@@ -97,7 +97,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item2">
                 <div className="nav-inline nav-links">
-                  <span> Careers</span> <small>(coming soon)</small>
+                  <span>Careers at Talentpoel </span> <small>(coming soon)</small>
                 </div>
               </li>
 
