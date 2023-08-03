@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import ScrollToTop from "./components/ScrollTop";
 import Home from "./pages/Home";
@@ -10,7 +9,6 @@ import HireaTalent from "./pages/HireaTalent";
 
 function App() {
   return (
-    // <HelmetProvider>
       <Router>
         <ScrollToTop />
         <Routes>
@@ -23,7 +21,6 @@ function App() {
           <Route path={generalRoute.hireATalent} element={<HireaTalent />} />
         </Routes>
       </Router>
-    // </HelmetProvider>
   );
 }
 
