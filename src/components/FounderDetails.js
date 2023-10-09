@@ -35,6 +35,31 @@ const FounderDetails = () => {
         </div>
       </div>
       <div className="founder">
+        <img src={founderThree} alt="llyod" />
+        <div className="details lloyd">
+          <h4>Otukpa Lloyd</h4>
+          <p>Co-founder/cmo</p>
+          <div className="detail-links">
+            <Link
+              className="founder-icon-link"
+              to="https://www.linkedin.com/in/godwinoi/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              className="founder-icon-link"
+              to="https://twitter.com/glucosezaddy90"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="founder">
         <img src={founderTwo} alt="karen" />
         <div className="details karen">
           <h4>Margareth Egbuchulam</h4>
@@ -59,31 +84,7 @@ const FounderDetails = () => {
           </div>
         </div>
       </div>
-      <div className="founder">
-        <img src={founderThree} alt="llyod" />
-        <div className="details lloyd">
-          <h4>Otukpa Lloyd</h4>
-          <p>Sales Marketing Manager</p>
-          <div className="detail-links">
-            <Link
-              className="founder-icon-link"
-              to="https://www.linkedin.com/in/godwinoi/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </Link>
-            <Link
-              className="founder-icon-link"
-              to="https://twitter.com/glucosezaddy90"
-              target="_blank"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </Link>
-          </div>
-        </div>
-      </div>
+      
       <div className="founder">
         <img src={founderFour} alt="udoye" />
         <div className="details udoye">
