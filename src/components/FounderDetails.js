@@ -2,7 +2,7 @@ import "./FounderDetails.css";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import founderOne from "../components/asset/founder1.webp";
-import founderTwo from "../components/asset/founder2.webp";
+import founderTwo from "../components/asset/founder2.png";
 import founderThree from "../components/asset/founder3.webp";
 import founderFour from "../components/asset/founder4.webp";
 
@@ -37,12 +37,12 @@ const FounderDetails = () => {
       <div className="founder">
         <img src={founderTwo} alt="karen" />
         <div className="details karen">
-          <h4>Karen Chukwu</h4>
-          <p>Chief Legal Officer</p>
+          <h4>Margareth Egbuchulam</h4>
+          <p>Operations Manager</p>
           <div className="detail-links">
             <Link
               className="founder-icon-link"
-              to="https://www.linkedin.com/in/karen-chukwu/"
+              to="https://www.linkedin.com/in/margareth-egbuchulam"
               target="_blank"
               aria-label="LinkedIn"
             >
@@ -50,7 +50,7 @@ const FounderDetails = () => {
             </Link>
             <Link
               className="founder-icon-link"
-              to="https://twitter.com/Karen_Amarii"
+              to="https://x.com/maegy_george?s=21"
               target="_blank"
               aria-label="Twitter"
             >
