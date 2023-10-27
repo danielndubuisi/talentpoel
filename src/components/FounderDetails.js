@@ -1,10 +1,10 @@
 import "./FounderDetails.css";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import founderOne from "../components/asset/founder1.webp";
-import founderTwo from "../components/asset/founder2.png";
-import founderThree from "../components/asset/founder3.webp";
-import founderFour from "../components/asset/founder4.webp";
+import founderOne from "../components/asset/founder1.jpg";
+import founderTwo from "../components/asset/founder2.jpg";
+import founderThree from "../components/asset/founder3.jpg";
+import founderFour from "../components/asset/founder4.jpg";
 
 const FounderDetails = () => {
   return (
@@ -34,9 +34,10 @@ const FounderDetails = () => {
           </div>
         </div>
       </div>
+
       <div className="founder">
-        <img src={founderThree} alt="llyod" />
-        <div className="details lloyd">
+        <img src={founderTwo} alt="karen" />
+        <div className="details karen">
           <h4>Otukpa Lloyd</h4>
           <p>Co-founder/CMO</p>
           <div className="detail-links">
@@ -59,9 +60,10 @@ const FounderDetails = () => {
           </div>
         </div>
       </div>
+
       <div className="founder">
-        <img src={founderTwo} alt="karen" />
-        <div className="details karen">
+        <img src={founderThree} alt="llyod" />
+        <div className="details lloyd">
           <h4>Margareth Egbuchulam</h4>
           <p>Operations Manager</p>
           <div className="detail-links">
@@ -84,7 +86,7 @@ const FounderDetails = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="founder">
         <img src={founderFour} alt="udoye" />
         <div className="details udoye">

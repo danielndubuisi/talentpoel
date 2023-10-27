@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import Select from "react-select";
-
+import Select, { components } from "react-select";
+import { countries, getCountryCode, getCountryData } from "countries-list";
+import ReactCountryFlag from "react-country-flag";
 import { Button } from "../components/Button";
 import { errorMessage, successMessage } from "../utils/message.utils";
-import { experience } from "../Data/talents"
+import { experience } from "../Data/talents";
 
 import star from "./asset/star.svg";
 
@@ -27,11 +28,35 @@ const RegisterSection = () => {
   const [formDetails, setFormDetails] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState(InitialFormData);
+  const [country, setCountry] = useState({ value: "NG", label: "Nigeria" });
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
     setFormDetails(false);
   };
+
+  const Control = ({ children, ...props }) => {
+    return (
+      <components.Control {...props}>
+        <ReactCountryFlag
+          className="react-country-flag"
+          countryCode={country ? country.value : ""}
+          svg
+          cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
+          cdnSuffix="svg"
+          title={country ? country.value : ""}
+        />
+        {children}
+      </components.Control>
+    );
+  };
+
+  const asCountries = Object.keys(countries)
+    .filter((countryCode) => countries[countryCode].continent === "AF")
+    .reduce((result, countryCode) => {
+      result[countryCode] = countries[countryCode];
+      return result;
+    }, {});
 
   const submitHandlerTwo = (e) => {
     e.preventDefault();
@@ -41,6 +66,7 @@ const RegisterSection = () => {
       lastName: formData.lastName,
       email: formData.email,
       role: formData.role,
+      country: getCountryData(country.value).name,
       bio: formData.bio,
       linkedin: formData.linkedin,
       availability: formData.availability,
@@ -69,6 +95,7 @@ const RegisterSection = () => {
               availability: false,
               experience: { value: "no", label: "No" },
             });
+            setCountry({ value: "NG", label: "Nigeria" })
             setFormDetails(true);
           }
         },
@@ -79,18 +106,29 @@ const RegisterSection = () => {
       );
   };
 
+  const changeHandler = (newValue) => {
+    setCountry(newValue);
+  };
+
   return (
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className="">
-          <img src={`${config.IMAGE_BASE_URL}/v1688803649/logo-green_erdxca.svg`} alt="vector-logo" id="reg-icon" />
+          <img
+            src={`${config.IMAGE_BASE_URL}/v1688803649/logo-green_erdxca.svg`}
+            alt="vector-logo"
+            id="reg-icon"
+          />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <img src={`${config.IMAGE_BASE_URL}/v1688803418/become_gwajwr.webp`} alt="register" />
+              <img
+                src={`${config.IMAGE_BASE_URL}/v1688803418/become_gwajwr.webp`}
+                alt="register"
+              />
             </div>
             <h3>
               Are you one of the best non-technical talents in Africa?{" "}
@@ -175,6 +213,17 @@ const RegisterSection = () => {
                           email: event.currentTarget.value,
                         })
                       }
+                    />
+                    <Select
+                      components={{ Control }}
+                      isSearchable
+                      className="flag-select"
+                      options={Object.keys(asCountries).map((countryCode) => ({
+                        value: getCountryCode(countries[countryCode].name),
+                        label: countries[countryCode].name,
+                      }))}
+                      value={country}
+                      onChange={changeHandler}
                     />
                     <input
                       type="text"
