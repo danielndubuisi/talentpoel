@@ -41,6 +41,12 @@ a{
   padding: 20px 30px;
 }
 
+.button-disabled, .button-disabled:hover{
+  cursor: not-allowed !important;
+  background-color: #d3d3d3 !important; /* Light gray */
+    color: #a9a9a9 !important; /* Dark gray */
+}
+
 .btn--center {
   padding: 5px 20px;
   font-size: 16px;
