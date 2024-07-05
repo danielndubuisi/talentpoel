@@ -170,7 +170,8 @@ const RegisterSection = () => {
           <div className="right">
             <div className="reg-form-container">
               <p className="form-desc">
-                Fill out this application, become a talent
+                {/* Fill out this application, become a talent */}
+                The form is currently unavailable. Please check back later.
               </p>
               {formDetails ? (
                 <>
@@ -181,6 +182,7 @@ const RegisterSection = () => {
                       placeholder="First name"
                       required
                       value={formData.firstName}
+                      disabled
                       onChange={(event) =>
                         setFormData({
                           ...formData,
@@ -191,6 +193,7 @@ const RegisterSection = () => {
                     <input
                       type="text"
                       name="Last"
+                      disabled
                       placeholder="Last name"
                       required
                       value={formData.lastName}
@@ -206,6 +209,7 @@ const RegisterSection = () => {
                       name="Email"
                       placeholder="Email"
                       required
+                      disabled
                       value={formData.email}
                       onChange={(event) =>
                         setFormData({
@@ -223,6 +227,7 @@ const RegisterSection = () => {
                         label: countries[countryCode].name,
                       }))}
                       value={country}
+                      // isDisabled
                       onChange={changeHandler}
                     />
                     <input
@@ -230,6 +235,7 @@ const RegisterSection = () => {
                       name="LinkedIn"
                       placeholder="LinkedIn"
                       value={formData.linkedin}
+                      disabled
                       onChange={(event) =>
                         setFormData({
                           ...formData,
@@ -241,7 +247,9 @@ const RegisterSection = () => {
                       id="reg-buttonOne"
                       type="submit"
                       buttonColor="green"
-                      text="Continue"
+                      text="Form Unavailable"
+                      // text="Continue"
+                      disabled={true}
                       display={true}
                     />
                   </form>

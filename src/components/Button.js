@@ -19,7 +19,8 @@ export const Button = ({
   display,
   icon,
   loading,
-  buttonIconStyle
+  buttonIconStyle,
+  disabled
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -42,12 +43,15 @@ export const Button = ({
           </button>
         ) : (
           <button
-            className={`btn btns ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
+            className={`btn btns ${disabled && "button-disabled"} ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
             onClick={onClick}
+            disabled={disabled}
             type={type}
           >
             {text}
-            {icon && <BsArrowRightShort className={`button-icon ${buttonIconStyle}`} />}
+            {icon && (
+              <BsArrowRightShort className={`button-icon ${buttonIconStyle}`} />
+            )}
           </button>
         )
       ) : null}
