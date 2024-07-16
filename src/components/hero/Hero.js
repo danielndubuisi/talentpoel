@@ -1,14 +1,15 @@
 import React from "react";
-import { config } from "../../app.config";
+// import { config } from "../../app.config";
 
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
 import imageOne from "../asset/hero/Anne.png";
 import imageTwo from "../asset/hero/Dubem.png";
-import imageThree from "../asset/hero/stack_1.png"
-import imageFour from "../asset/hero/stack_2.png"
-import imageFive from "../asset/hero/stack_3.png"
+// import imageThree from "../asset/hero/stack_1.png"
+import stackTeam from "../asset/hero/stack_team.png"
+// import imageFour from "../asset/hero/stack_2.png"
+// import imageFive from "../asset/hero/stack_3.png"
 
 import "./hero.css";
 
@@ -72,19 +73,9 @@ const Hero = () => {
             </div>
             <div className="stack-four">
               <img
-                src={imageThree}
-                alt="team member"
+                src={stackTeam}
+                alt="team members"
                 className="stack-four-img"
-              />
-              <img
-                src={imageFour}
-                alt="team member"
-                className="stack-four-img img-stack"
-              />
-              <img
-                src={imageFive}
-                alt="team member"
-                className="stack-four-img img-stack"
               />
             </div>
           </div>

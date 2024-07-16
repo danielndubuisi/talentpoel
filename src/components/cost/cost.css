@@ -10,6 +10,10 @@
   margin-top: 0 !important;
 }
 
+/* .cost-des-img {
+  width: 100%;
+} */
+
 @media (min-width: 768px) and (max-width: 992px) {
   .cost {
     margin: 80px 0 50px 0;
@@ -36,5 +40,10 @@
     width: 100% !important;
     height: 100% !important;
     margin-bottom: 10px;
+  }
+
+  /* added gap of 20px to flex box 7-16-2024 */
+  .cost .flex {
+    gap: 64px;
   }
 }

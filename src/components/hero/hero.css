@@ -1,12 +1,10 @@
 
-/* added gap of 36px to the flex box 7-16-2024 */
 .flex {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
-  gap: 36px;
 }
 
 .flex .heading {
@@ -87,23 +85,22 @@
   z-index: 40;
   bottom: -113px;
   left: 87px;
+  width: 121px;
 }
 
 .stack-four-img {
-  width: 46.5px;
-  height: 46.5px;
-  border-radius: 50%;
-  border: 2px solid white;
+ width: 100%;
 }
 
-.img-stack {
-  margin-left: -10px;
-}
+
 
 /* modified changes on flex box 7-16-2024 */
 @media (min-width: 0) and (max-width: 992px) {
   .flex {
     flex-direction: column;
+  }
+
+  .hero .flex {
     gap: 60px;
   }
 
@@ -139,7 +136,7 @@
       display: block;
     }
 
-    .flex {
+    .hero .flex {
       gap: 147px;
     }
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./vetting-process.css";
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
-import video from "../asset/vetting-process/video.png";
+// import video from "../asset/vetting-process/video.png";
 
 const VettingProcess = () => {
   return (
@@ -16,7 +16,17 @@ const VettingProcess = () => {
       </div>
       <div className="vetting-video-con">
         <div>
-          <img src={video} alt="" />
+          {/* added iframe tag to display the youtube video */}
+          <iframe
+            src="https://www.youtube.com/embed/I4Hzyv_6EXY?rel=0&showinfo=0&modestbranding=1&border=0"
+            title="Talentpoel vetting video"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            className="vetting-video-iframe"
+          />
         </div>
       </div>
       <div className="vetting-btn-con">
