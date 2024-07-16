@@ -48,6 +48,7 @@ const Hero = () => {
             <img
               className="hero-des-img"
               src={`${config.IMAGE_BASE_URL}/v1688476355/hero_z6bqyg.webp`}
+              // src={stackImages}
               alt=""
             />
             <img
