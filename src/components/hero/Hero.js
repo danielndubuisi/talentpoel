@@ -4,6 +4,8 @@ import { config } from "../../app.config";
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
+import imageOne from "../asset/hero/Anne.png";
+import imageTwo from "../asset/hero/Dubem.png";
 
 import "./hero.css";
 
@@ -44,18 +46,27 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="hero-img-con">
-            <img
-              className="hero-des-img"
-              src={`${config.IMAGE_BASE_URL}/v1688476355/hero_z6bqyg.webp`}
-              // src={stackImages}
-              alt=""
-            />
-            <img
-              className="hero-mobile-img"
-              src={`${config.IMAGE_BASE_URL}/v1688476353/hero-mobile_z7r0w5.webp`}
-              alt=""
-            />
+          {/* installed tailwind css and adding changes to the image container 7-16-2024 */}
+          <div className="hero-img-con relative -top-[54px] grid grid-cols-2 ">
+            <div className="z-20 relative lg:left-8 xl:left-0">
+              <img
+                src={imageOne}
+                alt="Anne profile"
+                className="rounded-3xl w-full shadow-[0px_4px_30px_0px_rgba(0,0,0,0.05)]"
+              />
+            </div>
+            <div className="relative top-[136.94px] xl:-left-[34.94px] left-0 z-10 ">
+              <img
+                src={imageTwo}
+                alt="Anne profile"
+                className="rounded-3xl w-full"
+              />
+            </div>
+            <div className="py-2 px-4 rounded-[100px] bg-primary absolute -bottom-[21px] z-30 xl:-ml-9 lg:-ml-16">
+              <p className="text-sm font-normal ">
+                Quality candidates for Quality companies
+              </p>
+            </div>
           </div>
         </div>
       </div>
