@@ -1,11 +1,12 @@
 
-
+/* added gap of 36px to the flex box 7-16-2024 */
 .flex {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+  gap: 36px;
 }
 
 .flex .heading {
@@ -38,18 +39,90 @@
     display: none;
 }
 
+/* adding css changes 7-16-2024 */
+.hero-img-con {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  top: -54px;
+}
 
+.stack_one {
+  z-index: 20;
+}
+
+.stack_two {
+  z-index: 10;
+  position: relative;
+  top: 136.94px;
+  left: -33.06px;
+}
+
+.stack_one-img {
+  box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.05);
+ 
+} 
+
+.stack_one-img, .stack_two-img {
+  border-radius: 24px;
+}
+
+.stack_three {
+  position: absolute;
+  padding: 8px 16px 8px 16px;
+  background-color: #5AAAA5;
+  z-index: 30;
+  border-radius: 100px;
+  bottom: -12px;
+  left: -38px;
+}
+
+.stack_three-text {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.stack-four {
+  position: absolute;
+  z-index: 40;
+  bottom: -113px;
+  left: 87px;
+}
+
+.stack-four-img {
+  width: 46.5px;
+  height: 46.5px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.img-stack {
+  margin-left: -10px;
+}
+
+/* modified changes on flex box 7-16-2024 */
 @media (min-width: 0) and (max-width: 992px) {
   .flex {
-    display: block;
+    flex-direction: column;
+    gap: 60px;
   }
 
   .flex > div {
     width: 100%;
   }
 
-  .hero-img-con{
-    margin-top: 60px;
+  .stack_two {
+    padding-bottom: 92px;
+  }
+
+  .stack_three {
+    bottom: 45px;
+    left: 48px;
+  }
+
+  .stack-four {
+    left: 190px;
+    bottom: -44px;
   }
 }
 
@@ -65,4 +138,28 @@
     .button-container{
       display: block;
     }
+
+    .flex {
+      gap: 147px;
+    }
+
+    .stack-four {
+      left: 12px;
+    }
+
+    .stack_three {
+      bottom: 113px;
+    }
+}
+
+/* created new media query 7-16-2024 */
+@media (min-width: 1000px) and (max-width: 1024px) {
+  .stack_one {
+    position: relative;
+    left: 32px;
+  }
+
+  .stack_two {
+    left: 0;
+  }
 }

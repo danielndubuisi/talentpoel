@@ -6,6 +6,9 @@ import { Button } from "../Button";
 import { Link } from "react-router-dom";
 import imageOne from "../asset/hero/Anne.png";
 import imageTwo from "../asset/hero/Dubem.png";
+import imageThree from "../asset/hero/stack_1.png"
+import imageFour from "../asset/hero/stack_2.png"
+import imageFive from "../asset/hero/stack_3.png"
 
 import "./hero.css";
 
@@ -46,26 +49,43 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          {/* installed tailwind css and adding changes to the image container 7-16-2024 */}
-          <div className="hero-img-con relative -top-[54px] grid grid-cols-2 ">
-            <div className="z-20 relative lg:left-8 xl:left-0">
+          {/* adding changes to the image container 7-16-2024 */}
+          <div className="hero-img-con">
+            <div className="stack_one">
               <img
                 src={imageOne}
                 alt="Anne profile"
-                className="rounded-3xl w-full shadow-[0px_4px_30px_0px_rgba(0,0,0,0.05)]"
+                className="stack_one-img"
               />
             </div>
-            <div className="relative top-[136.94px] xl:-left-[34.94px] left-0 z-10 ">
+            <div className="stack_two">
               <img
                 src={imageTwo}
-                alt="Anne profile"
-                className="rounded-3xl w-full"
+                alt="Dubem profile"
+                className="stack_two-img"
               />
             </div>
-            <div className="py-2 px-4 rounded-[100px] bg-primary absolute -bottom-[21px] z-30 xl:-ml-9 lg:-ml-16">
-              <p className="text-sm font-normal ">
+            <div className="stack_three">
+              <p className="stack_three-text">
                 Quality candidates for Quality companies
               </p>
+            </div>
+            <div className="stack-four">
+              <img
+                src={imageThree}
+                alt="team member"
+                className="stack-four-img"
+              />
+              <img
+                src={imageFour}
+                alt="team member"
+                className="stack-four-img img-stack"
+              />
+              <img
+                src={imageFive}
+                alt="team member"
+                className="stack-four-img img-stack"
+              />
             </div>
           </div>
         </div>
