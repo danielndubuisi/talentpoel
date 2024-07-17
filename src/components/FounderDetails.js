@@ -5,6 +5,7 @@ import founderOne from "../components/asset/founder1.jpg";
 import founderTwo from "../components/asset/founder2.jpg";
 import founderThree from "../components/asset/founder3.jpg";
 import founderFour from "../components/asset/founder4.jpg";
+import founderFive from "../components/asset/founder5.jpg";
 
 const FounderDetails = () => {
   return (
@@ -104,6 +105,33 @@ const FounderDetails = () => {
             <Link
               className="founder-icon-link"
               to="https://twitter.com/nemeremkamsiyo?s=21&t=Yl_UCXle_ernRHc4DUkJMg"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* added the fifth founder 7-17-2024 */}
+      <div className="founder">
+        <img src={founderFive} alt="Lilian uma" />
+        <div className="details lilian">
+          <h4>Lilian Uma</h4>
+          <p>Sales Associate</p>
+          <div className="detail-links">
+            <Link
+              className="founder-icon-link"
+              to="https://www.linkedin.com/in/jephtahabu/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              className="founder-icon-link"
+              to="https://twitter.com/jephtahA_"
               target="_blank"
               aria-label="Twitter"
             >

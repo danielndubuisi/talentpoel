@@ -2,9 +2,9 @@ import Marquee from "react-fast-marquee";
 
 import "./trustedby.css";
 import logo1 from "../asset/icons/trusted-by/logo1.svg";
-import logo2 from "../asset/icons/trusted-by/logo2.svg";
+// import logo2 from "../asset/icons/trusted-by/logo2.svg";
 import logo3 from "../asset/icons/trusted-by/logo3.svg";
-import logo4 from "../asset/icons/trusted-by/logo4.svg";
+// import logo4 from "../asset/icons/trusted-by/logo4.svg";
 import logo5 from "../asset/icons/trusted-by/logo5.svg";
 
 const TrustedBy = () => {
@@ -14,9 +14,9 @@ const TrustedBy = () => {
       <Marquee>
         <div className="trusted-img-con">
           <img src={logo1} alt="" className="trusted-img1" />
-          <img src={logo2} alt="" className="trusted-img" />
+          {/* <img src={logo2} alt="" className="trusted-img" /> */}
           <img src={logo3} alt="" className="trusted-img" />
-          <img src={logo4} alt="" className="trusted-img2" />
+          {/* <img src={logo4} alt="" className="trusted-img2" /> */}
           <img src={logo5} alt="" className="trusted-img3" />
         </div>
       </Marquee>

@@ -1,6 +1,7 @@
 import "./additional-roles.css";
+import model2 from "../../asset/discover/talent2.png"
 
-import { config } from "../../../app.config";
+// import { config } from "../../../app.config";
 
 const AdditionalRoles = () => {
   return (
@@ -18,8 +19,8 @@ const AdditionalRoles = () => {
       </div>
       <div className="additional-roles-right">
         <img
-          src={`${config.IMAGE_BASE_URL}/v1688484011/add_p9gcga.webp`}
-          alt=""
+          src={model2}
+          alt="model two"
         />
         <div>
           <p>let’s find other talents</p>
