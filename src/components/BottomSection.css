@@ -160,7 +160,7 @@
 
 .flex_frame_two-icon {
   margin-top: 115px;
-  width: 32px;
+  width: 32px !important;
   align-self: flex-end;
 }
 
@@ -193,6 +193,34 @@
   .home__bottom-section-quality {
     padding-top: 80px;
   }
+
+}
+
+/* add responsiveness to the grid container from 768px -992px  */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .grid_wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .flex_width-two {
+    height: 583.39px;
+  }
+
+  .flex_width-two img {
+    width: 100%;
+  }
+
+  .flex_height img {
+    width: 100%;
+  }
+
+  .flex_row-div {
+    height: 243.66px;
+  }
+
+  .flex_height {
+    height: 484px;
+  }
 }
 
 @media screen and (min-width: 0) and (max-width: 600px) {
@@ -203,7 +231,52 @@
   .home__bottom-section-quality {
     padding-top: 50px;
   }
+
+  /* change grid template columns to 1 7-17-2024 */
+  .grid_wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .flex_width-two {
+    height: 469.99px;
+  }
+
 }
+
+/* add a new media query of max-width 475px */
+@media screen and (max-width: 475px) {
+   .flex_wrap {
+    flex-wrap: wrap;
+  }
+
+  .flex_width-one {
+    flex-basis: auto;
+  }
+
+  .flex_width-two {
+    flex-basis: auto;
+    height: auto;
+  }
+
+  .flex_frame_two {
+    flex-basis: 100%;
+  }
+
+  .flex_row-img {
+    flex-basis: 100%;
+  }
+
+  .flex_height {
+    flex-basis: 100% !important;
+  }
+
+  .flex_height img {
+    width: 100%;
+  }
+
+}
+
+
 
 @media screen and (min-width: 0) and (max-width: 960px) {
   .bottom-container {

@@ -5,7 +5,8 @@ import line from "./asset/line.svg";
 import vector from "./asset/Vector.svg";
 import star from "../components/asset/star.svg";
 import { generalRoute } from "../Data/generalRoutes";
-import { config } from "../app.config";
+import aboutSectionImage from "./asset/features/about_us.png"
+// import { config } from "../app.config";
 
 const HeroSection = ({
   id,
@@ -180,14 +181,9 @@ const HeroSection = ({
                 ) : (
                   <div>
                     <img
-                      className="hero-des-img"
-                      src={`${config.IMAGE_BASE_URL}/v1688482993/about_zikvbs.webp`}
-                      alt=""
-                    />
-                    <img
-                      className="hero-mobile-img"
-                      src={`${config.IMAGE_BASE_URL}/v1688483017/about-mobile_sftwrq.webp`}
-                      alt=""
+                      // className="hero-des-img"
+                      src={aboutSectionImage}
+                      alt="About section profile"
                     />
                   </div>
                 )}

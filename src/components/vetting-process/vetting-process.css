@@ -103,3 +103,11 @@
     height: 189px;
   }
 } 
+
+/* created a new media query for the iframe height responsiveness 7-17-2024 */
+@media (min-width: 540px) and (max-width: 600px) {
+  .vetting-video-con div {
+    height: 274px;
+  }
+}
+

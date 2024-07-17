@@ -160,3 +160,18 @@
     left: 0;
   }
 }
+
+@media (max-width:475px) {
+  .stack_three-text {
+    font-size: 12px;
+  }
+
+  .stack_one {
+    margin-top: -30px;
+  }
+
+  .stack_three {
+    left: -6px;
+    bottom: 111px;
+  }
+}

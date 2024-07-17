@@ -73,9 +73,9 @@ const BottomSection = ({
             <div className="home__bottom-img-wrapper">
               {imgShow === "grid" ? (
                 <div className="bottom-img-con grid_wrapper">
-                  <div className="flex_container ">
+                  <div className="flex_container flex_wrap">
                     <div className="flex_container flex_col flex_width-one">
-                      <div >
+                      <div>
                         <img src={frameOne} alt="feature one" />
                       </div>
                       <div className="flex_frame_one">
@@ -96,9 +96,9 @@ const BottomSection = ({
                       <img src={frameTwo} alt="feature two" />
                     </div>
                   </div>
-                  <div className="flex_container">
+                  <div className="flex_container flex_wrap">
                     <div className="flex_container flex_col flex_width-two">
-                      <div className="flex_container flex_row">
+                      <div className="flex_container flex_row flex_wrap">
                         <div className="flex_frame_two">
                           <h4>Diversity</h4>
                           <img
