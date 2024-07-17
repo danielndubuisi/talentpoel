@@ -143,6 +143,10 @@
   height: 203px;
 }
 
+.flex_row-div img {
+  width: 100%;
+}
+
 .flex_frame_two {
   display: flex;
   flex-direction: column;

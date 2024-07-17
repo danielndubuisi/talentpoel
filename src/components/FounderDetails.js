@@ -123,7 +123,7 @@ const FounderDetails = () => {
           <div className="detail-links">
             <Link
               className="founder-icon-link"
-              to="https://www.linkedin.com/in/jephtahabu/"
+              to="http://linkedin.com/in/lilian-uma"
               target="_blank"
               aria-label="LinkedIn"
             >
@@ -131,7 +131,7 @@ const FounderDetails = () => {
             </Link>
             <Link
               className="founder-icon-link"
-              to="https://twitter.com/jephtahA_"
+              to="https://x.com/thatgirlomaaa"
               target="_blank"
               aria-label="Twitter"
             >
