@@ -16,7 +16,7 @@ const VettingProcess = () => {
       </div>
       <div className="vetting-video-con">
         <div>
-          {/* added iframe tag to display the youtube video */}
+          {/* added iframe tag to display the youtube video 7-16-2024 */}
           <iframe
             src="https://www.youtube.com/embed/I4Hzyv_6EXY?rel=0&showinfo=0&modestbranding=1&border=0"
             title="Talentpoel vetting video"

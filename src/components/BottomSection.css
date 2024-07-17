@@ -79,6 +79,112 @@
   height: 64px;
 }
 
+/* adding changes here for grid_wrapper class to the img container 7-17-2024 */
+.grid_wrapper {
+  display: grid;
+  grid-template-columns: 442px 1fr;
+  gap: 24px;
+}
+
+.flex_container {
+  display: flex;
+  gap: 24px;
+}
+
+.flex_col {
+  flex-direction: column;
+}
+
+.flex_row {
+  flex-direction: row;
+}
+
+.flex_frame_one {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px 25px 20px;
+  border-radius: 16px;
+  background-color: #CDBCE2;
+}
+
+.flex_frame_one-title {
+  margin-bottom: 43px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex_frame_one-title p {
+  font-size: 12px;
+  color: #535353;
+  font-weight: 400;
+  width: auto;
+  margin: 0;
+  text-align: start;
+  line-height: 18px;
+}
+
+.flex_frame_one-title h4 {
+  font-size: 14px;
+  color: black;
+  font-weight: 800;
+}
+
+.flex_frame_one-icon {
+  width: 32px;
+}
+
+.flex_row-img {
+  height: 214px;
+  flex-basis: 50%;
+}
+
+.flex_row-div {
+  height: 203px;
+}
+
+.flex_frame_two {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px 25px 20px;
+  border-radius: 16px;
+  background-color: #F7CCBC;
+  flex-basis: 50%;
+}
+
+.flex_frame_two h4 {
+  font-size: 14px;
+  color: black;
+  font-weight: 800;
+}
+
+.flex_frame_two-icon {
+  margin-top: 115px;
+  width: 32px;
+  align-self: flex-end;
+}
+
+.flex_width-one {
+  flex-basis: 40%;
+}
+
+.flex_width-two {
+  flex-basis: 60%;
+  height: 441px;
+}
+
+.flex_width-two img {
+  height: 100%;
+}
+
+.flex_height {
+  height: 441px;
+}
+.flex_height img {
+  height: 100%;
+}
+
+
 @media screen and (min-width: 600px) and (max-width: 992px) {
   .bottom-img-con{
     padding: 50px 0;
