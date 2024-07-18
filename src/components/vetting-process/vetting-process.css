@@ -32,8 +32,9 @@
 .vetting-video-con {
   display: flex;
   justify-content: center;
-  margin: 120px 0;
-  width: 100%;
+  margin: 120px auto;
+  /* width: 100%; */
+  width: 76%;
 }
 
 /* added height 7-16-2024 */
@@ -41,7 +42,7 @@
 .vetting-video-con div {
   /* width: 80%; */
   width: 77.3%;
-  height: 424px; 
+  height: 344px; 
 }
 
 .vetting-video-iframe {
@@ -66,7 +67,8 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
     .vetting-video-con{
-        margin: 60px 0;
+        /* margin: 60px 0; */
+        margin: 60px auto;
     }
     
     .vetting-video-con div{
@@ -86,7 +88,8 @@
   }
 
   .vetting-video-con {
-    margin: 30px 0;
+    /* margin: 30px 0; */
+    margin: 30px auto;
   }
 
   .vetting-video-con div {
@@ -102,6 +105,10 @@
 @media  (max-width: 425px) {
   .vetting-video-con div {
     height: 189px;
+  }
+
+  .vetting-video-con {
+    width: 100%;
   }
 } 
 

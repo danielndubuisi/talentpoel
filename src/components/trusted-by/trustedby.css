@@ -50,11 +50,13 @@
 .marquee-container {
   /* width: 1300px !important; */
   width: 1900px !important;
+  background: white !important;
 }
 
 .marquee {
   /* min-width: 1300px !important; */
   min-width: 1900px !important;
+  background: white !important;
 }
 
 @media (min-width: 0) and (max-width: 768px) {
@@ -65,11 +67,13 @@
   .marquee-container {
     /* width: 1300px !important; */
     width: 1900px !important;
+    background: white !important;
   }
 
 
   .marquee {
     /* min-width: 1300px !important; */
     min-width: 1900px !important;
+    background: white !important;
   }
 }
