@@ -4,7 +4,14 @@ import GridText from "../components/GridText";
 import { Button } from "./Button";
 import { generalRoute } from "../Data/generalRoutes";
 import { Link } from "react-router-dom";
-import { config } from "../app.config";
+import frameOne from "./asset/features/frame_1.png"
+import frameTwo from "./asset/features/frame_2.png"
+import frameThree from "./asset/features/frame_3.png"
+import frameFour from "./asset/features/frame_4.png"
+import frameFive from "./asset/features/frame_5.png"
+import cursorIcon from "./asset/features/carbon_cursor-2.svg"
+import earthIcon from "./asset/features/carbon_earth-europe-africa.svg"
+// import { config } from "../app.config";
 
 const BottomSection = ({
   id,
@@ -65,17 +72,58 @@ const BottomSection = ({
             </p>
             <div className="home__bottom-img-wrapper">
               {imgShow === "grid" ? (
-                <div className="bottom-img-con">
-                  <img
-                    className="hero-des-img"
-                    src={`${config.IMAGE_BASE_URL}/v1688477745/grid_yfxprb.webp`}
-                    alt=""
-                  />
-                  <img
-                    className="hero-mobile-img"
-                    src={`${config.IMAGE_BASE_URL}/v1688477729/grid-mobile_wcsfrp.webp`}
-                    alt=""
-                  />
+                <div className="bottom-img-con grid_wrapper">
+                  <div className="flex_container flex_wrap">
+                    <div className="flex_container flex_col flex_width-one">
+                      <div>
+                        <img src={frameOne} alt="feature one" />
+                      </div>
+                      <div className="flex_frame_one">
+                        <div className="flex_frame_one-title">
+                          <p>Talents currently from:</p>
+                          <h4>
+                            Nigeria <br /> Kenya <br /> Zambia and growing
+                          </h4>
+                        </div>
+                        <img
+                          src={earthIcon}
+                          alt="cursor icon"
+                          className="flex_frame_one-icon"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex_width-two">
+                      <img src={frameTwo} alt="feature two" />
+                    </div>
+                  </div>
+                  <div className="flex_container flex_wrap">
+                    <div className="flex_container flex_col flex_width-two">
+                      <div className="flex_container flex_row flex_wrap">
+                        <div className="flex_frame_two">
+                          <h4>Diversity</h4>
+                          <img
+                            src={cursorIcon}
+                            alt="cursor icon"
+                            className="flex_frame_two-icon"
+                          />
+                        </div>
+                        <div className="flex_row-img">
+                          <img
+                            src={frameThree}
+                            alt="feature three"
+                            // height="100%"
+                            width="100%"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex_row-div">
+                        <img src={frameFour} alt="feature four" />
+                      </div>
+                    </div>
+                    <div className="flex_width-one flex_height">
+                      <img src={frameFive} alt="feature five" />
+                    </div>
+                  </div>
                 </div>
               ) : imgShow === "row" ? (
                 <FounderDetails />
@@ -83,13 +131,15 @@ const BottomSection = ({
             </div>
             {button && (
               <div className="bottom_button-container">
-                <Link to={generalRoute.hireATalent}><Button
-                  buttonColor={buttonColor}
-                  buttonStyle={buttonStyle}
-                  text={buttonText}
-                  display={displayButton}
-                  icon
-                /></Link>
+                <Link to={generalRoute.hireATalent}>
+                  <Button
+                    buttonColor={buttonColor}
+                    buttonStyle={buttonStyle}
+                    text={buttonText}
+                    display={displayButton}
+                    icon
+                  />
+                </Link>
               </div>
             )}
           </div>

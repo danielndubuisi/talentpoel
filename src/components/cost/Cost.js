@@ -2,27 +2,20 @@ import React from "react";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
 import { generalRoute } from "../../Data/generalRoutes";
+import aboutImage from "../asset/hero/about.png"
 
 import "./cost.css";
 
-import { config } from "../../app.config";
+// import { config } from "../../app.config";
 
 const Cost = () => {
   return (
     <div id="top" className="home__hero-section cost">
       <div className="layout">
         <div className="flex">
-          <div className="hero-img-con">
-            <img
-              className="hero-des-img"
-              src={`${config.IMAGE_BASE_URL}/v1688476353/cost_vvxtce.webp`}
-              alt=""
-            />
-            <img
-              className="hero-mobile-img"
-              src={`${config.IMAGE_BASE_URL}/v1688476354/cost-mobile_wkuy8y.webp`}
-              alt=""
-            />
+          {/* add image  */}
+          <div className="cost-img-con">
+            <img src={aboutImage} alt="About talentpoel" />
           </div>
           <div className="">
             <div className="home__hero-text-wrapper">

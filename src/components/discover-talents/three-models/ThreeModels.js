@@ -2,8 +2,10 @@ import "./ThreeModels.css";
 import icon1 from "../../asset/discover/icons/icon1.svg";
 import icon2 from "../../asset/discover/icons/icon2.svg";
 import icon3 from "../../asset/discover/icons/icon3.svg";
+import model1 from "../../asset/discover/talent1.png"
 
-import { config } from "../../../app.config";
+
+// import { config } from "../../../app.config";
 
 const ThreeModels = () => {
   return (
@@ -39,8 +41,8 @@ const ThreeModels = () => {
         <div>
           <div className="right-tmf">
             <img
-              src={`${config.IMAGE_BASE_URL}/v1688484011/discover_j0d6zw.webp`}
-              alt=""
+              src={model1}
+              alt="model one"
             />
           </div>
         </div>

@@ -1,9 +1,15 @@
 import React from "react";
-import { config } from "../../app.config";
+// import { config } from "../../app.config";
 
 import { generalRoute } from "../../Data/generalRoutes";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
+import imageOne from "../asset/hero/Anne.png";
+import imageTwo from "../asset/hero/Dubem.png";
+// import imageThree from "../asset/hero/stack_1.png"
+import stackTeam from "../asset/hero/stack_team.png"
+// import imageFour from "../asset/hero/stack_2.png"
+// import imageFive from "../asset/hero/stack_3.png"
 
 import "./hero.css";
 
@@ -44,17 +50,34 @@ const Hero = () => {
               </div>
             </div>
           </div>
+          {/* adding changes to the image container 7-16-2024 */}
           <div className="hero-img-con">
-            <img
-              className="hero-des-img"
-              src={`${config.IMAGE_BASE_URL}/v1688476355/hero_z6bqyg.webp`}
-              alt=""
-            />
-            <img
-              className="hero-mobile-img"
-              src={`${config.IMAGE_BASE_URL}/v1688476353/hero-mobile_z7r0w5.webp`}
-              alt=""
-            />
+            <div className="stack_one">
+              <img
+                src={imageOne}
+                alt="Anne profile"
+                className="stack_one-img"
+              />
+            </div>
+            <div className="stack_two">
+              <img
+                src={imageTwo}
+                alt="Dubem profile"
+                className="stack_two-img"
+              />
+            </div>
+            <div className="stack_three">
+              <p className="stack_three-text">
+                Quality candidates for Quality companies
+              </p>
+            </div>
+            <div className="stack-four">
+              <img
+                src={stackTeam}
+                alt="team members"
+                className="stack-four-img"
+              />
+            </div>
           </div>
         </div>
       </div>

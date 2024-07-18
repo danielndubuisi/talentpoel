@@ -55,6 +55,11 @@
   background-color: #1b9690;
 }
 
+/* for lilian */
+.details.lilian {
+  background-color: #1b9690;
+}
+
 .details.karen {
   background-color: #fb8f67;
 }
@@ -79,6 +84,11 @@
 
 .founder-icon-link svg:hover {
   color: yellowgreen;
+}
+
+.founder:last-child {
+  justify-self: center;
+  grid-column: 1 / -1;
 }
 
 @media (min-width: 600px) and (max-width: 992px) {
