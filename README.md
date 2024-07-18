@@ -1,3 +1,7 @@
+# Non-Technical skills hiring platform
+
+This webiste is built for a non-technical skill hiring company called Talentpoel.  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
