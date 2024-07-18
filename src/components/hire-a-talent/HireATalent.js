@@ -11,6 +11,8 @@ import "./hire-a-talent.css";
 
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
+import logoWhite from "../asset/hire-a-talent/logo_white.svg"
+import regModel from "../asset/hire-a-talent/model.png"
 import { config } from "../../app.config";
 
 const InitialFormData = {
@@ -89,31 +91,45 @@ const HireATalent = () => {
     <div className="register-section">
       <div className="reg-logo layout">
         <Link to="/" className=" ">
-          <img src={`${config.IMAGE_BASE_URL}/v1688803649/logo-green_erdxca.svg`} alt="vector-logo" id="reg-icon" />
+          {/* changed the image logo and alt attribute text 7-18-2024 */}
+          <img src={logoWhite} alt="talentpoel-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
+          {/* changed text contents and image src attribute and added a ul tag 7-18-2024 */}
           <div className="left">
             <div className="reg-img-con">
-              <img src={`${config.IMAGE_BASE_URL}/v1688803450/hire_n4nzt8.webp`} alt="register" />
+              <img src={regModel} alt="register" />
             </div>
             <h3>
-              We understand the challenges associated with finding exceptional
-              talent in Africa.
+              Are you one of the best non-technical talents in Africa?{" "}
+              <span>If so, we want you!</span>
             </h3>
             <p className="hire-para">
-              That's why we are here to take the burden off your shoulders. Our
-              proven vetting process ensures that you have access to the most
-              qualified professionals who can help your company thrive. Fill out
-              the form to request any talent you need.
+              We seek to attract the best talent, and to that end we offer a
+              number of benefits to those who join our talent network:
             </p>
+            <ul className="hire_list">
+              <li className="hire_list-text">
+                HMO coverage for the duration of their contract with us.
+              </li>
+              <li className="hire_list-text">
+                Career coaching from our learning partners.
+              </li>
+              <li className="hire_list-text">
+                We are one of the first companies in Africa to introduce the
+                concept of "community equity". As a member of our company, you
+                will have the opportunity to own a share of the company.
+              </li>
+            </ul>
+            <small className="hire_add_text">
+              We will also be offering additional benefits in the near future
+            </small>
           </div>
           <div className="right">
             <div className="reg-form-container">
-              <p className="form-desc">
-                Looking for a talent, fill this out
-              </p>
+              <p className="form-desc">Looking for a talent, fill this out</p>
               <form className="form-one" onSubmit={submitHandlerOne} ref={form}>
                 <input
                   type="text"
