@@ -22,8 +22,8 @@ const VettingProcess = () => {
             title="Talentpoel vetting video"
             width="100%"
             height="100%"
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             className="vetting-video-iframe"
           />

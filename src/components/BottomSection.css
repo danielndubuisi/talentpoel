@@ -139,6 +139,7 @@
   flex-basis: 50%;
 }
 
+
 .flex_row-div {
   height: 203px;
 }
@@ -179,6 +180,7 @@
 
 .flex_width-two img {
   height: 100%;
+  filter: saturate(1.29); /* added 7-18-2024 */
 }
 
 .flex_height {
@@ -186,6 +188,11 @@
 }
 .flex_height img {
   height: 100%;
+}
+
+/* added 7-18-2024 */
+.flex_width-one > div > img {
+  filter: saturate(1.27);
 }
 
 

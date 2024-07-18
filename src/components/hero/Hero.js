@@ -52,12 +52,21 @@ const Hero = () => {
           </div>
           {/* adding changes to the image container 7-16-2024 */}
           <div className="hero-img-con">
-            <div className="stack_one">
+            <div className="stack_container">
+              <div className="stack_one">
+                <img
+                  src={imageOne}
+                  alt="Anne profile"
+                  className="stack_one-img"
+                />
+              </div>
+              <div className="stack-four">
               <img
-                src={imageOne}
-                alt="Anne profile"
-                className="stack_one-img"
+                src={stackTeam}
+                alt="team members"
+                className="stack-four-img"
               />
+            </div>
             </div>
             <div className="stack_two">
               <img
@@ -71,13 +80,7 @@ const Hero = () => {
                 Quality candidates for Quality companies
               </p>
             </div>
-            <div className="stack-four">
-              <img
-                src={stackTeam}
-                alt="team members"
-                className="stack-four-img"
-              />
-            </div>
+            
           </div>
         </div>
       </div>
