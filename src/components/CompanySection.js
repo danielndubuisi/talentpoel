@@ -57,26 +57,7 @@ const CompanySection = () => {
     <div className="company-section layout flex_wrapper">
       <h3 className="company-section_heading">Reviews from our customers</h3>
       <div className="slider_container">
-        <Slider>
-          {/* {
-            reviews.map((review, index) => (
-              <article key={index} className="review_container">
-                <div className="review_container-box">
-                  <q>{review.quote}</q>
-                </div>
-                <div className="review_container-info">
-                  <div className="info_image">
-                    <img src={review.image} alt="customer" />
-                  </div>
-                  <div className="info_name">
-                    <h5>{review.customerName}</h5>
-                    <p>{review.occupation}</p>
-                  </div>
-                </div>
-              </article>
-            ))
-          } */}
-        </Slider>
+        
       </div>
     </div>
   );
