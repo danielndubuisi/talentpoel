@@ -139,3 +139,5 @@ export const allTalent =[
   { value: "HR", label: "HR" },
   { value: "Head of talent", label: "Head of talent" },
 ]
+
+
