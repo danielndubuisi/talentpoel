@@ -107,6 +107,27 @@
   margin-top: 30px;
 }
 
+/* added new css changes 7-19-2024 */
+.flex_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-section_heading {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 40px;
+  color: #14706c;
+  margin-bottom: 104px;
+}
+
+.slider_container {
+  width: 60%;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 600px) and (max-width: 992px) {
   .img-wrapper > div {
     width: 90%;
