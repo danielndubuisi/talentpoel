@@ -34,7 +34,7 @@
   justify-content: center;
   margin: 120px auto;
   /* width: 100%; */
-  width: 76%;
+  width: 70%;
 }
 
 /* added height 7-16-2024 */
@@ -42,7 +42,7 @@
 .vetting-video-con div {
   /* width: 80%; */
   width: 77.3%;
-  height: 344px; 
+  height: 317px; 
 }
 
 .vetting-video-iframe {
@@ -73,7 +73,7 @@
     
     .vetting-video-con div{
         width: 90%;
-        height: 300px;
+        height: 273px;
     }
 }
 
