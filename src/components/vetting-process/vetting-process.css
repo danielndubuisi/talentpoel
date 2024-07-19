@@ -34,7 +34,7 @@
   justify-content: center;
   margin: 120px auto;
   /* width: 100%; */
-  width: 70%;
+  width: 67%;
 }
 
 /* added height 7-16-2024 */
@@ -42,7 +42,7 @@
 .vetting-video-con div {
   /* width: 80%; */
   width: 77.3%;
-  height: 317px; 
+  height: 303px; 
 }
 
 .vetting-video-iframe {
@@ -73,7 +73,7 @@
     
     .vetting-video-con div{
         width: 90%;
-        height: 273px;
+        height: 261px;
     }
 }
 
@@ -115,7 +115,7 @@
 /* created a new media query for the iframe height responsiveness 7-17-2024 */
 @media (min-width: 540px) and (max-width: 600px) {
   .vetting-video-con div {
-    height: 274px;
+    height: 184px;
   }
 }
 

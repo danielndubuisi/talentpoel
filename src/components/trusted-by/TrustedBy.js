@@ -18,7 +18,7 @@ const TrustedBy = () => {
         <div className="trusted-img-con">
           <img src={logo1} alt="" className="trusted-img" />
           <img src={logo2} alt="" className="trusted-img" />
-          <img src={logo3} alt="" className="trusted-img" />
+          <img src={logo3} alt="" className="trusted-img trusted-img-2" />
           <img src={logo4} alt="" className="trusted-img" />
           <img src={logo5} alt="" className="trusted-img1" />
           <img src={logo6} alt="" className="trusted-img" />

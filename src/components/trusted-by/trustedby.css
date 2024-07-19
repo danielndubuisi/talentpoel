@@ -77,3 +77,17 @@
     background: white !important;
   }
 }
+
+@media (max-width: 475px) {
+  .trusted-img {
+    width: 100px;
+  }
+
+  .trusted-img1 {
+    width: 150px;
+  }
+
+  .trusted-img-2 {
+    width: 90px;
+  }
+}
