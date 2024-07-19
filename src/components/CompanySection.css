@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.find{
+.find {
   font-weight: 700;
   margin-top: 10px;
 }
@@ -88,8 +88,8 @@
 
 .fou {
   border-radius: 24px;
-  border: 1px solid #9DCAC8;
-  background: #EBE7F1;
+  border: 1px solid #9dcac8;
+  background: #ebe7f1;
 }
 
 .icon-wrapper img {
@@ -98,12 +98,12 @@
   margin-bottom: 30px;
 }
 
-.founders-sub{
+.founders-sub {
   margin: 0 !important;
   padding: 20px 0;
 }
 
-.company-text-wrapper button{
+.company-text-wrapper button {
   margin-top: 30px;
 }
 
@@ -126,7 +126,91 @@
 .slider_container {
   width: 60%;
   margin: 0 auto;
+  /* display: flex;
+  gap: 34px; */
 }
+
+.review_container {
+  /* width: 500px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.review_container-box {
+  /* width: 100%; */
+  background-color: #0d4a47;
+  border-radius: 24px;
+  padding: 32px 41px 32px 42px;
+  position: relative;
+}
+
+.review_container-box::after {
+  content: "";
+  position: absolute;
+  width: 44.34px;
+  height: 44.34px;
+  background-color: #0d4a47;
+  bottom: -19px;
+  transform: rotate(45deg);
+  left: 46px;
+}
+
+.review_container-box > q {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  color: white;
+}
+
+.review_container-info {
+  display: flex;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.info_image {
+  width: 56px;
+  height: 56px;
+}
+
+.info_image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.info_name {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info_name h5, .info_name p {
+  color: black;
+}
+
+.info_name h5 {
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0;
+}
+
+.info_name p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.company-section .marquee-container {
+  width: 60% !important;
+}
+
+.company-section .marquee {
+  min-width: 60% !important;
+}
+
+
 
 @media screen and (min-width: 600px) and (max-width: 992px) {
   .img-wrapper > div {
@@ -148,11 +232,11 @@
     width: 50px;
   }
 
-  .founders-sub{
+  .founders-sub {
     padding: 20px 0;
   }
-  
-  .company-text-wrapper button{
+
+  .company-text-wrapper button {
     margin-top: 30px;
   }
 
@@ -208,7 +292,7 @@
 }
 
 @media screen and (min-width: 0) and (max-width: 992px) {
-  .company-text-wrapper button{
+  .company-text-wrapper button {
     margin-top: 0;
   }
 
