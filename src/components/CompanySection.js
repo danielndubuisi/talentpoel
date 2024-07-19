@@ -58,7 +58,7 @@ const CompanySection = () => {
       <h3 className="company-section_heading">Reviews from our customers</h3>
       <div className="slider_container">
         <Slider>
-          {
+          {/* {
             reviews.map((review, index) => (
               <article key={index} className="review_container">
                 <div className="review_container-box">
@@ -75,7 +75,7 @@ const CompanySection = () => {
                 </div>
               </article>
             ))
-          }
+          } */}
         </Slider>
       </div>
     </div>
