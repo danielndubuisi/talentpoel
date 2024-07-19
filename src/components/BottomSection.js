@@ -113,11 +113,12 @@ const BottomSection = ({
                             alt="feature three"
                             // height="100%"
                             width="100%"
+                            className="flex_row-img3"
                           />
                         </div>
                       </div>
                       <div className="flex_row-div">
-                        <img src={frameFour} alt="feature four" />
+                        <img src={frameFour} alt="feature four" className="flex_row-div-img" />
                       </div>
                     </div>
                     <div className="flex_width-one flex_height">
