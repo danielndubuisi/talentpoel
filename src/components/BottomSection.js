@@ -122,7 +122,7 @@ const BottomSection = ({
                       </div>
                     </div>
                     <div className="flex_width-one flex_height">
-                      <img src={frameFive} alt="feature five" />
+                      <img src={frameFive} alt="feature five"  />
                     </div>
                   </div>
                 </div>

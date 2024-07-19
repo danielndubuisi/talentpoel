@@ -18,7 +18,7 @@
   font-weight: 700;
 }
 
-.bottom-img-con{
+.bottom-img-con {
   padding: 100px 0;
 }
 
@@ -107,7 +107,7 @@
   align-items: center;
   /* padding: 25px 20px 25px 20px; */
   border-radius: 16px;
-  background-color: #CDBCE2;
+  background-color: #cdbce2;
 }
 
 .flex_frame_one-title {
@@ -146,8 +146,9 @@
 
 .flex_row-img3 {
   height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
-
 
 .flex_row-div {
   height: 183px;
@@ -159,6 +160,8 @@
 
 .flex_row-div .flex_row-div-img {
   height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 .flex_frame_two {
@@ -169,7 +172,7 @@
   align-items: center;
   /* padding: 25px 20px 25px 20px; */
   border-radius: 16px;
-  background-color: #F7CCBC;
+  background-color: #f7ccbc;
   flex-basis: 50%;
 }
 
@@ -208,6 +211,9 @@
 }
 .flex_height img {
   height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  filter: saturate(1.32);
 }
 
 /* added 7-18-2024 */
@@ -215,17 +221,14 @@
   filter: saturate(1.27);
 }
 
-
-
 @media screen and (min-width: 600px) and (max-width: 992px) {
-  .bottom-img-con{
+  .bottom-img-con {
     padding: 50px 0;
   }
 
   .home__bottom-section-quality {
     padding-top: 80px;
   }
-
 }
 
 /* add responsiveness to the grid container from 768px -992px  */
@@ -271,7 +274,7 @@
 }
 
 @media screen and (min-width: 0) and (max-width: 600px) {
-  .bottom-img-con{
+  .bottom-img-con {
     padding: 30px 0 50px 0;
   }
 
@@ -287,7 +290,6 @@
   .flex_frame_one {
     height: 201.59px;
   }
-
 }
 
 /* add a new media query of max-width 834px and min-width 800px  */
@@ -307,7 +309,7 @@
 
 /* add a new media query of max-width 475px */
 @media screen and (max-width: 475px) {
-   .flex_wrap {
+  .flex_wrap {
     flex-wrap: wrap;
   }
 
@@ -351,10 +353,7 @@
     margin-top: 25px;
     margin-left: 20px;
   }
-
 }
-
-
 
 @media screen and (min-width: 0) and (max-width: 960px) {
   .bottom-container {
@@ -403,8 +402,8 @@
 
   .home__bottom-section.darkerBg {
     width: 100%;
-    padding-top: 50px ;
-    padding-bottom: 50px ;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .home__bottom-section.darkerBg p {
@@ -445,4 +444,23 @@
   }
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+  .grid_wrapper {
+    grid-template-columns: 1fr;
+  }
 
+  .flex_frame_one {
+    height: 362.59px;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .flex_frame_one-title {
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+
+  .flex_frame_one-icon {
+    margin-top: 155px;
+  }
+}
