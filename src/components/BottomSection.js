@@ -8,7 +8,7 @@ import frameOne from "./asset/features/frame_1.png"
 import frameTwo from "./asset/features/frame_2.png"
 import frameThree from "./asset/features/frame_3.png"
 import frameFour from "./asset/features/frame_4.png"
-import frameFive from "./asset/features/frame_5.png"
+import frameFive from "./asset/features/frame_6.png"
 import cursorIcon from "./asset/features/carbon_cursor-2.svg"
 import earthIcon from "./asset/features/carbon_earth-europe-africa.svg"
 // import { config } from "../app.config";

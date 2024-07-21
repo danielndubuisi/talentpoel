@@ -109,12 +109,12 @@ export const HumanManagement = [
   },
 ];
 
-export const experience =[
-  {value: "yes", label: "Yes" },
+export const experience = [
+  { value: "yes", label: "Yes" },
   { value: "no", label: "No" },
-]
+];
 
-export const allTalent =[
+export const allTalent = [
   { value: "Content Marketers", label: "Content Marketers" },
   { value: "Content Writers", label: "Content Writers" },
   { value: "Product Marketers", label: "Product Marketers" },
@@ -138,6 +138,23 @@ export const allTalent =[
   { value: "Head of operation", label: "Head of operation" },
   { value: "HR", label: "HR" },
   { value: "Head of talent", label: "Head of talent" },
-]
+];
 
-
+export const socialDiscover = [
+  {
+    value: "LinkedIn",
+    label: "LinkedIn",
+  },
+  {
+    value: "Twitter",
+    label: "Twitter",
+  },
+  {
+    value: "Instagram",
+    label: "Instagram",
+  },
+  {
+    value: "Others",
+    label: "Others",
+  },
+];
