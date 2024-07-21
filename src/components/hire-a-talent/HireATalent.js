@@ -12,7 +12,7 @@ import "./hire-a-talent.css";
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
 import logoWhite from "../asset/hire-a-talent/logo_white.svg"
-import regModel from "../asset/hire-a-talent/model.png"
+import regModel from "../asset/features/frame_5.png"
 import { config } from "../../app.config";
 
 const InitialFormData = {
