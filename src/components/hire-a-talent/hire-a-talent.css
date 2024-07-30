@@ -122,6 +122,17 @@ select {
   filter: saturate(1.3);
 }
 
+.css-t3ipsp-control {
+  padding-right: 20px !important;
+}
+
+/* added change 30-7-2024 */
+.form_flex-input {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 
 /* added new media queries 7-21-2024 */
 @media (min-width: 768px) and (max-width: 992px) {
@@ -136,6 +147,10 @@ select {
     height: 495px;
     object-fit: cover;
   }
+
+  .form_flex-input {
+    flex-direction: column;
+  }
 }
 
 
@@ -144,4 +159,15 @@ select {
     height: 384px;
     object-fit: cover;
   }
+
+  .form_flex-input {
+    flex-direction: column;
+  }
 }
+
+/* added a new media query 30-7-2024 */
+/* @media (min-width:1000px) and (max-width:1024px) {
+  .form_flex-input {
+    flex-direction: column;
+  }
+} */
