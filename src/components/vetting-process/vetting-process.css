@@ -32,17 +32,18 @@
 .vetting-video-con {
   display: flex;
   justify-content: center;
-  margin: 120px auto;
+  /* margin: 120px auto; */
+  margin: 112px auto;
   /* width: 100%; */
-  width: 67%;
+  width: 55%;
 }
 
 /* added height 7-16-2024 */
 
 .vetting-video-con div {
   /* width: 80%; */
-  width: 77.3%;
-  height: 303px; 
+  width: 72.3%;
+  height: 235px; 
 }
 
 .vetting-video-iframe {
@@ -73,7 +74,7 @@
     
     .vetting-video-con div{
         width: 90%;
-        height: 261px;
+        height: 214px;
     }
 }
 

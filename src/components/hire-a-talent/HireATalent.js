@@ -1,11 +1,12 @@
 import { useRef, useState } from "react";
 import Select from "react-select";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
-import { errorMessage, successMessage } from "../../utils/message.utils";
+import { errorMessage } from "../../utils/message.utils";
 import { Button } from "../Button";
 import { allTalent } from "../../Data/talents";
+import axios from "axios";
 
 import "./hire-a-talent.css";
 
@@ -13,13 +14,23 @@ import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
 import logoWhite from "../asset/hire-a-talent/logo_white.svg"
 import regModel from "../asset/features/frame_5.png"
-import { config } from "../../app.config";
+// import { config } from "../../app.config";
+
+import { socialDiscover } from "../../Data/talents";
+import { SuccessModal } from "../modal/modal";
 
 const InitialFormData = {
-  companyName: "",
-  companyEmail: "",
+  firstName: "",
+  lastName: "",
+  email: "",
   additionalRequest: "",
   talent: "",
+  socialDiscover: "",
+};
+
+// Helper function to capitalize the first letter of each word
+const capitalizeWords = (str) => {
+  return str.replace(/\b\w/g, char => char.toUpperCase());
 };
 
 const HireATalent = () => {
@@ -29,6 +40,13 @@ const HireATalent = () => {
   const [dropDown, setDropDown] = useState([]);
 
   const [formData, setFormData] = useState(InitialFormData);
+  // const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const closeModal = () => {
+    setIsOpen(!isOpen)
+    // setIsSubmitted(false)
+  }
 
   const talentArray = (n) => {
     const arr = [];
@@ -39,42 +57,55 @@ const HireATalent = () => {
     return arr;
   };
 
-  const submitHandlerOne = (e) => {
+  const submitHandlerOne = async (e) => {
     e.preventDefault();
     setLoading(true);
     const templateParams = {
-      company_name: formData.companyName,
-      email: formData.companyEmail,
-      additional_request: formData.additionalRequest,
-      talents: talentArray(dropDown.length),
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      roles: talentArray(dropDown.length),
+      request: formData.additionalRequest,
+      through: formData.socialDiscover.value,
     };
 
-    emailjs
-      .send(
-        `${config.HIRE_SERVICE_ID}`,
-        `${config.HIRE_TEMPLATE_ID}`,
-        templateParams,
-        `${config.USER_ID}`
-      )
-      .then(
-        function (response) {
-          if (response.status === 200) {
-            setLoading(false);
-            successMessage("Successfully Submitted");
-            setFormData({
-              companyName: "",
-              companyEmail: "",
-              additionalRequest: "",
-              talent: "",
-            });
-            setDropDown([]);
-          }
-        },
-        function (error) {
-          setLoading(false);
-          errorMessage("Could not submit form");
-        }
-      );
+    const options = {
+      method: "POST",
+      // url: "http://localhost:3000/api/submit-form",
+      url: "https://talentpoel-server.vercel.app/api/submit-form",
+      data: templateParams,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+
+    try {
+      const response = await axios.request(options)
+      // console.log("response from client--- ", response)
+      if(response.status === 200) {
+        console.log("response fro google sheet--", response);
+        setLoading(false);
+        // setIsSubmitted(true)
+        setIsOpen(true)
+        
+        // console.log("is submitted-- ", isSubmitted)
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          additionalRequest: "",
+          talent: "",
+          socialDiscover: "",
+        });
+        setDropDown([]);
+      }
+      
+    } catch (error) {
+      console.log("message not delivered", error.message)
+      setLoading(false)
+      errorMessage("Could not submit form")
+    }
   };
 
   const addDropdown = () => {
@@ -89,6 +120,7 @@ const HireATalent = () => {
 
   return (
     <div className="register-section">
+      {isOpen && <SuccessModal closeModal={closeModal} isOpen={isOpen} />}
       <div className="reg-logo layout">
         <Link to="/" className=" ">
           {/* changed the image logo and alt attribute text 7-18-2024 */}
@@ -131,32 +163,65 @@ const HireATalent = () => {
             <div className="reg-form-container">
               <p className="form-desc">Looking for a talent, fill this out</p>
               <form className="form-one" onSubmit={submitHandlerOne} ref={form}>
-                <input
-                  type="text"
-                  name="company_name"
-                  placeholder="Company Name"
-                  value={formData.companyName}
-                  required
-                  onChange={(event) =>
-                    setFormData({
-                      ...formData,
-                      companyName: event.currentTarget.value,
-                    })
-                  }
-                />
+                <div className="form_flex-input">
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    required
+                    onChange={(event) =>
+                      setFormData({
+                        ...formData,
+                        firstName: capitalizeWords(event.currentTarget.value),
+                      })
+                    }
+                  />
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    value={formData.lastName}
+                    required
+                    onChange={(event) =>
+                      setFormData({
+                        ...formData,
+                        lastName: capitalizeWords(event.currentTarget.value),
+                      })
+                    }
+                  />
+                </div>
                 <input
                   type="email"
                   name="email"
-                  placeholder="Company Email"
-                  value={formData.companyEmail}
+                  placeholder="Email"
+                  value={formData.email}
                   required
                   onChange={(event) =>
                     setFormData({
                       ...formData,
-                      companyEmail: event.currentTarget.value,
+                      email: event.currentTarget.value,
                     })
                   }
                 />
+                {/* added a new label and input 7-22-2024 */}
+                <label>how did you discover us ?</label>
+                <div className="form-select-con">
+                  <div className="select">
+                    <Select
+                      value={formData.socialDiscover}
+                      onChange={(selectedSocial) => {
+                        setFormData({
+                          ...formData,
+                          socialDiscover: selectedSocial,
+                        });
+                      }}
+                      options={socialDiscover}
+                      className="form-select"
+                    />
+                  </div>
+                </div>
+
                 <label>Select talent you’re hiring for </label>
                 <div className="form-select-con">
                   <div className="select">
