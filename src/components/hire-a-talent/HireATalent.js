@@ -45,7 +45,6 @@ const HireATalent = () => {
 
   const closeModal = () => {
     setIsOpen(!isOpen)
-    // setIsSubmitted(false)
   }
 
   const talentArray = (n) => {
@@ -86,7 +85,7 @@ const HireATalent = () => {
       if(response.status === 200) {
         console.log("response fro google sheet--", response);
         setLoading(false);
-        // setIsSubmitted(true)
+        
         setIsOpen(true)
         
         // console.log("is submitted-- ", isSubmitted)
