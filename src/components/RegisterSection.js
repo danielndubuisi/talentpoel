@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import Select, { components } from "react-select";
 import { countries, getCountryCode, getCountryData } from "countries-list";
 import ReactCountryFlag from "react-country-flag";
 import { Button } from "../components/Button";
-import { errorMessage, successMessage } from "../utils/message.utils";
+import { errorMessage } from "../utils/message.utils";
 import { experience } from "../Data/talents";
+import logoWhite from "../../src/components/asset/hire-a-talent/logo_white.svg"
+import regModel from "../../src/components/asset/form-images/become3.png"
+import axios from "axios";
 
 import star from "./asset/star.svg";
 
 import "./RegisterSection.css";
-import { config } from "../app.config";
+import { SuccessModal } from "./modal/modal";
+// import { config } from "../app.config";
 
 const InitialFormData = {
   firstName: "",
@@ -24,15 +28,26 @@ const InitialFormData = {
   experience: { value: "no", label: "No" },
 };
 
+// Helper function to capitalize the first letter of each word
+const capitalizeWords = (str) => {
+  return str.replace(/\b\w/g, char => char.toUpperCase());
+};
+
+
 const RegisterSection = () => {
   const [formDetails, setFormDetails] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState(InitialFormData);
   const [country, setCountry] = useState({ value: "NG", label: "Nigeria" });
+   const [isOpen, setIsOpen] = useState(false);
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
     setFormDetails(false);
+  };
+
+  const closeModal = () => {
+    setIsOpen(!isOpen);
   };
 
   const Control = ({ children, ...props }) => {
@@ -73,37 +88,43 @@ const RegisterSection = () => {
       experience: formData.experience.value,
     };
 
-    emailjs
-      .send(
-        `${config.BECOME_SERVICE_ID}`,
-        `${config.BECOME_TEMPLATE_ID}`,
-        templateParams,
-        `${config.USER_ID}`
-      )
-      .then(
-        function (response) {
-          if (response.status === 200) {
-            setLoading(false);
-            successMessage("Successfully Submitted");
-            setFormData({
-              firstName: "",
-              lastName: "",
-              email: "",
-              role: "",
-              bio: "",
-              linkedin: "",
-              availability: false,
-              experience: { value: "no", label: "No" },
-            });
-            setCountry({ value: "NG", label: "Nigeria" })
-            setFormDetails(true);
-          }
-        },
-        function (error) {
+    const options = {
+      method: "POST",
+      // url: "http://localhost:3000/api/become-a-talent",
+      url: "https://talentpoel-server.vercel.app/api/become-a-talent",
+      data: templateParams,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    axios.request(options).then(
+      function (response) {
+        if (response.status === 200) {
           setLoading(false);
-          errorMessage("Could not submit form");
+          // successMessage("Successfully Submitted");
+          setIsOpen(true);
+          console.log(response)
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            role: "",
+            bio: "",
+            linkedin: "",
+            availability: false,
+            experience: { value: "no", label: "No" },
+          });
+          setCountry({ value: "NG", label: "Nigeria" });
+          setFormDetails(true);
         }
-      );
+      },
+      function (error) {
+        console.log("message not delivered", error.message);
+        setLoading(false);
+        errorMessage("Could not submit form");
+      }
+    );
   };
 
   const changeHandler = (newValue) => {
@@ -112,23 +133,17 @@ const RegisterSection = () => {
 
   return (
     <div className="register-section">
+      {isOpen && <SuccessModal closeModal={closeModal} isOpen={isOpen} />}
       <div className="reg-logo layout">
         <Link to="/" className="">
-          <img
-            src={`${config.IMAGE_BASE_URL}/v1688803649/logo-green_erdxca.svg`}
-            alt="vector-logo"
-            id="reg-icon"
-          />
+          <img src={logoWhite} alt="vector-logo" id="reg-icon" />
         </Link>
       </div>
       <div className="reg-content-wrapper layout">
         <div className="reg-content">
           <div className="left">
             <div className="reg-img-con">
-              <img
-                src={`${config.IMAGE_BASE_URL}/v1688803418/become_gwajwr.webp`}
-                alt="register"
-              />
+              <img src={regModel} alt="register" />
             </div>
             <h3>
               Are you one of the best non-technical talents in Africa?{" "}
@@ -170,46 +185,52 @@ const RegisterSection = () => {
           <div className="right">
             <div className="reg-form-container">
               <p className="form-desc">
-                {/* Fill out this application, become a talent */}
-                The form is currently unavailable. Please check back later.
+                Fill out this application, become a talent
+                {/* The form is currently unavailable. Please check back later. */}
               </p>
               {formDetails ? (
                 <>
                   <form className="form-one" onSubmit={submitHandlerOne}>
-                    <input
-                      type="text"
-                      name="First"
-                      placeholder="First name"
-                      required
-                      value={formData.firstName}
-                      disabled
-                      onChange={(event) =>
-                        setFormData({
-                          ...formData,
-                          firstName: event.currentTarget.value,
-                        })
-                      }
-                    />
-                    <input
-                      type="text"
-                      name="Last"
-                      disabled
-                      placeholder="Last name"
-                      required
-                      value={formData.lastName}
-                      onChange={(event) =>
-                        setFormData({
-                          ...formData,
-                          lastName: event.currentTarget.value,
-                        })
-                      }
-                    />
+                    <div className="form_flex-input">
+                      <input
+                        type="text"
+                        name="First"
+                        placeholder="First name"
+                        required
+                        value={formData.firstName}
+                        // disabled
+                        onChange={(event) =>
+                          setFormData({
+                            ...formData,
+                            firstName: capitalizeWords(
+                              event.currentTarget.value
+                            ),
+                          })
+                        }
+                      />
+                      <input
+                        type="text"
+                        name="Last"
+                        // disabled
+                        placeholder="Last name"
+                        required
+                        value={formData.lastName}
+                        onChange={(event) =>
+                          setFormData({
+                            ...formData,
+                            lastName: capitalizeWords(
+                              event.currentTarget.value
+                            ),
+                          })
+                        }
+                      />
+                    </div>
                     <input
                       type="email"
                       name="Email"
                       placeholder="Email"
                       required
-                      disabled
+                      // disabled
                       value={formData.email}
                       onChange={(event) =>
                         setFormData({
@@ -235,7 +256,7 @@ const RegisterSection = () => {
                       name="LinkedIn"
                       placeholder="LinkedIn"
                       value={formData.linkedin}
-                      disabled
+                      // disabled
                       onChange={(event) =>
                         setFormData({
                           ...formData,
@@ -247,9 +268,9 @@ const RegisterSection = () => {
                       id="reg-buttonOne"
                       type="submit"
                       buttonColor="green"
-                      text="Form Unavailable"
-                      // text="Continue"
-                      disabled={true}
+                      // text="Form Unavailable"
+                      text="Continue"
+                      disabled={false}
                       display={true}
                     />
                   </form>
