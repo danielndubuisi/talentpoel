@@ -6,7 +6,7 @@ import { Button } from "../Button";
 import { Link } from "react-router-dom";
 import imageOne from "../asset/hero/Anne.png";
 import imageTwo from "../asset/hero/Dubem.png";
-// import imageThree from "../asset/hero/stack_1.png"
+import imageMobile from "../asset/hero/hero_group.png"
 import stackTeam from "../asset/hero/stack_team.png"
 // import imageFour from "../asset/hero/stack_2.png"
 // import imageFive from "../asset/hero/stack_3.png"
@@ -61,12 +61,12 @@ const Hero = () => {
                 />
               </div>
               <div className="stack-four">
-              <img
-                src={stackTeam}
-                alt="team members"
-                className="stack-four-img"
-              />
-            </div>
+                <img
+                  src={stackTeam}
+                  alt="team members"
+                  className="stack-four-img"
+                />
+              </div>
             </div>
             <div className="stack_two">
               <img
@@ -80,7 +80,9 @@ const Hero = () => {
                 Quality candidates for Quality companies
               </p>
             </div>
-            
+          </div>
+          <div className="hero-img-mobile">
+            <img src={imageMobile} alt="stack group on mobile" />
           </div>
         </div>
       </div>
