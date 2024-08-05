@@ -7,14 +7,15 @@ import ReactCountryFlag from "react-country-flag";
 import { Button } from "../components/Button";
 import { errorMessage } from "../utils/message.utils";
 import { experience } from "../Data/talents";
-import logoWhite from "../../src/components/asset/hire-a-talent/logo_white.svg"
-import regModel from "../../src/components/asset/form-images/become3.png"
+import logoWhite from "../../src/components/asset/hire-a-talent/logo_white.svg";
+import regModel from "../../src/components/asset/form-images/become3.png";
 import axios from "axios";
 
 import star from "./asset/star.svg";
 
 import "./RegisterSection.css";
 import { SuccessModal } from "./modal/modal";
+import { socialDiscover } from "../Data/talents";
 // import { config } from "../app.config";
 
 const InitialFormData = {
@@ -26,20 +27,20 @@ const InitialFormData = {
   linkedin: "",
   availability: false,
   experience: { value: "no", label: "No" },
+  socialDiscover: "",
 };
 
 // Helper function to capitalize the first letter of each word
 const capitalizeWords = (str) => {
-  return str.replace(/\b\w/g, char => char.toUpperCase());
+  return str.replace(/\b\w/g, (char) => char.toUpperCase());
 };
-
 
 const RegisterSection = () => {
   const [formDetails, setFormDetails] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState(InitialFormData);
   const [country, setCountry] = useState({ value: "NG", label: "Nigeria" });
-   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
@@ -86,6 +87,7 @@ const RegisterSection = () => {
       linkedin: formData.linkedin,
       availability: formData.availability,
       experience: formData.experience.value,
+      through: formData.socialDiscover.value,
     };
 
     const options = {
@@ -104,7 +106,7 @@ const RegisterSection = () => {
           setLoading(false);
           // successMessage("Successfully Submitted");
           setIsOpen(true);
-          console.log(response)
+          console.log(response);
           setFormData({
             firstName: "",
             lastName: "",
@@ -114,6 +116,7 @@ const RegisterSection = () => {
             linkedin: "",
             availability: false,
             experience: { value: "no", label: "No" },
+            socialDiscover: "",
           });
           setCountry({ value: "NG", label: "Nigeria" });
           setFormDetails(true);
@@ -316,6 +319,25 @@ const RegisterSection = () => {
                         })
                       }
                     />
+
+                    {/* added a new label and input 8-05-2024 */}
+                    <label>how did you discover us ?</label>
+                    <div className="form-select-con">
+                      <div className="select">
+                        <Select
+                          value={formData.socialDiscover}
+                          onChange={(selectedSocial) => {
+                            setFormData({
+                              ...formData,
+                              socialDiscover: selectedSocial,
+                            });
+                          }}
+                          options={socialDiscover}
+                          className="form-select"
+                        />
+                      </div>
+                    </div>
+
                     <label htmlFor="bio">
                       Enter a short bio (one sentence)
                     </label>
@@ -333,6 +355,7 @@ const RegisterSection = () => {
                         })
                       }
                     />
+
                     <div className="available">
                       <div className="check-left">
                         <small>Availability (contract)</small>
