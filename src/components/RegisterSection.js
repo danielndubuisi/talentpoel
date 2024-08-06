@@ -321,7 +321,7 @@ const RegisterSection = () => {
                     />
 
                     {/* added a new label and input 8-05-2024 */}
-                    <label>how did you discover us ?</label>
+                    <label>How did you discover us ?</label>
                     <div className="form-select-con">
                       <div className="select">
                         <Select
