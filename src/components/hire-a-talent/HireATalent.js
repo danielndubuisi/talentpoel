@@ -204,7 +204,7 @@ const HireATalent = () => {
                   }
                 />
                 {/* added a new label and input 7-22-2024 */}
-                <label>how did you discover us ?</label>
+                <label>How did you discover us ?</label>
                 <div className="form-select-con">
                   <div className="select">
                     <Select
