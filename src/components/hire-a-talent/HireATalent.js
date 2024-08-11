@@ -12,8 +12,8 @@ import "./hire-a-talent.css";
 
 import addIcon from "../asset/icons/add.svg";
 import deleteIcon from "../asset/icons/delete.svg";
-import logoWhite from "../asset/hire-a-talent/logo_white.svg"
-import regModel from "../asset/features/frame_5.png"
+import logoWhite from "../asset/hire-a-talent/logo_white.svg";
+import regModel from "../asset/features/frame_5.png";
 // import { config } from "../../app.config";
 
 import { socialDiscover } from "../../Data/talents";
@@ -30,7 +30,7 @@ const InitialFormData = {
 
 // Helper function to capitalize the first letter of each word
 const capitalizeWords = (str) => {
-  return str.replace(/\b\w/g, char => char.toUpperCase());
+  return str.replace(/\b\w/g, (char) => char.toUpperCase());
 };
 
 const HireATalent = () => {
@@ -40,12 +40,14 @@ const HireATalent = () => {
   const [dropDown, setDropDown] = useState([]);
 
   const [formData, setFormData] = useState(InitialFormData);
-  // const [isSubmitted, setIsSubmitted] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [otherOption, setOtherOption] = useState("");
+  const [showOtherInput, setShowOtherInput] = useState(false);
 
   const closeModal = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const talentArray = (n) => {
     const arr = [];
@@ -56,6 +58,7 @@ const HireATalent = () => {
     return arr;
   };
 
+
   const submitHandlerOne = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -65,7 +68,10 @@ const HireATalent = () => {
       email: formData.email,
       roles: talentArray(dropDown.length),
       request: formData.additionalRequest,
-      through: formData.socialDiscover.value,
+      through:
+        formData.socialDiscover.value === "Others"
+          ? otherOption
+          : formData.socialDiscover.value,
     };
 
     const options = {
@@ -78,17 +84,16 @@ const HireATalent = () => {
       },
     };
 
-
     try {
-      const response = await axios.request(options)
+      const response = await axios.request(options);
       // console.log("response from client--- ", response)
-      if(response.status === 200) {
+      if (response.status === 200) {
         console.log("response fro google sheet--", response);
         setLoading(false);
-        
-        setIsOpen(true)
-        
-        // console.log("is submitted-- ", isSubmitted)
+
+        setIsOpen(true);
+
+        setOtherOption("");
         setFormData({
           firstName: "",
           lastName: "",
@@ -99,11 +104,10 @@ const HireATalent = () => {
         });
         setDropDown([]);
       }
-      
     } catch (error) {
-      console.log("message not delivered", error.message)
-      setLoading(false)
-      errorMessage("Could not submit form")
+      console.log("message not delivered", error.message);
+      setLoading(false);
+      errorMessage("Could not submit form");
     }
   };
 
@@ -205,20 +209,42 @@ const HireATalent = () => {
                 />
                 {/* added a new label and input 7-22-2024 */}
                 <label>How did you discover us ?</label>
-                <div className="form-select-con">
-                  <div className="select">
-                    <Select
-                      value={formData.socialDiscover}
-                      onChange={(selectedSocial) => {
-                        setFormData({
-                          ...formData,
-                          socialDiscover: selectedSocial,
-                        });
-                      }}
-                      options={socialDiscover}
-                      className="form-select"
-                    />
+                <div>
+                  <div className="form-select-con">
+                    <div className="select">
+                      <Select
+                        value={formData.socialDiscover}
+                        onChange={(selectedSocial) => {
+                          setFormData({
+                            ...formData,
+                            socialDiscover: selectedSocial,
+                          });
+                          if (selectedSocial.value === "Others") {
+                            setShowOtherInput(true);
+                          } else {
+                            setShowOtherInput(false);
+                          }
+                        }}
+                        options={socialDiscover}
+                        className="form-select"
+                      />
+                    </div>
                   </div>
+                  {showOtherInput && (
+                    <input
+                      type="text"
+                      value={otherOption}
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        const capitalizedValue = value.replace(/^./, (match) =>
+                          match.toUpperCase()
+                        );
+                        setOtherOption(capitalizedValue);
+                      }}
+                      placeholder="Enter other option"
+                      style={{ marginTop: "10px" }}
+                    />
+                  )}
                 </div>
 
                 <label>Select talent you’re hiring for </label>

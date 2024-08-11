@@ -41,6 +41,8 @@ const RegisterSection = () => {
   const [formData, setFormData] = useState(InitialFormData);
   const [country, setCountry] = useState({ value: "NG", label: "Nigeria" });
   const [isOpen, setIsOpen] = useState(false);
+  const [otherOption, setOtherOption] = useState("");
+  const [showOtherInput, setShowOtherInput] = useState(false);
 
   const submitHandlerOne = (e) => {
     e.preventDefault();
@@ -87,7 +89,10 @@ const RegisterSection = () => {
       linkedin: formData.linkedin,
       availability: formData.availability,
       experience: formData.experience.value,
-      through: formData.socialDiscover.value,
+      through:
+        formData.socialDiscover.value === "Others"
+          ? otherOption
+          : formData.socialDiscover.value,
     };
 
     const options = {
@@ -106,7 +111,7 @@ const RegisterSection = () => {
           setLoading(false);
           // successMessage("Successfully Submitted");
           setIsOpen(true);
-          console.log(response);
+          setOtherOption("");
           setFormData({
             firstName: "",
             lastName: "",
@@ -322,20 +327,43 @@ const RegisterSection = () => {
 
                     {/* added a new label and input 8-05-2024 */}
                     <label>How did you discover us ?</label>
-                    <div className="form-select-con">
-                      <div className="select">
-                        <Select
-                          value={formData.socialDiscover}
-                          onChange={(selectedSocial) => {
-                            setFormData({
-                              ...formData,
-                              socialDiscover: selectedSocial,
-                            });
-                          }}
-                          options={socialDiscover}
-                          className="form-select"
-                        />
+                    <div>
+                      <div className="form-select-con">
+                        <div className="select">
+                          <Select
+                            value={formData.socialDiscover}
+                            onChange={(selectedSocial) => {
+                              setFormData({
+                                ...formData,
+                                socialDiscover: selectedSocial,
+                              });
+                              if (selectedSocial.value === "Others") {
+                                setShowOtherInput(true);
+                              } else {
+                                setShowOtherInput(false);
+                              }
+                            }}
+                            options={socialDiscover}
+                            className="form-select"
+                          />
+                        </div>
                       </div>
+                      {showOtherInput && (
+                        <input
+                          type="text"
+                          value={otherOption}
+                          onChange={(e) => {
+                            const value = e.target.value;
+                            const capitalizedValue = value.replace(
+                              /^./,
+                              (match) => match.toUpperCase()
+                            );
+                            setOtherOption(capitalizedValue);
+                          }}
+                          placeholder="Enter other option"
+                          style={{ marginTop: "10px" }}
+                        />
+                      )}
                     </div>
 
                     <label htmlFor="bio">
