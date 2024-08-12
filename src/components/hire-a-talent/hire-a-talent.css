@@ -82,6 +82,12 @@
   display: block !important;
 }
 
+
+.css-tr4s17-option {
+  background-color: #9dcac8 !important;
+  color: black !important;
+}
+
 select {
   font-size: 20px;
   color: #49484c !important;
@@ -133,7 +139,6 @@ select {
   gap: 14px;
 }
 
-
 /* added new media queries 7-21-2024 */
 @media (min-width: 768px) and (max-width: 992px) {
   .reg-img-con img {
@@ -152,7 +157,6 @@ select {
     flex-direction: column;
   }
 }
-
 
 @media (min-width: 0px) and (max-width: 475px) {
   .reg-img-con img {
