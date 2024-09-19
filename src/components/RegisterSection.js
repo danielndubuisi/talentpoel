@@ -166,22 +166,19 @@ const RegisterSection = () => {
                 <span>
                   <img src={star} alt="list-star" />
                   <li>
-                    HMO coverage will be provided for the duration of the
-                    talent's contract with our company.
+                    Exclusive access to our diverse pool of talent for
+                    collaboration and networking.
                   </li>
+                </span>
+                <span>
+                  <img src={star} alt="list-star" />
+                  <li>Earn competitive hourly/monthly wages in US dollars.</li>
                 </span>
                 <span>
                   <img src={star} alt="list-star" />
                   <li>
                     Our talent community members will receive career coaching
                     from our trusted learning partners.
-                  </li>
-                </span>
-                <span>
-                  <img src={star} alt="list-star" />
-                  <li>
-                    Eligibility for equity participation is extended to all
-                    members of our talent community.
                   </li>
                 </span>
               </ul>

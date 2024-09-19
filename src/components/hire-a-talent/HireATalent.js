@@ -147,15 +147,15 @@ const HireATalent = () => {
             </p>
             <ul className="hire_list">
               <li className="hire_list-text">
-                HMO coverage for the duration of their contract with us.
+                Exclusive access to our diverse pool of talent for collaboration
+                and networking.
               </li>
               <li className="hire_list-text">
-                Career coaching from our learning partners.
+                Earn competitive hourly/monthly wages in US dollars.
               </li>
               <li className="hire_list-text">
-                We are one of the first companies in Africa to introduce the
-                concept of "community equity". As a member of our company, you
-                will have the opportunity to own a share of the company.
+                Our talent community members will receive career coaching from
+                our trusted learning partners.
               </li>
             </ul>
             <small className="hire_add_text">
