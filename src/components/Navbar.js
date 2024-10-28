@@ -97,7 +97,17 @@ const Navbar = () => {
               </li>
               <li className="nav-item2">
                 <div className="nav-inline nav-links">
-                  <span>Careers at Talentpoel </span> <small>(coming soon)</small>
+                  {/* <span>Careers at Talentpoel </span> <small>(coming soon)</small> */}
+                  
+                  {/* new change 10/28/2024 */}
+                  <a
+                    href="https://talentpoel.zohorecruit.com/jobs/Careers"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="nav-links"
+                  >
+                    Careers at Talentpoel
+                  </a>
                 </div>
               </li>
 
