@@ -106,11 +106,17 @@
   cursor: default;
 }
 
-.nav-item2 .nav-links a:hover {
-  /* color: #fff !important;
-  font-weight: 600; */
-  
-  /* modified the css 10/28/2024 */
+/* .nav-item2 .nav-links {
+  color: #fff !important;
+  font-weight: 600;
+} */
+
+.career_link {
+  color: white;
+}
+
+ /* modified the css 10/28/2024 */
+.career_link:hover {
   border-radius: 100px;
   color: #198a84;
   background-color: #fff;
@@ -207,6 +213,11 @@ hr {
     display: flex;
     justify-content: flex-start;
     font-size: 0.8em;
+  }
+
+  /* added a new css */
+  .career_link {
+    font-size: 15px;
   }
 
   .nav-item:hover {

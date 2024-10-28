@@ -104,7 +104,7 @@ const Navbar = () => {
                     href="https://talentpoel.zohorecruit.com/jobs/Careers"
                     target="_blank"
                     rel="noreferrer"
-                    className="nav-links"
+                    className="career_link"
                   >
                     Careers at Talentpoel
                   </a>
