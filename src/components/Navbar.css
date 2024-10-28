@@ -106,9 +106,17 @@
   cursor: default;
 }
 
-.nav-item2 .nav-links:hover {
-  color: #fff !important;
-  font-weight: 600;
+.nav-item2 .nav-links a:hover {
+  /* color: #fff !important;
+  font-weight: 600; */
+  
+  /* modified the css 10/28/2024 */
+  border-radius: 100px;
+  color: #198a84;
+  background-color: #fff;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
 }
 
 .nav-item:hover .contact-icon {
